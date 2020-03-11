@@ -1,0 +1,57 @@
+// this file is for compiling in the other style files, as well as for any overarching styling
+@import './variables';
+@import './pages';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background-color: $lightColor;
+}
+
+.pageContainer {
+    position: relative;
+    min-height: 100vh;
+}
+
+.contentWrap {
+    padding-bottom: 120px; //height of footer
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    @include pad-mar(15px, 0px);
+    background-color: $darkColor;
+    color: $accentColor;
+    border-bottom: 2px solid $accentColor;
+}
+
+nav {
+    a {
+        text-decoration: none;
+        padding: 0 15px;
+        color: $lightColor;
+    }
+}
+
+footer {
+    @include pad-mar(15px, 0px);
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: $darkColor;
+    color: $accentColor;
+    border-top: 2px solid $accentColor;
+
+    a {
+        text-decoration: none;
+        padding: 0 15px;
+        color: $lightColor;
+    }
+}

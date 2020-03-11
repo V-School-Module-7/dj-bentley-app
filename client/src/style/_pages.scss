@@ -1,0 +1,10 @@
+// most of the styling will be here. Any components, pages, ect
+
+.btn {
+    @include pad-mar(8px, 10px);
+    border-radius: 5px;
+    border: 1px solid $accentColor;
+    background-color: $darkColor;
+    color: $lightColor;
+    font-size: 20px;
+}

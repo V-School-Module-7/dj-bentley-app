@@ -1,5 +1,6 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
+import './style/style.css'
 import Header from './Header';
 import Home from './Home'
 import Contact from './Contact'
@@ -9,7 +10,7 @@ import Footer from './Footer'
 
 function App() {
 	return (
-    	<div>
+    	<div className="pageContainer">
 			<Header />
 
 		<Switch>
