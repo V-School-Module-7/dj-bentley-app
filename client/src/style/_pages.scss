@@ -8,3 +8,27 @@
     color: $lightColor;
     font-size: 20px;
 }
+
+.sideLink {
+    background-color: $darkColor;
+    width: fit-content;
+    height: fit-content;
+    @include pad-mar(10px, 10px);
+    border-radius: 50%;
+
+    svg {
+        color: $lightColor;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.sideLinkSection {
+    display: flex;
+    flex-direction: column;
+    // border: black solid 1px;
+    position: absolute;
+    z-index: 3;
+    position: fixed;
+    bottom: 120px;
+}
