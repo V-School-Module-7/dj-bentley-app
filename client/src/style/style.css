@@ -9,6 +9,40 @@
   font-size: 20px;
 }
 
+.sideLink {
+  background-color: #292828;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.sideLink svg {
+  color: #d6d5d5;
+  height: 30px;
+  width: 30px;
+}
+
+.sideLinkSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  z-index: 3;
+  position: fixed;
+  bottom: 120px;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
