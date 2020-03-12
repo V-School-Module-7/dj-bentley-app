@@ -19,11 +19,14 @@ body {
 }
 
 .contentWrap {
-    padding-bottom: 120px; //height of footer
+    // padding-bottom: 120px; //height of footer
+    padding: 20px 75px 150px 75px;
 }
 
 header {
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
     @include pad-mar(15px, 0px);
     background-color: $darkColor;
@@ -36,6 +39,10 @@ nav {
         text-decoration: none;
         padding: 0 15px;
         color: $lightColor;
+    }
+
+    a:hover {
+        color: $accentColor;
     }
 }
 

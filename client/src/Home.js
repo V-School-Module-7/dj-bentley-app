@@ -7,14 +7,13 @@ const Home = () => {
     }
 
     return (
-        <div className="contentWrap">
-            <h1>
-                home page
-            </h1>
+        <div>
+            <div className="actionImage">action image</div>
 
             <Button btnContent="hi button" btnAction = {btnTest} />
 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Felis eget nunc lobortis mattis aliquam faucibus purus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Condimentum mattis pellentesque id nibh tortor. A pellentesque sit amet porttitor eget dolor morbi non. Varius quam quisque id diam vel quam. Dolor sit amet consectetur adipiscing elit pellentesque. Dolor sit amet consectetur adipiscing elit pellentesque. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. Maecenas volutpat blandit aliquam etiam erat velit scelerisque. Eget magna fermentum iaculis eu non diam phasellus. Et tortor consequat id porta nibh venenatis cras. Enim facilisis gravida neque convallis a cras semper auctor neque. Nulla facilisi nullam vehicula ipsum. Tortor at risus viverra adipiscing at in tellus integer feugiat.
+            <div className="contentWrap">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Felis eget nunc lobortis mattis aliquam faucibus purus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Condimentum mattis pellentesque id nibh tortor. A pellentesque sit amet porttitor eget dolor morbi non. Varius quam quisque id diam vel quam. Dolor sit amet consectetur adipiscing elit pellentesque. Dolor sit amet consectetur adipiscing elit pellentesque. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. Maecenas volutpat blandit aliquam etiam erat velit scelerisque. Eget magna fermentum iaculis eu non diam phasellus. Et tortor consequat id porta nibh venenatis cras. Enim facilisis gravida neque convallis a cras semper auctor neque. Nulla facilisi nullam vehicula ipsum. Tortor at risus viverra adipiscing at in tellus integer feugiat.
 
 Sit amet consectetur adipiscing elit pellentesque habitant morbi. Scelerisque eu ultrices vitae auctor eu augue ut. Suscipit adipiscing bibendum est ultricies integer quis. Tempus iaculis urna id volutpat lacus laoreet non. Est placerat in egestas erat imperdiet sed. A cras semper auctor neque. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies. Porttitor eget dolor morbi non arcu. Interdum consectetur libero id faucibus nisl tincidunt eget nullam non. Sed libero enim sed faucibus turpis in eu mi. Id volutpat lacus laoreet non curabitur gravida. Nibh tellus molestie nunc non blandit massa enim. At in tellus integer feugiat scelerisque varius morbi enim.
 
@@ -112,7 +111,7 @@ Lectus urna duis convallis convallis tellus id. Lectus quam id leo in vitae turp
 
 Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Facilisis magna etiam tempor orci. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Lectus vestibulum mattis ullamcorper velit sed. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Vel facilisis volutpat est velit egestas dui id ornare arcu. Lectus magna fringilla urna porttitor rhoncus dolor. Quisque egestas diam in arcu cursus. Quis viverra nibh cras pulvinar mattis. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Risus commodo viverra maecenas accumsan.
 
-Magna fermentum iaculis eu non. Placerat duis ultricies lacus sed turpis. Phasellus faucibus scelerisque eleifend donec pretium vulputate. Auctor neque vitae tempus quam pellentesque. Nec feugiat nisl pretium fusce id velit. Bibendum arcu vitae elementum curabitur vitae nunc sed. Amet risus nullam eget felis eget nunc lobortis. Tristique senectus et netus et malesuada fames ac turpis egestas. Id diam maecenas ultricies mi eget. Commodo odio aenean sed adipiscing. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Quis auctor elit sed vulputate.
+Magna fermentum iaculis eu non. Placerat duis ultricies lacus sed turpis. Phasellus faucibus scelerisque eleifend donec pretium vulputate. Auctor neque vitae tempus quam pellentesque. Nec feugiat nisl pretium fusce id velit. Bibendum arcu vitae elementum curabitur vitae nunc sed. Amet risus nullam eget felis eget nunc lobortis. Tristique senectus et netus et malesuada fames ac turpis egestas. Id diam maecenas ultricies mi eget. Commodo odio aenean sed adipiscing. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Quis auctor elit sed vulputate.</div>
         </div>
     )
 }
