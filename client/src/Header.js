@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     return (
         <header>
-            <h3>logo</h3>
+            <h3>bentley logo</h3>
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/event">Events</Link>
@@ -16,3 +16,5 @@ const Header = () => {
 }
 
 export default Header
+
+//keep semi-transparent or keep opaque?

@@ -23,9 +23,9 @@ function App() {
     	</Switch>
 
 		<div className="sideLinkSection">
-			<SideLink linkHref="a" sideLinkSymbol={<FaInstagram />} />
-			<SideLink linkHref="a" sideLinkSymbol={<FaInstagram />} />
-			<SideLink linkHref="a" sideLinkSymbol={<FaInstagram />} />
+			<SideLink linkHref="a" sideLinkSymbol={<FaInstagram />} linkName="Instagram" />
+			<SideLink linkHref="a" sideLinkSymbol={<FaInstagram />} linkName="Instagram" />
+			<SideLink linkHref="a" sideLinkSymbol={<FaInstagram />} linkName="Instagram" />
 		</div>
     	<Footer />
     	</div>
