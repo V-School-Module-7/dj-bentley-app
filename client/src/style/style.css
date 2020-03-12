@@ -109,6 +109,10 @@
   color: #d6d5d5;
 }
 
+.carousel {
+  border: black solid 1px;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
