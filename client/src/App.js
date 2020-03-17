@@ -2,13 +2,13 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 import './style/style.css'
 import { FaInstagram } from 'react-icons/fa'
-import Header from './Header';
-import Home from './Home'
-import Contact from './Contact'
-import EventPage from './EventPage'
-import Login from './Login'
-import SideLink from './SideLink'
-import Footer from './Footer'
+import Header from './components/Header';
+import Home from './components/Home'
+import Contact from './components/Contact'
+import EventPage from './components/EventPage'
+import Login from './components/Login'
+import SideLink from './components/SideLink'
+import Footer from './components/Footer'
 
 function App() {
 	return (

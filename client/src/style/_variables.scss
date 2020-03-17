@@ -3,7 +3,9 @@
 $darkColor: rgb(41, 40, 40);
 $transparentDarkColor: rgba(41, 40, 40, 0.822);
 $lightColor: rgb(214, 213, 213);
-$accentColor: #40ffb9;
+$accentColor: #02FE03;
+$secondaryAccentColor: #F001FF;
+// $accentColor: #40FF4F;
 
 @mixin pad-mar($pad, $mar) {
     padding: $pad;

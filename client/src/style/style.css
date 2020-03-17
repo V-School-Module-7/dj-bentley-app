@@ -3,10 +3,17 @@
   margin: 10px;
   border: 1px solid black;
   border-radius: 5px;
-  border: 1px solid #40ffb9;
+  border: 1px solid #F001FF;
   background-color: #292828;
   color: #d6d5d5;
   font-size: 20px;
+}
+
+.btn:hover {
+  -webkit-box-shadow: #F001FF 0px 0px 10px;
+          box-shadow: #F001FF 0px 0px 10px;
+  color: #02FE03;
+  background-color: rgba(41, 40, 40, 0.822);
 }
 
 .sideLink {
@@ -43,10 +50,12 @@
   width: 50px;
   height: 50px;
   background-color: #292828;
+  -webkit-box-shadow: #F001FF 0px 0px 10px;
+          box-shadow: #F001FF 0px 0px 10px;
 }
 
 .sideLink:hover svg {
-  color: #40ffb9;
+  color: #02FE03;
   height: 30px;
   width: 30px;
 }
@@ -105,8 +114,8 @@
   border: black solid 1px;
   width: 100%;
   height: 75vh;
-  background-color: rgba(41, 40, 40, 0.822);
-  color: #d6d5d5;
+  background-image: url("../assets/ActionImage_DJBentley.jpg");
+  background-size: 100%;
 }
 
 .carousel {
@@ -148,8 +157,8 @@ header {
   margin: 0px;
   border: 1px solid black;
   background-color: #292828;
-  color: #40ffb9;
-  border-bottom: 2px solid #40ffb9;
+  color: #02FE03;
+  border-bottom: 2px solid #02FE03;
 }
 
 nav a {
@@ -159,7 +168,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #40ffb9;
+  color: #02FE03;
 }
 
 footer {
@@ -171,8 +180,8 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: #292828;
-  color: #40ffb9;
-  border-top: 2px solid #40ffb9;
+  color: #02FE03;
+  border-top: 2px solid #02FE03;
 }
 
 footer a {
