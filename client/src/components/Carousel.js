@@ -12,8 +12,10 @@ export default class Carousel extends React.Component {
             className="carousel"
             isPlaying="true"
             infinite
+            visibleSlides="2"
         >
             <Slider>
+                {/* have pictures vary in how they are arrayed? have a modal effect? */}
                 <Slide index={0}>I am the first Slide.</Slide>
                 <Slide index={1}>I am the second Slide.</Slide>
                 <Slide index={2}>I am the third Slide.</Slide>
