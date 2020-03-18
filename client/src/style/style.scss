@@ -1,6 +1,8 @@
 // this file is for compiling in the other style files, as well as for any overarching styling
 @import './variables';
 @import './pages';
+@import './carousel';
+@import './sideLink';
 
 * {
     box-sizing: border-box;
@@ -32,6 +34,7 @@ header {
     background-color: $darkColor;
     color: $accentColor;
     border-bottom: 2px solid $accentColor;
+    box-shadow: $accentColor 2px 2px 10px;
 }
 
 nav {
@@ -42,12 +45,12 @@ nav {
     }
 
     a:hover {
-        color: $accentColor;
+        color: $secondaryAccentColor;
     }
 }
 
 footer {
-    @include pad-mar(15px, 0px);
+    @include pad-mar(15px, auto);
     height: 120px;
     position: absolute;
     bottom: 0;
@@ -55,10 +58,18 @@ footer {
     background-color: $darkColor;
     color: $accentColor;
     border-top: 2px solid $accentColor;
+    box-shadow: $accentColor 2px 2px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     a {
         text-decoration: none;
         padding: 0 15px;
         color: $lightColor;
+    }
+
+    a:hover {
+        color: $secondaryAccentColor;
     }
 }

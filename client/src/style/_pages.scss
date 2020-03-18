@@ -1,6 +1,6 @@
 // most of the styling will be here. Any components, pages, ect
 
-.btn {
+.btn, input[type=text] {
     @include pad-mar(8px, 10px);
     border-radius: 5px;
     border: 1px solid $secondaryAccentColor;
@@ -15,86 +15,6 @@
     background-color: $transparentDarkColor;
 }
 
-.sideLink {
-    background-color: $transparentDarkColor;
-    width: 40px;
-    height: 40px;
-    @include pad-mar(0px, 10px);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: width 200ms, height 200ms;
-
-    svg {
-        color: $lightColor;
-        height: 20px;
-        width: 20px;
-        transition: width 200ms, height 200ms;
-        text-align: center;
-    }
-}
-
-.sideLink:hover {
-    width: 50px;
-    height: 50px;
-    background-color: $darkColor;
-    box-shadow: $secondaryAccentColor 0px 0px 10px;
-
-    svg {
-        color: $accentColor;
-        height: 30px;
-        width: 30px;
-    }
-}
-
-.tooltip {
-    position: relative;
-    // display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: fit-content;
-    background-color: $darkColor;
-    color: $lightColor;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    // height: 30px;
-    font-size: 20px;
-
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-    left: 120%;
-}
-
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent black transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-
-.sideLinkSection {
-    display: flex;
-    flex-direction: column;
-    // border: black solid 1px;
-    position: absolute;
-    z-index: 3;
-    position: fixed;
-    bottom: 120px;
-}
-
 .actionImage {
     border: black solid 1px;
     width: 100%;
@@ -105,6 +25,41 @@
     background-size: 100%;
 }
 
-.carousel {
-    border: black solid 1px;
+.homeQuote {
+    border: dotted 3px $secondaryAccentColor;
+    border-radius: 5px;
+    @include pad-mar(50px, 50px auto);
+    width: 80%;
+}
+
+.homeQuoteSignoff {
+    font-size: .7em;
+}
+
+.loginPage {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    @include pad-mar(10%, auto 0);
+
+    // for media query, add >
+    // position: absolute;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+}
+
+svg {
+    color: $lightColor;
+    height: 20px;
+    width: 20px;
+    transition: width 200ms, height 200ms;
+    text-align: center;
 }
