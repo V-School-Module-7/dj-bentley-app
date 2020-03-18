@@ -1,0 +1,40 @@
+.myCarousel {
+    @include pad-mar(30px, 10px);
+    background-color: $transparentDarkColor;
+    color: $lightColor;
+}
+
+.carouselBtn {
+    background-color: $darkColor;
+    @include pad-mar(5px, 5px);
+    border-radius: 50%;
+}
+
+.carouselBtn:hover {
+    box-shadow: $secondaryAccentColor 0px 0px 10px;
+
+    svg {
+        color: $accentColor;
+    }
+    
+}
+
+.carouselNav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.carouselDots {
+    display: flex;
+    align-items: center;
+
+    button {
+        @include pad-mar(3px, 3px);
+        border-radius: 50%;
+        background-color: $lightColor;
+    }
+    
+}
+.carousel__dot--selected {
+    background-color: $accentColor !important;
+}
