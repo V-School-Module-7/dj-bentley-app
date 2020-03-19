@@ -2,6 +2,8 @@
     @include pad-mar(30px, 10px);
     background-color: $transparentDarkColor;
     color: $lightColor;
+    z-index: 1;
+    width: 100%;
 }
 
 .carouselBtn {

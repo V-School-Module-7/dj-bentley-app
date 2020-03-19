@@ -1,0 +1,30 @@
+.musicPlayer {
+    @include pad-mar(10px, 10px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $darkColor;
+}
+
+.otherMusic {
+    @include pad-mar(5px, 5px);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $lightColor;
+    overflow: scroll;
+
+    img {
+        width: 100px;
+        height: 100px;
+        @include pad-mar(5px, 5px);
+    }
+
+    h3 {
+        @include pad-mar(5px, 5px);
+    }
+}
+
+.otherMusic:hover {
+    color: $secondaryAccentColor;
+}

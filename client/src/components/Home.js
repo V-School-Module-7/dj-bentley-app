@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Button from './Button'
 import Carousel from './Carousel'
 import About from './About'
+import MusicPlayer from './MusicPlayer'
+import FellowDjs from './FellowDjs'
 
 const Home = () => {
     const btnTest = () => {
@@ -10,7 +12,7 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div className="homePage">
             <div className="actionImage"></div>
 
             <div className="contentWrap">
@@ -20,7 +22,11 @@ const Home = () => {
 
                 <Carousel />
 
+                <MusicPlayer />
+
                 <About />
+
+                <FellowDjs />
 
                 <Link to="/event"><Button btnContent="Want to Book an event?" btnAction = {btnTest} /></Link>
 
