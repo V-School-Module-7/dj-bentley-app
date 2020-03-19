@@ -15,6 +15,16 @@
     background-color: $transparentDarkColor;
 }
 
+.homePage {
+    
+
+    .contentWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .actionImage {
     border: black solid 1px;
     width: 100%;
@@ -62,4 +72,47 @@ svg {
     width: 20px;
     transition: width 200ms, height 200ms;
     text-align: center;
+}
+
+.aboutPage {
+    border: 1px solid $darkColor;
+}
+
+.fellowDjs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 350px;
+
+    div {
+        overflow: scroll;
+        border-right: $transparentDarkColor 1px solid;
+        border-left: $transparentDarkColor 1px solid;
+    }
+
+    p {
+            text-align: center;
+    }
+}
+
+.fellowDjsPage {
+    border: solid black $darkColor;
+    background-color: $transparentDarkColor;
+    color: $lightColor;
+    width: 100%;
+
+    h3 {
+        border-bottom: $accentColor 1px solid;
+        width: 80%;
+        text-align: center;
+        @include pad-mar(10px, 5px auto);
+    }
+
+    h3:hover {
+        color: $secondaryAccentColor;
+    }
+
+    h2 {
+        @include pad-mar(20px, 10px);
+        text-align: center;
+    }
 }
