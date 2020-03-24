@@ -5,6 +5,7 @@ import Carousel from './Carousel'
 import About from './About'
 import MusicPlayer from './MusicPlayer'
 import FellowDjs from './FellowDjs'
+import InstagramFeed from './InstagramFeed'
 
 const Home = () => {
     const btnTest = () => {
@@ -17,14 +18,23 @@ const Home = () => {
 
             <div className="contentWrap">
 
+                <h1 className="headlineOne">headline one</h1>
+
+                <h1 className="headlineTwo">headline two</h1>
+
+                <h4 className="subTitle">subtitle</h4>
+
+                <p className="bodyText">body</p>
+
                 <h2 className="homeQuote">“I like to step out of the box and be as creative as possible, put things together that people don’t think they would hear together.” <span className="homeQuoteSignoff">- DJ Bentley</span></h2>
 
-
+                <MusicPlayer />
+                
                 <Carousel />
 
-                <MusicPlayer />
-
                 <About />
+
+                <InstagramFeed />
 
                 <FellowDjs />
 

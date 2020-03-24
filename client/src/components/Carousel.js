@@ -15,7 +15,7 @@ export default class Carousel extends React.Component {
             infinite
             visibleSlides="2"
         >
-            
+            <h1 className="headlineTwo">Photos</h1>
             <Slider>
                 {/* have pictures vary in how they are arrayed? have a modal effect? */}
                 <Slide index={0}>I am the first Slide.</Slide>

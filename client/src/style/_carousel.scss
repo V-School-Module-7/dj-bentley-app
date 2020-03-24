@@ -1,19 +1,27 @@
-.myCarousel {
+.myCarousel, .instaCarousel {
     @include pad-mar(30px, 10px);
-    background-color: $transparentDarkColor;
+    background-color: $darkColor;
     color: $lightColor;
     z-index: 1;
-    width: 100%;
+    width: 470px;
+    
+}
+
+.instaCarousel {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
 }
 
 .carouselBtn {
     background-color: $darkColor;
     @include pad-mar(5px, 5px);
     border-radius: 50%;
+    height: fit-content;
+    align-self: center;
 }
 
 .carouselBtn:hover {
-    box-shadow: $secondaryAccentColor 0px 0px 10px;
+    box-shadow: $accentColor 0px 0px 10px;
 
     svg {
         color: $accentColor;
