@@ -13,7 +13,8 @@
 
 body {
     height: 100%;
-    background-color: $lightColor;
+    background-color: $darkColor;
+    color: $lightColor;
 }
 
 .pageContainer {
@@ -36,6 +37,7 @@ header {
     color: $accentColor;
     border-bottom: 2px solid $accentColor;
     box-shadow: $accentColor 2px 2px 10px;
+    z-index: 100;
 
     a {
         h3 {
@@ -53,7 +55,7 @@ nav {
     }
 
     a:hover {
-        color: $secondaryAccentColor;
+        color: $accentColor;
     }
 }
 
@@ -66,7 +68,7 @@ footer {
     background-color: $darkColor;
     color: $accentColor;
     border-top: 2px solid $accentColor;
-    box-shadow: $accentColor 2px 2px 10px;
+    box-shadow: $accentColor -2px -2px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +80,6 @@ footer {
     }
 
     a:hover {
-        color: $secondaryAccentColor;
+        color: $accentColor;
     }
 }
