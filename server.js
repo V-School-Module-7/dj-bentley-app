@@ -9,7 +9,7 @@ const expressJwt = require('express-jwt')
 app.use(express.json())
 app.use(morgan('dev'))
 
-mongoose.connect('mongodb://localhost:27017/productsDB',
+mongoose.connect('mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -21,17 +21,16 @@ mongoose.connect('mongodb://localhost:27017/productsDB',
 
 // Routes
 app.use("/auth", require("./routes/authRouter"))
-app.use("/api", expressJwt({ secret: process.env.SECRET }))
 
-app.use("/gallery", require('./routes/productsRouter'))
-app.use("/api/gallery", require('./routes/productsRouter'))
 
 // Err handler
 app.use((err, res, next) => {
     console.log(err.message)
     if (err.name === "UnauthorizedError") {
-        res.status(err.status)
+        console.log("yo")
+        res.status(err.status).send(err)
     }
+    console.log("show this yo pls")
     return res.send({ errMsg: err.message })
 })
 
