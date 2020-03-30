@@ -11,7 +11,7 @@ const MusicPlayer = () => {
     }
 
     return (
-        <div>
+        <div className="section">
             <h1 className="headlineTwo">Mixes</h1>
 
         <div className="musicPlayer">

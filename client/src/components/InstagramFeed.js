@@ -37,10 +37,10 @@ const InstagramFeed = () => {
             naturalSlideHeight={550}
             totalSlides={6}
             className="instaCarousel"
-            // isPlaying="true"
+            isPlaying="true"
             infinite
             >
-                <ButtonBack className="carouselBtn"><FaAngleLeft /></ButtonBack>
+                {/* <ButtonBack className="carouselBtn"><FaAngleLeft /></ButtonBack> */}
                 <Slider>
                 {/* have pictures vary in how they are arrayed? have a modal effect? */}
 
@@ -60,7 +60,7 @@ const InstagramFeed = () => {
                             /></Slide>
                     )}
                 </Slider>
-                <ButtonNext className="carouselBtn"><FaAngleRight /></ButtonNext>
+                {/* <ButtonNext className="carouselBtn"><FaAngleRight /></ButtonNext> */}
             </CarouselProvider>
             
         </div>
