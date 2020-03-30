@@ -12,6 +12,10 @@
     color: $darkColor;
 }
 
+.section {
+    margin: 50px 0;
+}
+
 input[type=text] {
     background-color: $darkColor;
     color: $lightColor;
@@ -109,7 +113,7 @@ svg {
 
 .fellowDjsPage {
     width: 100%;
-    @include pad-mar(20px, 50px);
+    @include pad-mar(20px, 0px);
 
     h2 {
         @include pad-mar(20px, 10px);
@@ -118,6 +122,11 @@ svg {
 }
 
 .instaDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.imagesDiv {
     display: flex;
     flex-direction: row;
 }

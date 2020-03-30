@@ -36,6 +36,10 @@ body {
   color: #25282A;
 }
 
+.section {
+  margin: 50px 0;
+}
+
 input[type=text] {
   background-color: #25282A;
   color: #F2EFE9;
@@ -141,7 +145,7 @@ svg {
 .fellowDjsPage {
   width: 100%;
   padding: 20px;
-  margin: 50px;
+  margin: 0px;
 }
 
 .fellowDjsPage h2 {
@@ -160,20 +164,25 @@ svg {
           flex-direction: row;
 }
 
+.imagesDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .myCarousel, .instaCarousel {
-  padding: 30px;
-  margin: 10px;
   background-color: #25282A;
   color: #F2EFE9;
   z-index: 1;
-  width: 470px;
+  width: 410px;
 }
 
-.instaCarousel {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 10fr 1fr;
-      grid-template-columns: 1fr 10fr 1fr;
+.myCarousel {
+  border-width: 5px;
 }
 
 .carouselBtn {
@@ -224,6 +233,10 @@ svg {
 
 .carousel__dot--selected {
   background-color: #F001FF !important;
+}
+
+.carouselImg {
+  overflow: hidden;
 }
 
 .sideLink {
