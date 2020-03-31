@@ -21,16 +21,15 @@ mongoose.connect('mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/
 
 // Routes
 app.use("/auth", require("./routes/authRouter"))
+app.use("/api", expressJwt({ secret: process.env.SECRET }))
 
 
 // Err handler
-app.use((err, res, next) => {
-    console.log(err.message)
+app.use((err, req, res, next) => {
+    console.log(err)
     if (err.name === "UnauthorizedError") {
-        console.log("yo")
-        res.status(err.status).send(err)
+        res.status(err.status)
     }
-    console.log("show this yo pls")
     return res.send({ errMsg: err.message })
 })
 
