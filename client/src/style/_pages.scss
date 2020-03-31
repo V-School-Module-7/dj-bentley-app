@@ -3,16 +3,28 @@
 .btn, input[type=text] {
     @include pad-mar(8px, 10px);
     border-radius: 5px;
-    border: 1px solid $secondaryAccentColor;
-    background-color: $darkColor;
-    color: $lightColor;
+    border: 1px solid $accentColor;
     font-size: 20px;
 }
 
+.btn {
+    background-color: $lightColor;
+    color: $darkColor;
+}
+
+.section {
+    margin: 50px 0;
+}
+
+input[type=text] {
+    background-color: $darkColor;
+    color: $lightColor;
+}
+
 .btn:hover {
-    box-shadow: $secondaryAccentColor 0px 0px 10px;
-    color: $accentColor;
-    background-color: $transparentDarkColor;
+    box-shadow: $accentColor 0px 0px 50px;
+    // color: $accentColor;
+    // background-color: $darkColor;
 }
 
 .homePage {
@@ -26,17 +38,19 @@
 }
 
 .actionImage {
-    border: black solid 1px;
     width: 100%;
-    height: 75vh;
-    // background-color: $transparentDarkColor;
+    height: 65vh;
+    // background-color: $darkColor;
     // color: $lightColor;
     background-image: url('../assets/ActionImage_DJBentley.jpg');
     background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-shadow: -5px -5px 10px black inset;
 }
 
 .homeQuote {
-    border: dotted 3px $secondaryAccentColor;
+    border: dotted 3px $accentColor;
     border-radius: 5px;
     @include pad-mar(50px, 50px auto);
     width: 80%;
@@ -75,44 +89,44 @@ svg {
 }
 
 .aboutPage {
-    border: 1px solid $darkColor;
+    p {
+        font-size: 20px;
+    }
 }
 
 .fellowDjs {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 350px;
+    grid-template-columns: 1fr 1fr 1fr;
+    // height: 350px;
+    overflow: scroll;
 
     div {
-        overflow: scroll;
-        border-right: $transparentDarkColor 1px solid;
-        border-left: $transparentDarkColor 1px solid;
+        border-right: $darkColor 1px solid;
+        border-left: $darkColor 1px solid;
     }
 
     p {
-            text-align: center;
+        text-align: center;
+        @include pad-mar(5px, 0px auto);
     }
 }
 
 .fellowDjsPage {
-    border: solid black $darkColor;
-    background-color: $transparentDarkColor;
-    color: $lightColor;
     width: 100%;
-
-    h3 {
-        border-bottom: $accentColor 1px solid;
-        width: 80%;
-        text-align: center;
-        @include pad-mar(10px, 5px auto);
-    }
-
-    h3:hover {
-        color: $secondaryAccentColor;
-    }
+    @include pad-mar(20px, 0px);
 
     h2 {
         @include pad-mar(20px, 10px);
         text-align: center;
     }
+}
+
+.instaDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.imagesDiv {
+    display: flex;
+    flex-direction: row;
 }

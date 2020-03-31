@@ -5,6 +5,7 @@ import Carousel from './Carousel'
 import About from './About'
 import MusicPlayer from './MusicPlayer'
 import FellowDjs from './FellowDjs'
+import InstagramFeed from './InstagramFeed'
 
 const Home = () => {
     const btnTest = () => {
@@ -19,12 +20,18 @@ const Home = () => {
 
                 <h2 className="homeQuote">“I like to step out of the box and be as creative as possible, put things together that people don’t think they would hear together.” <span className="homeQuoteSignoff">- DJ Bentley</span></h2>
 
-
-                <Carousel />
-
+                
                 <MusicPlayer />
+                
+                
 
                 <About />
+
+                {/* <div className="imagesDiv section">
+                    <Carousel />
+
+                    <InstagramFeed />
+                </div> */}
 
                 <FellowDjs />
 

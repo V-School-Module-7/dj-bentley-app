@@ -3,21 +3,51 @@ body {
   font-family: 'Sen', sans-serif;
 }
 
+.headlineOne {
+  font-size: 104px;
+  text-align: center;
+}
+
+.headlineTwo {
+  font-size: 55px;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+}
+
+.subTitle {
+  font-size: 30px;
+}
+
+.bodyText {
+  font-size: 16px;
+}
+
 .btn, input[type=text] {
   padding: 8px;
   margin: 10px;
   border-radius: 5px;
   border: 1px solid #F001FF;
-  background-color: #292828;
-  color: #d6d5d5;
   font-size: 20px;
 }
 
+.btn {
+  background-color: #F2EFE9;
+  color: #25282A;
+}
+
+.section {
+  margin: 50px 0;
+}
+
+input[type=text] {
+  background-color: #25282A;
+  color: #F2EFE9;
+}
+
 .btn:hover {
-  -webkit-box-shadow: #F001FF 0px 0px 10px;
-          box-shadow: #F001FF 0px 0px 10px;
-  color: #02FE03;
-  background-color: rgba(41, 40, 40, 0.822);
+  -webkit-box-shadow: #F001FF 0px 0px 50px;
+          box-shadow: #F001FF 0px 0px 50px;
 }
 
 .homePage .contentWrap {
@@ -34,11 +64,14 @@ body {
 }
 
 .actionImage {
-  border: black solid 1px;
   width: 100%;
-  height: 75vh;
+  height: 65vh;
   background-image: url("../assets/ActionImage_DJBentley.jpg");
   background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: -5px -5px 10px black inset;
+          box-shadow: -5px -5px 10px black inset;
 }
 
 .homeQuote {
@@ -78,7 +111,7 @@ body {
 }
 
 svg {
-  color: #d6d5d5;
+  color: #F2EFE9;
   height: 20px;
   width: 20px;
   -webkit-transition: width 200ms, height 200ms;
@@ -86,45 +119,33 @@ svg {
   text-align: center;
 }
 
-.aboutPage {
-  border: 1px solid #292828;
+.aboutPage p {
+  font-size: 20px;
 }
 
 .fellowDjs {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  height: 350px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  overflow: scroll;
 }
 
 .fellowDjs div {
-  overflow: scroll;
-  border-right: rgba(41, 40, 40, 0.822) 1px solid;
-  border-left: rgba(41, 40, 40, 0.822) 1px solid;
+  border-right: #25282A 1px solid;
+  border-left: #25282A 1px solid;
 }
 
 .fellowDjs p {
   text-align: center;
+  padding: 5px;
+  margin: 0px auto;
 }
 
 .fellowDjsPage {
-  border: solid black #292828;
-  background-color: rgba(41, 40, 40, 0.822);
-  color: #d6d5d5;
   width: 100%;
-}
-
-.fellowDjsPage h3 {
-  border-bottom: #02FE03 1px solid;
-  width: 80%;
-  text-align: center;
-  padding: 10px;
-  margin: 5px auto;
-}
-
-.fellowDjsPage h3:hover {
-  color: #F001FF;
+  padding: 20px;
+  margin: 0px;
 }
 
 .fellowDjsPage h2 {
@@ -133,20 +154,48 @@ svg {
   text-align: center;
 }
 
-.myCarousel {
-  padding: 30px;
-  margin: 10px;
-  background-color: rgba(41, 40, 40, 0.822);
-  color: #d6d5d5;
+.instaDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.imagesDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.myCarousel, .instaCarousel {
+  background-color: #25282A;
+  color: #F2EFE9;
   z-index: 1;
-  width: 100%;
+  width: 410px;
+}
+
+.myCarousel {
+  border-width: 5px;
 }
 
 .carouselBtn {
-  background-color: #292828;
+  background-color: #25282A;
   padding: 5px;
   margin: 5px;
   border-radius: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .carouselBtn:hover {
@@ -155,7 +204,7 @@ svg {
 }
 
 .carouselBtn:hover svg {
-  color: #02FE03;
+  color: #F001FF;
 }
 
 .carouselNav {
@@ -179,15 +228,19 @@ svg {
   padding: 3px;
   margin: 3px;
   border-radius: 50%;
-  background-color: #d6d5d5;
+  background-color: #F2EFE9;
 }
 
 .carousel__dot--selected {
-  background-color: #02FE03 !important;
+  background-color: #F001FF !important;
+}
+
+.carouselImg {
+  overflow: hidden;
 }
 
 .sideLink {
-  background-color: rgba(41, 40, 40, 0.822);
+  background-color: #25282A;
   width: 40px;
   height: 40px;
   padding: 0px;
@@ -209,13 +262,13 @@ svg {
 .sideLink:hover {
   width: 50px;
   height: 50px;
-  background-color: #292828;
-  -webkit-box-shadow: #F001FF 0px 0px 10px;
-          box-shadow: #F001FF 0px 0px 10px;
+  background-color: #25282A;
+  -webkit-box-shadow: #F001FF 0px 0px 30px;
+          box-shadow: #F001FF 0px 0px 30px;
 }
 
 .sideLink:hover svg {
-  color: #02FE03;
+  color: #F001FF;
   height: 30px;
   width: 30px;
 }
@@ -229,8 +282,8 @@ svg {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #292828;
-  color: #d6d5d5;
+  background-color: #25282A;
+  color: #F2EFE9;
   text-align: center;
   border-radius: 6px;
   padding: 5px;
@@ -277,13 +330,13 @@ svg {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  background-color: #292828;
+  background-color: #25282A;
 }
 
 .otherMusic {
   padding: 5px;
   margin: 5px;
-  border: 1px solid black;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,7 +347,7 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #d6d5d5;
+  color: #F2EFE9;
   overflow: scroll;
 }
 
@@ -312,6 +365,7 @@ svg {
 
 .otherMusic:hover {
   color: #F001FF;
+  background-color: #F2EFE9;
 }
 
 * {
@@ -323,7 +377,8 @@ svg {
 
 body {
   height: 100%;
-  background-color: #d6d5d5;
+  background-color: #25282A;
+  color: #F2EFE9;
 }
 
 .pageContainer {
@@ -347,15 +402,16 @@ header {
           justify-content: space-between;
   padding: 15px;
   margin: 0px;
-  background-color: #292828;
-  color: #02FE03;
-  border-bottom: 2px solid #02FE03;
-  -webkit-box-shadow: #02FE03 2px 2px 10px;
-          box-shadow: #02FE03 2px 2px 10px;
+  background-color: #25282A;
+  color: #F001FF;
+  border-bottom: 2px solid #F001FF;
+  -webkit-box-shadow: #F001FF 2px 2px 10px;
+          box-shadow: #F001FF 2px 2px 10px;
+  z-index: 100;
 }
 
 header a h3 {
-  color: #02FE03;
+  color: #F001FF;
 }
 
 nav {
@@ -365,7 +421,7 @@ nav {
 nav a {
   text-decoration: none;
   padding: 0 15px;
-  color: #d6d5d5;
+  color: #F2EFE9;
 }
 
 nav a:hover {
@@ -379,11 +435,11 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #292828;
-  color: #02FE03;
-  border-top: 2px solid #02FE03;
-  -webkit-box-shadow: #02FE03 2px 2px 10px;
-          box-shadow: #02FE03 2px 2px 10px;
+  background-color: #25282A;
+  color: #F001FF;
+  border-top: 2px solid #F001FF;
+  -webkit-box-shadow: #F001FF -2px -2px 10px;
+          box-shadow: #F001FF -2px -2px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,7 +454,7 @@ footer {
 footer a {
   text-decoration: none;
   padding: 0 15px;
-  color: #d6d5d5;
+  color: #F2EFE9;
 }
 
 footer a:hover {

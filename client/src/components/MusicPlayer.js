@@ -11,7 +11,11 @@ const MusicPlayer = () => {
     }
 
     return (
+        <div className="section">
+            <h1 className="headlineTwo">Mixes</h1>
+
         <div className="musicPlayer">
+            
             <div>
                 <iframe title="mixcloud player" width="100%" height="400" src={song} frameBorder="0" ></iframe>
             </div>
@@ -26,7 +30,7 @@ const MusicPlayer = () => {
                     <h3>DJ Bentley Top 40 Dance Mix</h3>
                 </div>
             </div>
-            
+            </div>
         </div>
     )
 }

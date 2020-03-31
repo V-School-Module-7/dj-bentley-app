@@ -7,7 +7,8 @@
 
 .otherMusic {
     @include pad-mar(5px, 5px);
-    border: 1px solid black;
+    // border: 1px solid $lightColor;
+    border-radius: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,5 +27,6 @@
 }
 
 .otherMusic:hover {
-    color: $secondaryAccentColor;
+    color: $accentColor;
+    background-color: $lightColor;
 }
