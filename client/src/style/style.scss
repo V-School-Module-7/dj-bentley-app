@@ -4,6 +4,7 @@
 @import './carousel';
 @import './sideLink';
 @import './musicplayer';
+@import './mediaqueries';
 
 * {
     box-sizing: border-box;
@@ -22,10 +23,9 @@ body {
     min-height: 100vh;
 }
 
-.contentWrap {
-    padding: 20px 75px 150px 75px;
-    // padding-bottom: 150px;
-}
+// .contentWrap {
+//     padding: 20px 75px 150px 75px;
+// }
 
 header {
     display: flex;

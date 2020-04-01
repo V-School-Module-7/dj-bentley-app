@@ -2,12 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
 
-// $darkColor: rgb(22, 22, 22);
 $darkColor: #25282A;
-// $darkColor: rgba(41, 40, 40, 0.822);
 $lightColor: #F2EFE9;
-// $lightColor: rgb(241, 241, 241);
-// $accentColor: #02FE03;
 $accentColor: #F001FF;
 
 @mixin pad-mar($pad, $mar) {
@@ -19,18 +15,16 @@ body {
     font-family: 'Sen', sans-serif;
 }
 
-// headlines (h1...), subtitle 1 a/o 2, body 1 a/o 2, button, caption, overline
-
 .headlineOne {
     font-size: 104px;
     text-align: center;
 }
 
-.headlineTwo {
-    font-size: 55px;
-    text-align: center;
-    @include pad-mar(20px, 10px)
-}
+// .headlineTwo {
+//     font-size: 55px;
+//     text-align: center;
+//     @include pad-mar(20px, 10px)
+// }
 
 .subTitle {
     font-size: 30px;

@@ -1,7 +1,7 @@
 .musicPlayer {
     @include pad-mar(10px, 10px);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    // display: flex;
+    // grid-template-columns: 1fr 1fr;
     background-color: $darkColor;
 }
 
