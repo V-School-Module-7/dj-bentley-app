@@ -1,0 +1,87 @@
+@media only screen and (max-width: 600px) {
+    .actionImage {
+        height: 150px;
+    }
+
+    .contentWrap {
+        padding: 20px 10px 150px 10px;
+    }
+
+    .homeQuote {
+        @include pad-mar(20px, 50px auto);
+    }
+
+    .musicPlayer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fellowDjs {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .headlineTwo {
+        font-size: 35px;
+        text-align: center;
+        @include pad-mar(20px, 10px)
+    }
+}
+
+//lots of styles from big screen work for this size
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+    .actionImage {
+        height: 200px;
+    }
+
+    .contentWrap {
+        padding: 20px 25px 150px 25px;
+    }
+
+    .homeQuote {
+        @include pad-mar(30px, 50px auto);
+    }
+
+    .musicPlayer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fellowDjs {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .headlineTwo {
+        font-size: 45px;
+        text-align: center;
+        @include pad-mar(20px, 10px)
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .actionImage {
+        height: 65vh;
+    }
+
+    .contentWrap {
+        padding: 20px 75px 150px 75px;
+    }
+
+    .homeQuote {
+        @include pad-mar(50px, 50px auto);
+    }
+
+    .musicPlayer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .fellowDjs {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .headlineTwo {
+        font-size: 55px;
+        text-align: center;
+        @include pad-mar(20px, 10px)
+    }
+}
