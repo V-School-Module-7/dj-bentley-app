@@ -16,7 +16,7 @@ body {
   font-size: 16px;
 }
 
-.btn, input[type=text] {
+.btn, input[type=text], input[type=password] {
   padding: 8px;
   margin: 10px;
   border-radius: 5px;
@@ -33,7 +33,7 @@ body {
   margin: 50px 0;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
   background-color: #25282A;
   color: #F2EFE9;
 }
@@ -141,16 +141,6 @@ svg {
   padding: 20px;
   margin: 10px;
   text-align: center;
-}
-
-.instaDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .imagesDiv {
@@ -383,6 +373,16 @@ svg {
     padding: 20px;
     margin: 10px;
   }
+  .instaDiv {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .instaDiv img {
+    padding: 0px;
+    margin: 10px;
+  }
 }
 
 @media only screen and (max-width: 900px) and (min-width: 600px) {
@@ -415,6 +415,16 @@ svg {
     padding: 20px;
     margin: 10px;
   }
+  .instaDiv {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  img {
+    padding: 0px;
+    margin: 30px;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -446,6 +456,16 @@ svg {
     text-align: center;
     padding: 20px;
     margin: 10px;
+  }
+  .instaDiv {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .instaDiv img {
+    padding: 0px;
+    margin: 50px;
   }
 }
 

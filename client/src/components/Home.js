@@ -27,11 +27,11 @@ const Home = () => {
 
                 <About />
 
-                {/* <div className="imagesDiv section">
-                    <Carousel />
+                <div className="imagesDiv section">
+                    {/* <Carousel /> */}
 
                     <InstagramFeed />
-                </div> */}
+                </div>
 
                 <FellowDjs />
 
