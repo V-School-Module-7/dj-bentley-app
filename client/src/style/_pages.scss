@@ -120,7 +120,44 @@ svg {
     }
 }
 
+.instaDiv {
+    img {
+        border-radius: 10px;
+        border: #F001FF 1px solid;
+        box-shadow: #F001FF 0px 0px 15px 1px;
+    }
+}
+
 .imagesDiv {
     display: flex;
     flex-direction: row;
+}
+
+#drop {
+    position: absolute;
+    background-color: $darkColor;
+    border: #F001FF 1px solid;
+    display: flex;
+    flex-direction: column;
+    top: 55px;
+
+    a {
+        padding: 15px;
+    }
+}
+
+.dropdownArrow {
+    position: relative;
+    right: 10px;
+}
+
+.dropdownArrow:hover {
+    color: $accentColor;
+}
+
+.hidden {
+    a {
+        display: none;
+        color: red;
+    }
 }

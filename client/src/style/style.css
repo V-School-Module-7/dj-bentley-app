@@ -143,6 +143,13 @@ svg {
   text-align: center;
 }
 
+.instaDiv img {
+  border-radius: 10px;
+  border: #F001FF 1px solid;
+  -webkit-box-shadow: #F001FF 0px 0px 15px 1px;
+          box-shadow: #F001FF 0px 0px 15px 1px;
+}
+
 .imagesDiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,6 +158,38 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+#drop {
+  position: absolute;
+  background-color: #25282A;
+  border: #F001FF 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 55px;
+}
+
+#drop a {
+  padding: 15px;
+}
+
+.dropdownArrow {
+  position: relative;
+  right: 10px;
+}
+
+.dropdownArrow:hover {
+  color: #F001FF;
+}
+
+.hidden a {
+  display: none;
+  color: red;
 }
 
 .myCarousel, .instaCarousel {
@@ -513,6 +552,13 @@ header a h3 {
 
 nav {
   z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 nav a {
