@@ -1,27 +1,30 @@
-const express = require('express')
+const express = require("express")
 const app = express()
+const morgan = require("morgan")
+const mongoose = require("mongoose")
+const expressJwt = require("express-jwt")
+const PORT = process.env.PORT || 5684
 require("dotenv").config()
-const PORT = process.env.PORT || 7000
-const morgan = require('morgan')
-const mongoose = require('mongoose')
-const expressJwt = require('express-jwt')
 
 app.use(express.json())
-app.use(morgan('dev'))
+app.use(morgan("dev"))
 
-mongoose.connect('mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley',
+mongoose.connect("mongodb://localhost:27017/bentleydb", 
     {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: false,
-        useCreateIndex: true
-    })
-    .then(() => console.log(`Connected to DB.`))
-    .catch(() => console.log(err))
+        useFindAndModify: true,
+        useCreateIndex: false,
+        useUnifiedTopology: true
+
+    }, () => console.log('connected to database'))
 
 // Routes
 app.use("/auth", require("./routes/authRouter"))
 app.use("/api", expressJwt({ secret: process.env.SECRET }))
+app.use("/info", require("./routes/infoRouter"))
+app.use("/api/editmix", require("./routes/mixRouter"))
+app.use("/api/perform", require("./routes/performRouter"))
+app.use("/api/text", require("./routes/textRouter"))
 
 
 // Err handler
