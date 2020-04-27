@@ -9,7 +9,7 @@ require("dotenv").config()
 app.use(express.json())
 app.use(morgan("dev"))
 
-mongoose.connect("mongodb://localhost:27017/bentleydb", 
+mongoose.connect('mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley' ||"mongodb://localhost:27017/bentleydb", 
     {
         useNewUrlParser: true,
         useFindAndModify: true,
