@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import Button from './Button'
 import {UserContext} from '../context/userProvider'
+import Header from './Header'
 
 const Login = () => {
     const initAuth = {
@@ -28,6 +29,7 @@ const Login = () => {
 
     return (
         <div className="loginPage">
+            <Header />
             {/* <h2>Admin Login</h2> */}
             <form className="login" onSubmit={handleSubmit}>
                 <input 
