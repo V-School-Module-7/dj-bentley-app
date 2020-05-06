@@ -22,14 +22,9 @@ const Header = (props) => {
                     <a href="https://www.instagram.com/djbentleytaylor/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
                     <a href="https://www.mixcloud.com/djbentleytaylor/" target="_blank" rel="noopener noreferrer"><FaMixcloud /></a>
                 </div>
-                
-
-                {/* { token && <Link onClick={logout}>Logout</Link>} */}
             </nav>
         </header>
     )
 }
 
 export default Header
-
-//keep semi-transparent or keep opaque?

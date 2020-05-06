@@ -1,30 +1,44 @@
 // most of the styling will be here. Any components, pages, ect
 
-.btn, input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=date], input[type=time], textarea {
     @include pad-mar(8px, 10px);
     border-radius: 5px;
-    border: 1px solid $accentColor;
+    border: none;
+    border-bottom: 1px solid $lightColor;
     font-size: 20px;
+    background: none;
+    color: $lightColor;
+}
+
+input[type=date]:invalid {
+    color: $lightColor;
+}
+
+::placeholder {
+    color: $lightColor;
+    opacity: 64%;
+}
+
+textarea {
+    border: none;
+    border-bottom: 1px solid $lightColor;
 }
 
 .btn {
-    background-color: $lightColor;
-    color: $darkColor;
+    background: none;
+    color: $lightColor;
+    border: 1px solid $lightColor;
+    font-size: 20px;
+    @include pad-mar(8px, 10px);
+    border-radius: 5px;
 }
 
 .section {
     margin: 50px 0;
 }
 
-input[type=text], input[type=password] {
-    background-color: $darkColor;
-    color: $lightColor;
-}
-
 .btn:hover {
     box-shadow: $accentColor 0px 0px 50px;
-    // color: $accentColor;
-    // background-color: $darkColor;
 }
 
 .homePage {
@@ -39,7 +53,6 @@ input[type=text], input[type=password] {
 
 .actionImage {
     width: 100%;
-    // height: 65vh;
     background-image: url('../assets/ActionImage_DJBentley.jpg');
     background-size: 100%;
     background-attachment: fixed;
@@ -51,7 +64,6 @@ input[type=text], input[type=password] {
 .homeQuote {
     border: dotted 3px $accentColor;
     border-radius: 5px;
-    // @include pad-mar(50px, 50px auto);
     width: 80%;
 }
 
@@ -92,7 +104,7 @@ svg {
     right: 0;
 }
 
-.aboutPage {
+.aboutPage, .eventPage {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
