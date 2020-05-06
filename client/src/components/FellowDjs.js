@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { FaCircle } from 'react-icons/fa'
 
 const FellowDjs = () => {
     const artists = [
@@ -160,16 +161,86 @@ const FellowDjs = () => {
         }
     ]
 
+    const [chosenArtists, setChosenArtists] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+
+    const createNewNumbers = () => {
+        const nameHolder = []
+
+        for (let i = 0; i < chosenArtists.length; i++) {
+            if (chosenArtists[i] === chosenArtists.length - 1) {
+                nameHolder.push(0)
+            } else {
+                nameHolder.push(chosenArtists[i] + 1)
+            }
+        }
+
+        setChosenArtists(nameHolder)
+        console.log(chosenArtists)
+
+        document.getElementById('fellowDjs').classList.toggle('opacity')
+        document.getElementById('fellowDjs').classList.toggle('undoOpacity')
+    }
+    
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         createNewNumbers()
+    //     }, 5000);
+    
+    //     return () => {
+    //         clearInterval(interval);
+    //     };
+    // });
+
     return (
         <div className="fellowDjsPage">
-            <div>
-                <section></section>
+            <div className='fDjBanner'>
+                <section className='fDjBannerOne'></section>
                 <h2>Featured Artists</h2>
-                <section></section>
+                <section className='fDjBannerTwo'></section>
             </div>
             
-            <div className="fellowDjs">
-                    { artists.map((dj) => <p key={dj.key}>{dj.artistName}</p>)}
+            <div className="fellowDjs undoOpacity" id='fellowDjs'>
+                {/* <button onClick={createNewNumbers}>Change Names</button> */}
+                    {/* { chosenArtists.map((dj) => <p key={artists[dj].key}>{artists[dj].artistName}</p>)} */}
+                    
+                    <p className='fDjName' key={artists[chosenArtists[0]].key}>{artists[chosenArtists[0]].artistName}</p>
+
+                    <FaCircle />
+
+                    <p className='fDjName' key={artists[chosenArtists[1]].key}>{artists[chosenArtists[1]].artistName}</p>
+
+                    <p className='fDjNameAccent' key={artists[chosenArtists[2]].key}>{artists[chosenArtists[2]].artistName}</p>
+
+                    <p className='fDjName' key={artists[chosenArtists[3]].key}>{artists[chosenArtists[3]].artistName}</p>
+
+                    <FaCircle />
+
+                    <p className='fDjName' key={artists[chosenArtists[4]].key}>{artists[chosenArtists[4]].artistName}</p>
+                    
+                    <p className='fDjNameAccent' key={artists[chosenArtists[5]].key}>{artists[chosenArtists[5]].artistName}</p>
+
+                    <p className='fDjName' key={artists[chosenArtists[6]].key}>{artists[chosenArtists[6]].artistName}</p>
+
+                    <FaCircle />
+
+                    <p className='fDjName' key={artists[chosenArtists[7]].key}>{artists[chosenArtists[7]].artistName}</p>
+
+                    <p className='fDjNameAccent' key={artists[chosenArtists[8]].key}>{artists[chosenArtists[8]].artistName}</p>
+
+                    <p className='fDjName' key={artists[chosenArtists[9]].key}>{artists[chosenArtists[9]].artistName}</p>
+
+                    <FaCircle />
+                    
+                    <p className='fDjName' key={artists[chosenArtists[10]].key}>{artists[chosenArtists[10]].artistName}</p>
+
+                    {/* <p key={artists[chosenArtists[11]].key}>{artists[chosenArtists[11]].artistName}</p>
+
+                    <p key={artists[chosenArtists[12]].key}>{artists[chosenArtists[12]].artistName}</p>
+
+                    <p key={artists[chosenArtists[13]].key}>{artists[chosenArtists[13]].artistName}</p>
+
+                    <p key={artists[chosenArtists[14]].key}>{artists[chosenArtists[14]].artistName}</p> */}
+                    
             </div>
         </div>
     )
