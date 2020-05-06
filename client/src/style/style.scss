@@ -28,15 +28,15 @@ body {
 // }
 
 header {
-    display: flex;
+    // display: flex;
     position: sticky;
     top: 0;
-    justify-content: space-between;
+    // justify-content: space-between;
     @include pad-mar(15px, 0px);
     background-color: $headerColor;
     color: $accentColor;
-    border-bottom: 2px solid $accentColor;
-    box-shadow: $accentColor 2px 2px 10px;
+    // border-bottom: 2px solid $accentColor;
+    // box-shadow: $accentColor 2px 2px 10px;
     z-index: 10;
 
     a {
@@ -50,15 +50,21 @@ nav {
     z-index: 20;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        flex-direction: row;
+    }
+    p {
+        padding: 0 15px;
+        color: $lightColor;
+    }
     
     a {
         text-decoration: none;
         padding: 0 15px;
         color: $lightColor;
-    }
-
-    a:hover {
-        color: $accentColor;
     }
 }
 
@@ -68,10 +74,10 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: $darkColor;
+    background-color: $headerColor;
     color: $accentColor;
-    border-top: 2px solid $accentColor;
-    box-shadow: $accentColor -2px -2px 10px;
+    // border-top: 2px solid $accentColor;
+    // box-shadow: $accentColor -2px -2px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,97 +98,98 @@ footer {
 .headerImg {
     height: 100vh;
     background-image: url('../assets/ActionImage_DJBentley.jpg');
-    background-size: 100%;
-    
-
-    div {
-        // height: 100%;
-        position: absolute;
-        // filter: grayscale(0);
-    }
-
-    .overlayone {
-        background-color: $headerOverlayOne;
-        height: 100%;
-    }
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
-.arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 40vw solid transparent;
-    border-right: 40vw solid transparent;
-    border-bottom: 100vh solid $headerOverlayTwo;
-}
 
-.arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 40vw solid transparent;
-    border-right: 40vw solid transparent;
-    border-top: 100vh solid $headerOverlayThree;
-    right: 0;
-}
+// .contentCard {
+//     border: black solid 1px;
+//     width: 70%;
+//     height: 70vh;
+//     position: absolute;
+//     margin-top: 50px;
+// }
 
-.contentCard {
-    border: black solid 1px;
-    width: 70%;
-    height: 70vh;
-    position: absolute;
-    margin-top: 50px;
-}
+// .cards {
+//     height: 100vh;
+//     // display: flex;
+//     // align-items: center;
+//     margin: 25px;
+//     position: relative;
 
-.cards {
-    height: 100vh;
-    // display: flex;
-    // align-items: center;
-    margin: 25px;
-    position: relative;
+//     button {
+//         margin: 20px;
+//     }
+// }
 
-    button {
-        margin: 20px;
-    }
-}
+// #cardOne {
+//     background-color: blue;
+//     top: 0px;
+// }
 
-#cardOne {
-    background-color: blue;
-    top: 0px;
-}
+// #cardTwo {
+//     background-color: orange;
+//     top: 10px;
+//     left: 10%;
+// }
 
-#cardTwo {
-    background-color: orange;
-    top: 10px;
-    left: 10%;
-}
+// #cardThree {
+//     background-color: gray;
+//     top: 20px;
+//     left: 20%;
+// }
 
-#cardThree {
-    background-color: gray;
-    top: 20px;
-    left: 20%;
-}
+// #cardFour {
+//     background-color: pink;
+//     top: 30px;
+//     left: 30%;
+// }  
 
-#cardFour {
-    background-color: pink;
-    top: 30px;
-    left: 30%;
-}  
+// .cardPosOne {
+//     z-index: 4;
+// }
 
-.cardPosOne {
-    z-index: 4;
-}
+// .cardPosTwo {
+//     z-index: 3;
+// }
 
-.cardPosTwo {
-    z-index: 3;
-}
+// .cardPosThree {
+//     z-index: 2;
+// }
 
-.cardPosThree {
-    z-index: 2;
-}
-
-.cardPosFour {
-    z-index: 1;
-}
+// .cardPosFour {
+//     z-index: 1;
+// }
 
 .aboutModal {
     z-index: 10;
+}
+
+.aboutImage {
+    background-color: pink;
+}
+
+.aboutContent {
+    padding: 25px;
+}
+
+.imageGallery {
+    padding: 50px 20px 160px;
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+}
+
+.iGSlider {
+    max-height: 80vh;
+}
+
+.imgGalBtn {
+    background: none;
+    border: none;
+
+    svg {
+        height: 50px;
+        width: 50px;
+    }
 }

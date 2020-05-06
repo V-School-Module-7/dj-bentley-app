@@ -87,7 +87,16 @@ svg {
     text-align: center;
 }
 
+.svgRight {
+    position: absolute;
+    right: 0;
+}
+
 .aboutPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 100%;
     padding: 30px;
     p {
         font-size: 20px;
@@ -118,6 +127,11 @@ svg {
     h2 {
         @include pad-mar(20px, 10px);
         text-align: center;
+        background-color: $headerColor;
+        // border-top: $headerColor solid 50px;
+        // border-bottom: $headerColor solid 50px;
+        // border-left: transparent solid 50px;
+        // border-right: transparent solid 50px;
     }
 }
 
@@ -134,27 +148,6 @@ svg {
     flex-direction: row;
 }
 
-#drop {
-    position: absolute;
-    background-color: $darkColor;
-    border: #F001FF 1px solid;
-    display: flex;
-    flex-direction: column;
-    top: 55px;
-
-    a {
-        padding: 15px;
-    }
-}
-
-.dropdownArrow {
-    position: relative;
-    right: 10px;
-}
-
-.dropdownArrow:hover {
-    color: $accentColor;
-}
 
 .hidden {
     a {

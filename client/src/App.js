@@ -38,11 +38,13 @@ function App() {
 	const aboutModalStyles = {
         overlay: {
             zIndex: 20,
-            margin: '20px',
+            margin: '0px',
             backgroundColor: 'none'
         },
         content: {
-            background: 'gray'
+			background: 'gray',
+			margin: 0,
+			padding: 0
         }
     }
 	
@@ -74,7 +76,7 @@ function App() {
 			contentLabel="About Modal"
 			style={aboutModalStyles}
 		>
-			<h3 onClick={closeAboutModal}><FaTimes style={{color: 'black', float:'right', margin: '10px'}} /></h3>
+			<h3 onClick={closeAboutModal} className="svgRight"><FaTimes style={{color: 'black', float:'right', margin: '10px'}} /></h3>
 			<About />
 		</Modal>
 
@@ -84,7 +86,7 @@ function App() {
 			contentLabel="Book Modal"
 			style={aboutModalStyles}
 		>
-			<h3 onClick={closeBookModal}><FaTimes style={{color: 'black', float:'right', margin: '10px'}} /></h3>
+			<h3 onClick={closeBookModal} className="svgRight"><FaTimes style={{color: 'black', float:'right', margin: '10px'}} /></h3>
 			<EventPage />
 		</Modal>
 
