@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-import Button from './Button'
 import {UserContext} from '../context/userProvider'
 import Header from './Header'
 
@@ -23,7 +22,7 @@ const Login = () => {
     const handleSubmit = e => {
         e.preventDefault()
         login(auth)
-        // alert(auth.username + auth.password)
+        
         setAuth(initAuth)
     }
 
@@ -47,7 +46,8 @@ const Login = () => {
                     onChange={handleChange}
                 />
                 <p>{authErrMsg}</p>
-                <Button btnAction={handleSubmit} btnContent="Submit" />
+                
+                <button className='btn' onClick={handleSubmit}>Submit</button>
             </form>
         </div>
     )

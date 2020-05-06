@@ -1,6 +1,6 @@
 import React from 'react'
 import emailjs from 'emailjs-com'
-import Calendar from 'react-calendar'
+// import Calendar from 'react-calendar'
 
 const EventPage = () => {
     function sendEmail(e) {
@@ -15,29 +15,28 @@ const EventPage = () => {
     }
 
     return (
-        <div className="contentWrap">
-            <h1>Booking</h1>
-            <h3>
-                Request to book me for an event with this form,
-                and I will follow up with you via email. Please
-                note that I am unavailable on calendar dates that
-                have been blocked out.
-            </h3>
-            <form className="contact-form" onSubmit={sendEmail}>
+        <div className="eventPage">
+            
+            <form className="contact-form aboutContent" onSubmit={sendEmail}>
+                <h1>Hit Me Up!</h1>
                 <input type="hidden" name="contact_number" />
-                <label>Name</label>
-                <input type="text" name="user_name" />
-                <label>Email</label>
-                <input type="text" name="user_email" />
-                <br />
-                <label>Event Details & Location</label>
-                <br />
-                <textarea name="message" rows="20" cols="70" />
-                <br />
-                <input type="submit" value="Send" />
+                
+                <input type="text" name="user_name" placeholder='Name' />
+                
+                <input type="text" name="user_email" placeholder='Email' />
+                
+                <input type="text" name="venue_location" placeholder='Venue Location' />
+                
+                <input type='date' placeholder='date' name='requested_date' />
+
+                <input type='time' placeholder='Time' name='time' />
+
+                <textarea name="message" placeholder='Your Message' />
+                
+                <input type="submit" value="Send" className='btn' />
             </form>
-            <div className="bookingCalendar">
-                <Calendar />
+
+            <div className='aboutImage'>
 
             </div>
         </div>
