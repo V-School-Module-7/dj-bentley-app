@@ -162,14 +162,15 @@ const FellowDjs = () => {
 
     return (
         <div className="fellowDjsPage">
-            <h1 className="headlineTwo">Performed Along</h1>
-
-            {/* <h2 className="subTitle">DJ Bentley has performed along side such artist as:</h2> */}
-
+            <div>
+                <section></section>
+                <h2>Featured Artists</h2>
+                <section></section>
+            </div>
+            
             <div className="fellowDjs">
                     { artists.map((dj) => <p key={dj.key}>{dj.artistName}</p>)}
             </div>
-            
         </div>
     )
 }

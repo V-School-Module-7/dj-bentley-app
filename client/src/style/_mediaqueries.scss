@@ -20,12 +20,6 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .headlineTwo {
-        font-size: 35px;
-        text-align: center;
-        @include pad-mar(20px, 10px)
-    }
-
     .instaDiv {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -59,12 +53,6 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .headlineTwo {
-        font-size: 45px;
-        text-align: center;
-        @include pad-mar(20px, 10px)
-    }
-
     .instaDiv {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -90,17 +78,11 @@
 
     .musicPlayer {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .fellowDjs {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .headlineTwo {
-        font-size: 55px;
-        text-align: center;
-        @include pad-mar(20px, 10px)
     }
 
     .instaDiv {
@@ -109,6 +91,15 @@
 
         img {
             @include pad-mar(0px, 50px);
+        }
+    }
+
+    .musicFellow {
+        display: flex;
+        flex-direction: row;
+
+        div {
+            width: 100%;
         }
     }
 }
