@@ -117,27 +117,30 @@ svg {
 
 .fellowDjs {
     display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    // height: 350px;
+    grid-template-columns: 3fr 1fr 3fr;
     overflow: scroll;
+    height: 90%;
 
     div {
         border-right: $darkColor 1px solid;
         border-left: $darkColor 1px solid;
+        display: flex;
     }
 
     p {
         text-align: center;
         @include pad-mar(5px, 0px auto);
+        align-self: center;
+        padding: 15px;
     }
 }
 
 .fellowDjsPage {
     width: 100%;
-    @include pad-mar(20px, 0px);
+    @include pad-mar(10px, 10px);
 
     h2 {
-        @include pad-mar(20px, 10px);
+        @include pad-mar(20px, 10px 0px);
         text-align: center;
         background-color: $headerColor;
         // border-top: $headerColor solid 50px;
@@ -145,6 +148,55 @@ svg {
         // border-left: transparent solid 50px;
         // border-right: transparent solid 50px;
     }
+
+    svg {
+        align-self: center;
+        margin: auto;
+        height: 10px;
+        width: 10px;
+        color: $darkColor;
+    }
+}
+
+.fDjBanner {
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+}
+
+.fDjBannerOne {
+    margin: 10px 0px;
+    border-left: 10px solid transparent;
+    border-top: 35px solid $headerColor;
+    border-bottom: 35px solid $headerColor;
+}
+
+.fDjBannerTwo {
+    margin: 10px 0px;
+    border-right: 10px solid transparent;
+    border-top: 35px solid $headerColor;
+    border-bottom: 35px solid $headerColor;
+}
+
+.fDjName {
+    color: $darkColor;
+    font-size: 25px;
+}
+
+.fDjNameAccent {
+    color: $headerColor;
+    grid-column: 1 / 4;
+    font-size: 25px;
+    font-size: 30px;
+}
+
+.opacity {
+    transition: opacity 5s;
+    opacity: 40%;
+}
+
+.undoOpacity {
+    transition: opacity 5s;
+    opacity: 100%;
 }
 
 .instaDiv {
@@ -153,6 +205,10 @@ svg {
         border: #F001FF 1px solid;
         box-shadow: #F001FF 0px 0px 15px 1px;
     }
+}
+
+.musicFellow {
+    margin: 100px 0;
 }
 
 .imagesDiv {

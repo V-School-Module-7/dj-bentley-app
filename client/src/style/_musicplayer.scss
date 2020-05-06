@@ -1,6 +1,11 @@
 .musicPlayer {
     @include pad-mar(10px, 10px);
     background-color: $darkColor;
+    height: 90vh;
+}
+
+.musicList {
+    overflow: scroll;
 }
 
 .otherMusic {
