@@ -1,6 +1,6 @@
 .musicPlayer {
     @include pad-mar(10px, 10px);
-    background-color: $darkColor;
+    // background-color: $darkColor;
     height: 90vh;
 }
 
@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: $lightColor;
+    color: $darkColor;
     overflow: scroll;
 
     img {
@@ -29,6 +29,6 @@
 }
 
 .otherMusic:hover {
-    color: $accentColor;
-    background-color: $lightColor;
+    color: $headerColor;
+    background-color: $darkColor;
 }

@@ -38,9 +38,26 @@ function App() {
             backgroundColor: 'none'
         },
         content: {
-			background: 'gray',
+			background: '#F2EFE9',
 			margin: 0,
-			padding: 0
+			padding: 0,
+			color: '#25282A',
+			border: 'none',
+			borderRadius: '3px'
+        }
+    }
+	const bookModalStyles = {
+        overlay: {
+            zIndex: 20,
+            margin: '0px',
+			backgroundColor: 'none'
+        },
+        content: {
+			background: '#AE5E15',
+			margin: 0,
+			padding: 0,
+			border: 'none',
+			borderRadius: '3px'
         }
     }
 	
@@ -69,7 +86,7 @@ function App() {
 			isOpen={bookModalIsOpen}
 			onRequestClose={closeBookModal}
 			contentLabel="Book Modal"
-			style={aboutModalStyles}
+			style={bookModalStyles}
 		>
 			<h3 onClick={closeBookModal} className="svgRight"><FaTimes style={{color: 'black', float:'right', margin: '10px'}} /></h3>
 			<EventPage />
