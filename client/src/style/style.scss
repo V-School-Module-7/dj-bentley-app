@@ -104,6 +104,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    // color: $darkColor;
     
     h1 {
         text-align: center;
@@ -114,10 +115,12 @@ footer {
     padding: 50px 20px 160px;
     display: grid;
     grid-template-columns: 1fr 12fr 1fr;
+    background-color: $imageGalBackground;
 }
 
 .iGSlider {
     max-height: 80vh;
+    box-shadow: $darkColor 5px 3px 5px;
 }
 
 .imgGalBtn {

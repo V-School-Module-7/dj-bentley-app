@@ -181,15 +181,15 @@ const FellowDjs = () => {
         document.getElementById('fellowDjs').classList.toggle('undoOpacity')
     }
     
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         createNewNumbers()
-    //     }, 5000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            createNewNumbers()
+        }, 5000);
     
-    //     return () => {
-    //         clearInterval(interval);
-    //     };
-    // });
+        return () => {
+            clearInterval(interval);
+        };
+    });
 
     return (
         <div className="fellowDjsPage">

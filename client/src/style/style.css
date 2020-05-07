@@ -266,7 +266,8 @@ svg {
 }
 
 .musicFellow {
-  margin: 100px 0;
+  padding: 100px 0;
+  background-color: #F2EFE9;
 }
 
 .imagesDiv {
@@ -352,7 +353,6 @@ svg {
 .musicPlayer {
   padding: 10px;
   margin: 10px;
-  background-color: #25282A;
   height: 90vh;
 }
 
@@ -374,7 +374,7 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #F2EFE9;
+  color: #25282A;
   overflow: scroll;
 }
 
@@ -391,8 +391,8 @@ svg {
 }
 
 .otherMusic:hover {
-  color: #F001FF;
-  background-color: #F2EFE9;
+  color: #F58C2B;
+  background-color: #25282A;
 }
 
 @media only screen and (max-width: 600px) {
@@ -649,10 +649,13 @@ footer a:hover {
   display: grid;
   -ms-grid-columns: 1fr 12fr 1fr;
       grid-template-columns: 1fr 12fr 1fr;
+  background-color: #5AD6DE;
 }
 
 .iGSlider {
   max-height: 80vh;
+  -webkit-box-shadow: #25282A 5px 3px 5px;
+          box-shadow: #25282A 5px 3px 5px;
 }
 
 .imgGalBtn {
