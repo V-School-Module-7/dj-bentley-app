@@ -1,6 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import IndMusic from './IndMusic'
+import { UserContext } from '../context/userProvider'
 
 const MusicPlayer = () => {
+    const { dataState } = useContext(UserContext)
+
     const initSong = "https://www.mixcloud.com/widget/iframe/?feed=%2Fdjbentleytaylor%2Fdj-bentley-top-40-dance-mix%2F"
     
 
@@ -10,6 +14,19 @@ const MusicPlayer = () => {
         setSong(song)
     }
 
+    const testData = [
+        {
+            url:'https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/d/6/3/1/3fd1-8887-446a-a0b7-ee924484feeb.jpg',
+            mixName: 'DJ Bentley Top 40 Dance Mix',
+            key: 0
+        },
+        {
+            url:'https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/d/6/3/1/3fd1-8887-446a-a0b7-ee924484feeb.jpg',
+            mixName: 'DJ Bentley Top 40 Dance Mix',
+            key: 1
+        }
+    ]
+
     return (
         <div className="musicPlayer">
             
@@ -18,20 +35,9 @@ const MusicPlayer = () => {
             </div>
 
             <div className='musicList'>
-                <div className="otherMusic" onClick={() => handleSongChange("https://www.mixcloud.com/widget/iframe/?feed=%2Fdjbentleytaylor%2Fdj-bentley-top-40-dance-mix%2F")}>
-                    <img alt="DJ Bentley Top 40 Dance Mix" src="https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/d/6/3/1/3fd1-8887-446a-a0b7-ee924484feeb.jpg" />
-                    <h3>DJ Bentley Top 40 Dance Mix</h3>
-                </div>
-                <div className="otherMusic" onClick={() => handleSongChange("https://www.mixcloud.com/widget/iframe/?feed=%2Fdjbentleytaylor%2Fdj-bentley-top-40-dance-mix%2F")}>
-                    <img alt="DJ Bentley Top 40 Dance Mix" src="https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/d/6/3/1/3fd1-8887-446a-a0b7-ee924484feeb.jpg" />
-                    <h3>DJ Bentley Top 40 Dance Mix</h3>
-                </div>
-                <div className="otherMusic" onClick={() => handleSongChange("https://www.mixcloud.com/widget/iframe/?feed=%2Fdjbentleytaylor%2Fdj-bentley-top-40-dance-mix%2F")}>
-                    <img alt="DJ Bentley Top 40 Dance Mix" src="https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/d/6/3/1/3fd1-8887-446a-a0b7-ee924484feeb.jpg" />
-                    <h3>DJ Bentley Top 40 Dance Mix</h3>
-                </div>
+                { dataState.mixData.map((ind) => <IndMusic key={ind._id} {...ind} theKey={ind._id} handleSongChange={handleSongChange} />)}
             </div>
-            </div>
+        </div>
     )
 }
 

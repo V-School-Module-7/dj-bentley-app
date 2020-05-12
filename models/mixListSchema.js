@@ -6,7 +6,7 @@ const mixListSchema = new Schema({
         required: true,
         type: String
     },
-    imgUrl: {
+    mixName: {
         required: true,
         type: String
     }
