@@ -86,7 +86,7 @@ footer {
 
 .headerImg {
     height: 100vh;
-    background-image: url('../assets/ActionImage_DJBentley.jpg');
+    background-image: url('../assets/BentleyEdited/Dj-Bentley-Taylor-5.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 } 
@@ -120,7 +120,15 @@ footer {
 
 .iGSlider {
     max-height: 80vh;
-    box-shadow: $darkColor 5px 3px 5px;
+}
+
+.iGImage {
+    height: 75vh !important;
+    width: auto !important;
+    margin: 10px auto;
+    box-shadow: $darkColor 0px 10px 30px 5px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .imgGalBtn {

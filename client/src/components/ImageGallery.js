@@ -9,7 +9,7 @@ export default class extends React.Component {
         <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={125}
-            totalSlides={2}
+            totalSlides={3}
             infinite='true'
             isPlaying='true'
             className="imageGallery"
@@ -17,8 +17,9 @@ export default class extends React.Component {
             <ButtonBack className='imgGalBtn'><FaCaretLeft /></ButtonBack>
             
             <Slider className='iGSlider'>
-                <Slide index={0}><Image src={require('../assets/DressedUp.jpg')} /></Slide>
-                <Slide index={1}><Image src={require('../assets/wide-fixingSleve.jpeg')} /></Slide>
+                <Slide index={0}><Image className="iGImage" src={require('../assets/DressedUp.jpg')} /></Slide>>
+                <Slide index={1}><Image className="iGImage" src={require('../assets/BentleyEdited/Dj-Bentley-Taylor-6.jpg')} /></Slide>
+                <Slide index={2}><Image className="iGImage" src={require('../assets/BentleyEdited/Dj-Bentley-Taylor-8.jpg')} /></Slide>
             </Slider>
             <ButtonNext className='imgGalBtn'><FaCaretRight /></ButtonNext>
             
