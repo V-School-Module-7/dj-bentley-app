@@ -10,8 +10,8 @@ const Header = (props) => {
                         props.locPath === "/"
                         ?
                         <div>
-                            <p onClick={props.openAboutModal}>AboutModal</p>
-                            <p onClick={props.openBookModal}>BookModal</p>
+                            <p onClick={props.openAboutModal}>About Me</p>
+                            <p onClick={props.openBookModal}>Booking</p>
                         </div>
                         : <div>
                             <Link to="/">Home</Link>

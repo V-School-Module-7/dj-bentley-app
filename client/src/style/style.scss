@@ -132,3 +132,19 @@ footer {
         width: 50px;
     }
 }
+
+.musicDjForm {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.editMusicDj {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+
+.indDj {
+    border: black solid 1px;
+}

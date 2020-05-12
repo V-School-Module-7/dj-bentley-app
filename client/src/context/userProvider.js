@@ -2,6 +2,13 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 export const UserContext = React.createContext()
+const userAxios = axios.create()
+
+userAxios.interceptors.request.use((config) => {
+    const token = localStorage.getItem("token")
+    config.headers.Authorization = `Bearer ${token}`
+    return config
+})
 
 const UserProvider = (props) => {
     const initState = {
@@ -10,6 +17,11 @@ const UserProvider = (props) => {
         authErrMsg: ""
     }
     const [userState, setUserState] = useState(initState)
+
+    const [dataState, setDataState] = useState({
+        mixData: [],
+        fellowData: []
+    })
 
     const login = credentials => {
         axios.post("/auth/login", credentials)
@@ -39,6 +51,74 @@ const UserProvider = (props) => {
         })
     }
 
+    const getData = () => {
+        axios.get('/info/perform')
+            .then(res => {
+                setDataState(prevData => ({
+                    ...prevData,
+                    fellowData: res.data
+                }))
+            })
+            .catch(err => {
+                console.log(err)
+            })
+
+        axios.get('/info/mix')
+            .then(res => {
+                setDataState(prevData => ({
+                    ...prevData,
+                    mixData: res.data
+                }))
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    const deleteMix = (id) => {
+        userAxios.delete(`/api/editMix/${id}`)
+            .then(res => {
+                setDataState(prevData => ({
+                    ...prevData,
+                    mixData: dataState.mixData.filter(ind => ind._id !== id)
+                }))
+            })
+            .catch(err => console.log(err.response.data.errMsg))
+    }
+
+    const deleteFellow = (id) => {
+        userAxios.delete(`/api/perform/${id}`)
+            .then(res => {
+                setDataState(prevData => ({
+                    ...prevData,
+                    fellowData: dataState.fellowData.filter(ind => ind._id !== id)
+                }))
+            })
+            .catch(err => console.log(err.response.data.errMsg))
+    }
+
+    const addMix = (newUrl, newName) => {
+        const newMix = {
+            url: newUrl,
+            mixName: newName
+        }
+        userAxios.post('/api/editMix', newMix)
+            .then(res => {
+                getData()
+            })
+            .catch(err=> console.log(err))
+    }
+    const addFellow = (newName) => {
+        const newFellow = {
+            name: newName
+        }
+        userAxios.post('/api/perform', newFellow)
+            .then(res => {
+                getData()
+            })
+            .catch(err=> console.log(err))
+    }
+
     return (
         <UserContext.Provider
             value={{
@@ -46,7 +126,13 @@ const UserProvider = (props) => {
                 token: userState.token,
                 authErrMsg: userState.authErrMsg,
                 login: login,
-                logout: logout
+                logout: logout,
+                getData: getData,
+                dataState: dataState,
+                deleteMix: deleteMix,
+                addMix: addMix,
+                deleteFellow: deleteFellow,
+                addFellow: addFellow
             }}>
             { props.children }
         </UserContext.Provider>

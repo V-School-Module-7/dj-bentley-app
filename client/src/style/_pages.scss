@@ -32,12 +32,20 @@ textarea {
     @include pad-mar(8px, 10px);
     border-radius: 5px;
 }
+.btnDark {
+    background: none;
+    color: $darkColor;
+    border: 1px solid $darkColor;
+    font-size: 20px;
+    @include pad-mar(8px, 10px);
+    border-radius: 5px;
+}
 
 .section {
     margin: 50px 0;
 }
 
-.btn:hover {
+.btn:hover, .btnDark:hover {
     box-shadow: $accentColor 0px 0px 50px;
 }
 
