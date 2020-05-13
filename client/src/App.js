@@ -15,22 +15,6 @@ function App() {
 
 	const [aboutModalIsOpen, setAboutModalIsOpen] = useState(false)
 
-	// const [inputs, changeInputs] = useState({
-    //     about: '' //or current about
-	// })
-
-	// const submitAboutChange = () => {
-
-	// }
-	
-	// const handleChange = (e) => {
-    //     const { name, value } = e.target
-    //     changeInputs(prevState => ({
-    //         ...prevState,
-    //         [name]: value
-    //     }))
-    // }
-
     const openAboutModal = () => {
         setAboutModalIsOpen(true)
     }
@@ -57,7 +41,7 @@ function App() {
         },
         content: {
 			background: '#F2EFE9',
-			margin: 0,
+			margin: '-25px',
 			padding: 0,
 			color: '#25282A',
 			border: 'none',
@@ -76,7 +60,7 @@ function App() {
         },
         content: {
 			background: '#AE5E15',
-			margin: 0,
+			margin: '-25px',
 			padding: 0,
 			border: 'none',
 			borderRadius: '3px',
@@ -280,3 +264,10 @@ function App() {
 }
 
 export default App;
+
+
+//To change the text on the about page, go to the About.js file in the components folder
+
+//To change photos, or add more in the gallery, go to ImageGallery.js in the components folder
+
+//More information about the modals on https://www.npmjs.com/package/react-modal

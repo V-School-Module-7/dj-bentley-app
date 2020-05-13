@@ -1,14 +1,8 @@
 @media only screen and (max-width: 600px) {
-    .actionImage {
-        height: 150px;
-    }
-
-    .contentWrap {
-        padding: 20px 10px 150px 10px;
-    }
-
-    .homeQuote {
-        @include pad-mar(20px, 50px auto);
+    nav {
+        p {
+            padding: 0px 7px;
+        }
     }
 
     .musicPlayer {
@@ -28,20 +22,41 @@
             @include pad-mar(0px, 10px);
         }
     }
+
+    .aboutImage, .bookImage {
+        display: none;
+    }
+
+    .aboutContent {
+        padding: 25px;
+    }
+
+    .aboutImage, .bookImage {
+        display: none;
+    }
+
+    .eventPage, .aboutPage {
+        padding: 0px;
+        grid-template-columns: 1fr;
+
+        p {
+            font-size: 20px;
+        }
+        
+    }
+
+    input[type=text], input[type=password], input[type=date], input[type=time], textarea {
+        padding: 10;
+        margin: 0;
+    }
 }
 
 //lots of styles from big screen work for this size
 @media only screen and (max-width: 900px) and (min-width: 600px) {
-    .actionImage {
-        height: 200px;
-    }
-
-    .contentWrap {
-        padding: 20px 25px 150px 25px;
-    }
-
-    .homeQuote {
-        @include pad-mar(30px, 50px auto);
+    nav {
+        p {
+            padding: 0px 15px;
+        }
     }
 
     .musicPlayer {
@@ -61,15 +76,21 @@
     img {
         @include pad-mar(0px, 30px);
     }
+
+    .aboutContent {
+        padding: 20px;
+    }
+
+    .eventPage, .aboutPage {
+        padding: 0px;
+    }
 }
 
 @media only screen and (min-width: 900px) {
-    .actionImage {
-        height: 65vh;
-    }
-
-    .homeQuote {
-        @include pad-mar(50px, 50px auto);
+    nav {
+        p {
+            padding: 0px 15px;
+        }
     }
 
     .musicPlayer {
@@ -97,5 +118,22 @@
         div {
             width: 100%;
         }
+    }
+
+    .imageGallery {
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+
+    .iGImage {
+        height: 75vh !important;
+        width: auto !important;
+    }
+
+    .aboutContent {
+        padding: 25px;
+    }
+
+    .eventPage, .aboutPage {
+        padding: 20px;
     }
 }

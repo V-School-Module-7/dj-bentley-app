@@ -11,7 +11,7 @@ const IndDj = (props) => {
     return (
         <div key={props.key} className='indDj'>
             <p>{props.name} </p>
-            <button onClick={handleDelete}>Delete</button>
+            <button className='btn' onClick={handleDelete}>Delete</button>
         </div>
     )
 }

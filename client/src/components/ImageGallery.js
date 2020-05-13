@@ -9,7 +9,7 @@ export default class extends React.Component {
         <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={125}
-            totalSlides={3}
+            totalSlides={3} //changes number of slides
             infinite='true'
             isPlaying='true'
             className="imageGallery"
@@ -17,7 +17,7 @@ export default class extends React.Component {
             <ButtonBack className='imgGalBtn'><FaCaretLeft /></ButtonBack>
             
             <Slider className='iGSlider'>
-                <Slide index={0}><Image className="iGImage" src={require('../assets/DressedUp.jpg')} /></Slide>>
+                <Slide index={0}><Image className="iGImage" src={require('../assets/DressedUp.jpg')} /></Slide>
                 <Slide index={1}><Image className="iGImage" src={require('../assets/BentleyEdited/Dj-Bentley-Taylor-6.jpg')} /></Slide>
                 <Slide index={2}><Image className="iGImage" src={require('../assets/BentleyEdited/Dj-Bentley-Taylor-8.jpg')} /></Slide>
             </Slider>
@@ -27,3 +27,7 @@ export default class extends React.Component {
         );
     }
 }
+
+//the amount of slides must equal the number on line 12
+//the slides must have the specified index in the correct order. It helps specify the order
+//more information to be found on https://www.npmjs.com/package/pure-react-carousel

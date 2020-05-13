@@ -41,42 +41,8 @@ textarea {
     border-radius: 5px;
 }
 
-.section {
-    margin: 50px 0;
-}
-
 .btn:hover, .btnDark:hover {
-    box-shadow: $accentColor 0px 0px 50px;
-}
-
-.homePage {
-    
-
-    .contentWrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.actionImage {
-    width: 100%;
-    background-image: url('../assets/ActionImage_DJBentley.jpg');
-    background-size: 100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: top;
-    box-shadow: -5px -5px 10px black inset;
-}
-
-.homeQuote {
-    border: dotted 3px $accentColor;
-    border-radius: 5px;
-    width: 80%;
-}
-
-.homeQuoteSignoff {
-    font-size: .7em;
+    box-shadow: $lightColor 0px 0px 50px;
 }
 
 .loginPage {
@@ -91,12 +57,6 @@ textarea {
     flex-direction: column;
     // align-items: center;
     @include pad-mar(10%, auto 0);
-
-    // for media query, add >
-    // position: absolute;
-    // left: 50%;
-    // top: 50%;
-    // transform: translate(-50%, -50%);
 }
 
 svg {
@@ -117,7 +77,7 @@ svg {
     grid-template-columns: 1fr 1fr;
     height: 100%;
     width: 100%;
-    padding: 30px;
+    // padding: 30px;
     p {
         font-size: 20px;
     }
@@ -144,17 +104,13 @@ svg {
 }
 
 .fellowDjsPage {
-    width: 100%;
+    width: 90%;
     @include pad-mar(10px, 10px);
 
     h2 {
         @include pad-mar(20px, 10px 0px);
         text-align: center;
         background-color: $headerColor;
-        // border-top: $headerColor solid 50px;
-        // border-bottom: $headerColor solid 50px;
-        // border-left: transparent solid 50px;
-        // border-right: transparent solid 50px;
     }
 
     svg {
@@ -223,12 +179,4 @@ svg {
 .imagesDiv {
     display: flex;
     flex-direction: row;
-}
-
-
-.hidden {
-    a {
-        display: none;
-        color: red;
-    }
 }
