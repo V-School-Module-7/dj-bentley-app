@@ -77,6 +77,20 @@ const Home = (props) => {
         }
     }
 
+    const adminHelp = () => {
+        alert(`To add to mixlist: 
+            1. Go to your mixcloud.
+            2. Click the Share/Embed.
+            3. Click Embed Player. Select Picture.
+            4. Copy from the code snippet at the bottom the text after {src=} , not including the quotations.
+            5. Paste in the "Add Music Url" input. Add in its name in the "Add Music Name" input. 
+            6. Submit.
+            
+        To add another artist: 
+            1. Type artist name in "Add Dj" input.
+            2. Submit.`)
+    }
+
     return (
         <div>
             <div className="headerImg"></div>
@@ -117,6 +131,7 @@ const Home = (props) => {
                         <button className='btn'>Submit</button>
                     </form>
                     <button onClick={openFellowMixModal} style={{margin: 'auto'}} className='btn'>Edit Listed Artists</button>
+                    <button onClick={adminHelp} className='btn'>How to Fill In Info</button>
                 </div>
             }
             
@@ -128,7 +143,9 @@ const Home = (props) => {
             >
                 <h3 onClick={closeFellowMixModal} className="svgRight"><FaTimes style={{color: 'black', float:'right', margin: '10px'}} /></h3>
 
-                { dataState.fellowData.map((ind) => <IndDj key={ind._id} {...ind} theKey={ind._id} />)}
+                <div className='editDjModal'>
+                    { dataState.fellowData.map((ind) => <IndDj key={ind._id} {...ind} theKey={ind._id} />)}
+                </div>
             </Modal>
 
 

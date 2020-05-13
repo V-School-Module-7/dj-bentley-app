@@ -5,7 +5,7 @@ import { FaCircle } from 'react-icons/fa'
 const FellowDjs = (props) => {
     const { dataState } = useContext(UserContext)
 
-    const [chosenArtists, setChosenArtists] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+    const [chosenArtists, setChosenArtists] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
     const createNewNumbers = () => {
         const nameHolder = []
@@ -45,41 +45,41 @@ const FellowDjs = (props) => {
             
             <div className="fellowDjs undoOpacity" id='fellowDjs'>
 
-                {/* { dataState.fellowData.length >= 11 ? */}
+                { dataState.fellowData.length >= 11 ?
                 
                     <>
-                    <p className='fDjName' key={props.artists[chosenArtists[0]].key}>{props.artists[chosenArtists[0]].artistName}</p>
+                    <p className='fDjName' key={dataState.fellowData[chosenArtists[0]]._id}>{dataState.fellowData[chosenArtists[0]].name}</p>
                     
 
                     <FaCircle />
 
-                    <p className='fDjName' key={props.artists[chosenArtists[1]].key}>{props.artists[chosenArtists[1]].artistName}</p>
+                    <p className='fDjName' key={dataState.fellowData[chosenArtists[1]]._id}>{dataState.fellowData[chosenArtists[1]].name}</p>
 
-                    <p className='fDjNameAccent' key={props.artists[chosenArtists[2]].key}>{props.artists[chosenArtists[2]].artistName}</p>
+                    <p className='fDjNameAccent' key={dataState.fellowData[chosenArtists[2]]._id}>{dataState.fellowData[chosenArtists[2]].name}</p>
 
-                    <p className='fDjName' key={props.artists[chosenArtists[3]].key}>{props.artists[chosenArtists[3]].artistName}</p>
+                    <p className='fDjName' key={dataState.fellowData[chosenArtists[3]]._id}>{dataState.fellowData[chosenArtists[3]].name}</p>
 
                     <FaCircle />
 
-                    <p className='fDjName' key={props.artists[chosenArtists[4]].key}>{props.artists[chosenArtists[4]].artistName}</p>
+                    <p className='fDjName' key={dataState.fellowData[chosenArtists[4]]._id}>{dataState.fellowData[chosenArtists[4]].name}</p>
                     
-                    <p className='fDjNameAccent' key={props.artists[chosenArtists[5]].key}>{props.artists[chosenArtists[5]].artistName}</p>
+                    <p className='fDjNameAccent' key={dataState.fellowData[chosenArtists[5]]._id}>{dataState.fellowData[chosenArtists[5]].name}</p>
 
-                    <p className='fDjName' key={props.artists[chosenArtists[6]].key}>{props.artists[chosenArtists[6]].artistName}</p>
+                    <p className='fDjName' key={dataState.fellowData[chosenArtists[6]]._id}>{dataState.fellowData[chosenArtists[6]].name}</p>
 
                     <FaCircle />
 
-                    <p className='fDjName' key={props.artists[chosenArtists[7]].key}>{props.artists[chosenArtists[7]].artistName}</p>
+                    <p className='fDjName' key={dataState.fellowData[chosenArtists[7]]._id}>{dataState.fellowData[chosenArtists[7]].name}</p>
 
-                    <p className='fDjNameAccent' key={props.artists[chosenArtists[8]].key}>{props.artists[chosenArtists[8]].artistName}</p>
+                    <p className='fDjNameAccent' key={dataState.fellowData[chosenArtists[8]]._id}>{dataState.fellowData[chosenArtists[8]].name}</p>
 
-                    <p className='fDjName' key={props.artists[chosenArtists[9]].key}>{props.artists[chosenArtists[9]].artistName}</p>
+                    <p className='fDjName' key={dataState.fellowData[chosenArtists[9]]._id}>{dataState.fellowData[chosenArtists[9]].name}</p>
 
                     <FaCircle />
                     
-                    <p className='fDjName' key={props.artists[chosenArtists[10]].key}>{props.artists[chosenArtists[10]].artistName}</p>
+                    <p className='fDjName' key={dataState.fellowData[chosenArtists[10]]._id}>{dataState.fellowData[chosenArtists[10]].name}</p>
                     </>
-                    {/* : null } */}
+                    : null }
                 
             </div>
         </div>

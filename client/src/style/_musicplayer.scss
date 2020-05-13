@@ -1,11 +1,28 @@
 .musicPlayer {
     @include pad-mar(10px, 10px);
-    // background-color: $darkColor;
-    height: 90vh;
+    height: 80vh;
 }
 
 .musicList {
     overflow: scroll;
+}
+
+.musicList::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.musicList::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+.musicList::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+.musicList::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid $lightColor; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .otherMusic {
@@ -16,6 +33,7 @@
     align-items: center;
     color: $darkColor;
     overflow: scroll;
+    border-bottom: solid 1px gray;
 
     img {
         width: 100px;

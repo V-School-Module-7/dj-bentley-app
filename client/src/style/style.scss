@@ -48,7 +48,6 @@ nav {
         flex-direction: row;
     }
     p {
-        padding: 0 15px;
         color: $lightColor;
     }
     
@@ -96,11 +95,16 @@ footer {
 }
 
 .aboutImage {
-    background-color: pink;
+    background-image: url('../assets/BentleyEdited/Dj-Bentley-Taylor-2.jpg');
+    background-size: 100%;
+}
+
+.bookImage {
+    background-image: url('../assets/BentleyEdited/Dj-Bentley-Taylor-10.jpg');
+    background-size: 100%;
 }
 
 .aboutContent {
-    padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -108,13 +112,14 @@ footer {
     
     h1 {
         text-align: center;
+        margin: 25px;
     }
 }
 
 .imageGallery {
     padding: 50px 20px 160px;
     display: grid;
-    grid-template-columns: 1fr 12fr 1fr;
+    // grid-template-columns: 1fr 4fr 1fr;
     background-color: $imageGalBackground;
 }
 
@@ -123,8 +128,8 @@ footer {
 }
 
 .iGImage {
-    height: 75vh !important;
-    width: auto !important;
+    // height: 75vh !important;
+    // width: auto !important;
     margin: 10px auto;
     box-shadow: $darkColor 0px 10px 30px 5px;
     padding: 10px;
@@ -141,10 +146,11 @@ footer {
     }
 }
 
-.musicDjForm {
+.musicDjForm, .djForm {
     display: flex;
     justify-content: center;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .editMusicDj {
@@ -154,5 +160,26 @@ footer {
 }
 
 .indDj {
-    border: black solid 1px;
+    border: $lightColor solid 1px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.editDjModal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    p {
+        color: $lightColor;
+        text-align: center;
+    }
+
+    .btn {
+        font-size: 10px;
+    }
 }

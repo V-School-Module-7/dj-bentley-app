@@ -3,19 +3,6 @@ body {
   font-family: 'Sen', sans-serif;
 }
 
-.headlineOne {
-  font-size: 104px;
-  text-align: center;
-}
-
-.subTitle {
-  font-size: 30px;
-}
-
-.bodyText {
-  font-size: 16px;
-}
-
 input[type=text], input[type=password], input[type=date], input[type=time], textarea {
   padding: 8px;
   margin: 10px;
@@ -76,47 +63,9 @@ textarea {
   border-radius: 5px;
 }
 
-.section {
-  margin: 50px 0;
-}
-
 .btn:hover, .btnDark:hover {
-  -webkit-box-shadow: #F001FF 0px 0px 50px;
-          box-shadow: #F001FF 0px 0px 50px;
-}
-
-.homePage .contentWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.actionImage {
-  width: 100%;
-  background-image: url("../assets/ActionImage_DJBentley.jpg");
-  background-size: 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top;
-  -webkit-box-shadow: -5px -5px 10px black inset;
-          box-shadow: -5px -5px 10px black inset;
-}
-
-.homeQuote {
-  border: dotted 3px #F001FF;
-  border-radius: 5px;
-  width: 80%;
-}
-
-.homeQuoteSignoff {
-  font-size: .7em;
+  -webkit-box-shadow: #F2EFE9 0px 0px 50px;
+          box-shadow: #F2EFE9 0px 0px 50px;
 }
 
 .loginPage {
@@ -164,7 +113,6 @@ svg {
       grid-template-columns: 1fr 1fr;
   height: 100%;
   width: 100%;
-  padding: 30px;
 }
 
 .aboutPage p, .eventPage p {
@@ -199,7 +147,7 @@ svg {
 }
 
 .fellowDjsPage {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   margin: 10px;
 }
@@ -290,11 +238,6 @@ svg {
           flex-direction: row;
 }
 
-.hidden a {
-  display: none;
-  color: red;
-}
-
 .myCarousel, .instaCarousel {
   background-color: #25282A;
   color: #F2EFE9;
@@ -363,11 +306,30 @@ svg {
 .musicPlayer {
   padding: 10px;
   margin: 10px;
-  height: 90vh;
+  height: 80vh;
 }
 
 .musicList {
   overflow: scroll;
+}
+
+.musicList::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.musicList::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+.musicList::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+.musicList::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid #F2EFE9;
+  /* should match background, can't be transparent */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .otherMusic {
@@ -386,6 +348,7 @@ svg {
           align-items: center;
   color: #25282A;
   overflow: scroll;
+  border-bottom: solid 1px gray;
 }
 
 .otherMusic img {
@@ -406,15 +369,11 @@ svg {
 }
 
 @media only screen and (max-width: 600px) {
-  .actionImage {
-    height: 150px;
+  nav p {
+    padding: 0px 7px;
   }
   .contentWrap {
     padding: 20px 10px 150px 10px;
-  }
-  .homeQuote {
-    padding: 20px;
-    margin: 50px auto;
   }
   .musicPlayer {
     display: -webkit-box;
@@ -439,18 +398,35 @@ svg {
     padding: 0px;
     margin: 10px;
   }
+  .aboutImage, .bookImage {
+    display: none;
+  }
+  .aboutContent {
+    padding: 25px;
+  }
+  .aboutImage, .bookImage {
+    display: none;
+  }
+  .eventPage, .aboutPage {
+    padding: 0px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .eventPage p, .aboutPage p {
+    font-size: 20px;
+  }
+  input[type=text], input[type=password], input[type=date], input[type=time], textarea {
+    padding: 10;
+    margin: 0;
+  }
 }
 
 @media only screen and (max-width: 900px) and (min-width: 600px) {
-  .actionImage {
-    height: 200px;
+  nav p {
+    padding: 0px 15px;
   }
   .contentWrap {
     padding: 20px 25px 150px 25px;
-  }
-  .homeQuote {
-    padding: 30px;
-    margin: 50px auto;
   }
   .musicPlayer {
     display: -webkit-box;
@@ -475,15 +451,17 @@ svg {
     padding: 0px;
     margin: 30px;
   }
+  .aboutContent {
+    padding: 20px;
+  }
+  .eventPage, .aboutPage {
+    padding: 0px;
+  }
 }
 
 @media only screen and (min-width: 900px) {
-  .actionImage {
-    height: 65vh;
-  }
-  .homeQuote {
-    padding: 50px;
-    margin: 50px auto;
+  nav p {
+    padding: 0px 15px;
   }
   .musicPlayer {
     display: -webkit-box;
@@ -519,6 +497,20 @@ svg {
   }
   .musicFellow div {
     width: 100%;
+  }
+  .imageGallery {
+    -ms-grid-columns: 1fr 4fr 1fr;
+        grid-template-columns: 1fr 4fr 1fr;
+  }
+  .iGImage {
+    height: 75vh !important;
+    width: auto !important;
+  }
+  .aboutContent {
+    padding: 25px;
+  }
+  .eventPage, .aboutPage {
+    padding: 20px;
   }
 }
 
@@ -580,7 +572,6 @@ nav div {
 }
 
 nav p {
-  padding: 0 15px;
   color: #F2EFE9;
 }
 
@@ -632,11 +623,16 @@ footer a:hover {
 }
 
 .aboutImage {
-  background-color: pink;
+  background-image: url("../assets/BentleyEdited/Dj-Bentley-Taylor-2.jpg");
+  background-size: 100%;
+}
+
+.bookImage {
+  background-image: url("../assets/BentleyEdited/Dj-Bentley-Taylor-10.jpg");
+  background-size: 100%;
 }
 
 .aboutContent {
-  padding: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -651,14 +647,13 @@ footer a:hover {
 
 .aboutContent h1 {
   text-align: center;
+  margin: 25px;
 }
 
 .imageGallery {
   padding: 50px 20px 160px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 12fr 1fr;
-      grid-template-columns: 1fr 12fr 1fr;
   background-color: #5AD6DE;
 }
 
@@ -667,8 +662,6 @@ footer a:hover {
 }
 
 .iGImage {
-  height: 75vh !important;
-  width: auto !important;
   margin: 10px auto;
   -webkit-box-shadow: #25282A 0px 10px 30px 5px;
           box-shadow: #25282A 0px 10px 30px 5px;
@@ -686,7 +679,7 @@ footer a:hover {
   width: 50px;
 }
 
-.musicDjForm {
+.musicDjForm, .djForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -694,6 +687,8 @@ footer a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .editMusicDj {
@@ -708,6 +703,36 @@ footer a:hover {
 }
 
 .indDj {
-  border: black solid 1px;
+  border: #F2EFE9 solid 1px;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.editDjModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.editDjModal p {
+  color: #F2EFE9;
+  text-align: center;
+}
+
+.editDjModal .btn {
+  font-size: 10px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -36,7 +36,7 @@ const EventPage = () => {
                 <input type="submit" value="Send" className='btn' />
             </form>
 
-            <div className='aboutImage'>
+            <div className='bookImage'>
 
             </div>
         </div>
