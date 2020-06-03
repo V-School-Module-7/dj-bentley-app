@@ -1,7 +1,6 @@
 // this file is for compiling in the other style files, as well as for any overarching styling
 @import './variables';
 @import './pages';
-@import './carousel';
 @import './musicplayer';
 @import './mediaqueries';
 
@@ -85,7 +84,7 @@ footer {
 
 .headerImg {
     height: 100vh;
-    background-image: url('../assets/BentleyEdited/Dj-Bentley-Taylor-5.jpg');
+    background-image: url('../assets/BentleyEdited/Dj-Bentley-Taylor-.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 } 

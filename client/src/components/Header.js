@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaInstagram, FaMixcloud } from 'react-icons/fa'
+import { FaInstagram, FaMixcloud, FaFacebookF, FaTwitter } from 'react-icons/fa'
 
 const Header = (props) => {
     return (
@@ -20,6 +20,8 @@ const Header = (props) => {
 
                 <div>
                     <a href="https://www.instagram.com/djbentleytaylor/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                    <a href="https://www.facebook.com/DjBentleySLC/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+                    <a href="https://twitter.com/djbentleytaylor" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
                     <a href="https://www.mixcloud.com/djbentleytaylor/" target="_blank" rel="noopener noreferrer"><FaMixcloud /></a>
                 </div>
             </nav>
