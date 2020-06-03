@@ -11,7 +11,7 @@ const FellowDjs = (props) => {
         const nameHolder = []
 
         for (let i = 0; i < chosenArtists.length; i++) {
-            if (chosenArtists[i] === chosenArtists.length - 1) {
+            if (chosenArtists[i] === dataState.fellowData.length - 1) {
                 nameHolder.push(0)
             } else {
                 nameHolder.push(chosenArtists[i] + 1)

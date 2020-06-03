@@ -238,71 +238,6 @@ svg {
           flex-direction: row;
 }
 
-.myCarousel, .instaCarousel {
-  background-color: #25282A;
-  color: #F2EFE9;
-  z-index: 1;
-  width: 410px;
-}
-
-.myCarousel {
-  border-width: 5px;
-}
-
-.carouselBtn {
-  background-color: #25282A;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 50%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.carouselBtn:hover {
-  -webkit-box-shadow: #F001FF 0px 0px 10px;
-          box-shadow: #F001FF 0px 0px 10px;
-}
-
-.carouselBtn:hover svg {
-  color: #F001FF;
-}
-
-.carouselNav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.carouselDots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.carouselDots button {
-  padding: 3px;
-  margin: 3px;
-  border-radius: 50%;
-  background-color: #F2EFE9;
-}
-
-.carousel__dot--selected {
-  background-color: #F001FF !important;
-}
-
-.carouselImg {
-  overflow: hidden;
-}
-
 .musicPlayer {
   padding: 10px;
   margin: 10px;
@@ -372,9 +307,6 @@ svg {
   nav p {
     padding: 0px 7px;
   }
-  .contentWrap {
-    padding: 20px 10px 150px 10px;
-  }
   .musicPlayer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -424,9 +356,6 @@ svg {
 @media only screen and (max-width: 900px) and (min-width: 600px) {
   nav p {
     padding: 0px 15px;
-  }
-  .contentWrap {
-    padding: 20px 25px 150px 25px;
   }
   .musicPlayer {
     display: -webkit-box;
@@ -613,7 +542,7 @@ footer a:hover {
 
 .headerImg {
   height: 100vh;
-  background-image: url("../assets/BentleyEdited/Dj-Bentley-Taylor-5.jpg");
+  background-image: url("../assets/BentleyEdited/Dj-Bentley-Taylor-.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -654,7 +583,7 @@ footer a:hover {
   padding: 50px 20px 160px;
   display: -ms-grid;
   display: grid;
-  background-color: #5AD6DE;
+  background-color: #5BD6DE;
 }
 
 .iGSlider {
