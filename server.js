@@ -13,10 +13,9 @@ mongoose.connect('mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/
     {
         useNewUrlParser: true,
         useFindAndModify: true,
-        useCreateIndex: false,
         useUnifiedTopology: true
 
-    }, () => console.log('connected to database'))
+    }, () => console.log('Connected to DB.'))
 
 // Routes
 app.use("/auth", require("./routes/authRouter"))
