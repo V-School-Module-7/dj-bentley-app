@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
-  font-family: 'Sen', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 input[type=text], input[type=password], input[type=date], input[type=time], textarea {
@@ -124,7 +125,7 @@ svg {
   display: grid;
   -ms-grid-columns: 3fr 1fr 3fr;
       grid-template-columns: 3fr 1fr 3fr;
-  overflow: scroll;
+  overflow: hidden;
   height: 90%;
 }
 
@@ -467,7 +468,7 @@ header {
   top: 0;
   padding: 15px;
   margin: 0px;
-  background-color: #F58C2B;
+  background-color: #212020;
   color: #F001FF;
   z-index: 10;
 }
