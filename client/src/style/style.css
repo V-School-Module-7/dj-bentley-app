@@ -157,7 +157,7 @@ svg {
   padding: 20px;
   margin: 10px 0px;
   text-align: center;
-  background-color: #F58C2B;
+  background-color: #55c5c9;
 }
 
 .fellowDjsPage svg {
@@ -180,15 +180,15 @@ svg {
 .fDjBannerOne {
   margin: 10px 0px;
   border-left: 10px solid transparent;
-  border-top: 35px solid #F58C2B;
-  border-bottom: 35px solid #F58C2B;
+  border-top: 35px solid #55c5c9;
+  border-bottom: 35px solid #55c5c9;
 }
 
 .fDjBannerTwo {
   margin: 10px 0px;
   border-right: 10px solid transparent;
-  border-top: 35px solid #F58C2B;
-  border-bottom: 35px solid #F58C2B;
+  border-top: 35px solid #55c5c9;
+  border-bottom: 35px solid #55c5c9;
 }
 
 .fDjName {
@@ -226,7 +226,7 @@ svg {
 
 .musicFellow {
   padding: 100px 0;
-  background-color: #F2EFE9;
+  background-color: #060606;
 }
 
 .imagesDiv {
@@ -453,7 +453,7 @@ svg {
 
 body {
   height: 100%;
-  background-color: #917CCC;
+  background-color: #060606;
   color: #F2EFE9;
 }
 
@@ -518,7 +518,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #F58C2B;
+  background-color: #55c5c9;
   color: #F001FF;
   display: -webkit-box;
   display: -ms-flexbox;
