@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom'
 import './style/style.css'
 import EventPage from './components/EventPage'

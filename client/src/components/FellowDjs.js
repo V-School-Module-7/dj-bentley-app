@@ -39,7 +39,7 @@ const FellowDjs = (props) => {
         <div className="fellowDjsPage">
             <div className='fDjBanner'>
                 <section className='fDjBannerOne'></section>
-                <h2>Featured Artists</h2>
+                <h2>FEATURED ARTISTS</h2>
                 <section className='fDjBannerTwo'></section>
             </div>
             
