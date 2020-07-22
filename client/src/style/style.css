@@ -610,8 +610,8 @@ footer a:hover {
 
 .iGImage {
   margin: 10px auto;
-  -webkit-box-shadow: #80158e 0px 10px 30px 5px;
-          box-shadow: #80158e 0px 10px 30px 5px;
+  /* -webkit-box-shadow: #80158e 0px 10px 30px 5px;
+          box-shadow: #80158e 0px 10px 30px 5px; */
   padding: 10px;
   border-radius: 10px;
 }

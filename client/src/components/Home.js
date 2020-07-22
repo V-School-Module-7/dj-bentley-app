@@ -13,7 +13,7 @@ const Home = (props) => {
 
     useEffect(() => {
         getData()
-    }, [])
+    }, [getData])
 
     const [inputs, changeInputs] = useState({
         url: '',

@@ -236,6 +236,7 @@ function App() {
 				openBookModal={openBookModal} />} />
 			<Route path="/event"><EventPage /></Route>
 			<Route path="/login"><Login /></Route>
+            {/* <Route path="/gallery"></Route> */}
     	</Switch>
 
 		<Modal
