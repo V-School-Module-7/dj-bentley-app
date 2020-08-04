@@ -9,7 +9,7 @@ export default class extends React.Component {
         <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={125}
-            totalSlides={37} //changes number of slides
+            totalSlides={37} //changes number of slides. 37
             infinite='true'
             isPlaying='true'
             className="imageGallery"
@@ -54,7 +54,6 @@ export default class extends React.Component {
                 <Slide index={34}><Image className="iGImage" src={require('../assets/IMG_0835.PNG')} /></Slide>
                 <Slide index={35}><Image className="iGImage" src={require('../assets/IMG_0839.PNG')} /></Slide>
                 <Slide index={36}><Image className="iGImage" src={require('../assets/tall-backstage.jpeg')} /></Slide>
-
             </Slider>
             <ButtonNext className='imgGalBtn'><FaCaretRight /></ButtonNext>
             

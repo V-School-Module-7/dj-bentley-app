@@ -5,6 +5,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 input[type=text], input[type=password], input[type=date], input[type=time], textarea {
   padding: 8px;
   margin: 10px;
@@ -110,6 +114,7 @@ svg:hover {
 .svgRight {
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 
 .aboutPage, .eventPage {
@@ -128,10 +133,11 @@ svg:hover {
 .fellowDjs {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 1fr 3fr;
-      grid-template-columns: 3fr 1fr 3fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   overflow: hidden;
-  height: 90%;
+  height: 80%;
+  /* margin-left: 15px; */
 }
 
 .fellowDjs div {
@@ -198,7 +204,7 @@ svg:hover {
 
 .fDjName {
   color: whitesmoke;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .fDjNameAccent {
@@ -206,7 +212,6 @@ svg:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 4;
-  font-size: 25px;
   font-size: 30px;
 }
 
@@ -313,6 +318,9 @@ svg:hover {
   nav p {
     padding: 0px 7px;
   }
+  .headerImg {
+    height: 200px;
+  }
   .musicPlayer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -323,6 +331,7 @@ svg:hover {
             flex-direction: column;
   }
   .fellowDjs {
+    margin-left: 15px;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
@@ -356,6 +365,22 @@ svg:hover {
   input[type=text], input[type=password], input[type=date], input[type=time], textarea {
     padding: 10;
     margin: 0;
+  }
+  .fDjBanner {
+    margin-left: 25px;
+  }
+  .fDjBannerOne, .fDjBannerTwo {
+    border-top: 70px solid #55c5c9;
+    /* border-bottom: 35px solid #55c5c9; */
+  }
+  .carousel, .imageGallery {
+    display: none;
+  }
+  .imgGalBtn {
+    display: none;
+  }
+  .iGSlider {
+    display: none;
   }
 }
 
@@ -559,6 +584,7 @@ footer a:hover {
   height: 100vh;
   background-image: url("../assets/BentleyEdited/Dj-Bentley-Taylor-.jpg");
   background-size: 100% 100%;
+  /* background-size: contain; */
   background-repeat: no-repeat;
 }
 
@@ -570,6 +596,7 @@ footer a:hover {
   background-image: url("../assets/BentleyEdited/Dj-Bentley-Taylor-10.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+  margin-top: 100px;
 }
 
 .bookImage {
@@ -577,6 +604,7 @@ footer a:hover {
   background-size: 100%;
   background-repeat: no-repeat;
   text-align: center;
+  margin-top: 130px;
 }
 
 .aboutContent {
