@@ -9,7 +9,13 @@ require("dotenv").config()
 app.use(express.json())
 app.use(morgan("dev"))
 
-mongoose.connect('mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley' ||"mongodb://localhost:27017/bentleydb", 
+corsOptions = {
+    origin: "https://dj-bentley-taylor.herokuapp.com/",
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+app.use(cors(corsOptions));
+
+mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley' || "mongodb://localhost:27017/bentleydb",
     {
         useNewUrlParser: true,
         useFindAndModify: true,
@@ -25,6 +31,19 @@ app.use("/api/editmix", require("./routes/mixRouter"))
 app.use("/api/perform", require("./routes/performRouter"))
 app.use("/api/about", require("./routes/aboutRouter"))
 app.use("/api/text", require("./routes/textRouter"))
+
+
+// ... other imports 
+const path = require("path")
+
+// ... other app.use middleware 
+app.use(express.static(path.join(__dirname, "client", "build")))
+
+// ...
+// Right before your app.listen(), add this:
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 
 // Err handler
