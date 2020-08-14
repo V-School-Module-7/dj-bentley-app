@@ -13,7 +13,8 @@ const About = () => {
         }
     })
 
-    const [aboutText, setAboutText] = useState("")
+    let initText = aboutData[0].aboutText
+    const [aboutText, setAboutText] = useState(initText)
 
     // use useEffect to set the initState to the value of the current aboutText
 
