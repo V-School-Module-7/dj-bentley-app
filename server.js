@@ -9,15 +9,7 @@ require("dotenv").config()
 app.use(express.json())
 app.use(morgan("dev"))
 
-corsOptions = {
-    origin: "https://dj-bentley-taylor.herokuapp.com/",
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-app.use(cors(corsOptions));
-
-let MONGODB_URL = "mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley"
-
-mongoose.connect(MONGODB_URL || 'mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley',
+mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley?retryWrites=true&w=majority',
     {
         useNewUrlParser: true,
         useFindAndModify: true,
