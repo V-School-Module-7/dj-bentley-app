@@ -1,184 +1,184 @@
-// this file is for compiling in the other style files, as well as for any overarching styling
-@import './variables';
-@import './pages';
-@import './musicplayer';
-@import './mediaqueries';
+// // this file is for compiling in the other style files, as well as for any overarching styling
+// @import './variables';
+// @import './pages';
+// @import './musicplayer';
+// @import './mediaqueries';
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+// * {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+// }
 
-body {
-    height: 100%;
-    background-color: $backgroundColor;
-    color: $lightColor;
-}
+// body {
+//     height: 100%;
+//     background-color: $backgroundColor;
+//     color: $lightColor;
+// }
 
-.pageContainer {
-    position: relative;
-    min-height: 100vh;
-}
+// .pageContainer {
+//     position: relative;
+//     min-height: 100vh;
+// }
 
-header {
-    position: sticky;
-    top: 0;
-    @include pad-mar(15px, 0px);
-    background-color: $headerColor;
-    color: $accentColor;
-    z-index: 10;
+// header {
+//     position: sticky;
+//     top: 0;
+//     @include pad-mar(15px, 0px);
+//     background-color: $headerColor;
+//     color: $accentColor;
+//     z-index: 10;
 
-    a {
-        h3 {
-            color: $accentColor;
-        }
-    }
-}
+//     a {
+//         h3 {
+//             color: $accentColor;
+//         }
+//     }
+// }
 
-nav {
-    z-index: 20;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+// nav {
+//     z-index: 20;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
 
-    div {
-        display: flex;
-        flex-direction: row;
-    }
-    p {
-        color: $lightColor;
-    }
+//     div {
+//         display: flex;
+//         flex-direction: row;
+//     }
+//     p {
+//         color: $lightColor;
+//     }
     
-    a {
-        text-decoration: none;
-        padding: 0 15px;
-        color: $lightColor;
-    }
-}
+//     a {
+//         text-decoration: none;
+//         padding: 0 15px;
+//         color: $lightColor;
+//     }
+// }
 
-footer {
-    @include pad-mar(15px, auto);
-    height: 120px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: $headerColor;
-    color: $accentColor;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// footer {
+//     @include pad-mar(15px, auto);
+//     height: 120px;
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     background-color: $headerColor;
+//     color: $accentColor;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 
-    a {
-        text-decoration: none;
-        padding: 0 15px;
-        color: $lightColor;
-    }
+//     a {
+//         text-decoration: none;
+//         padding: 0 15px;
+//         color: $lightColor;
+//     }
 
-    a:hover {
-        color: $accentColor;
-    }
-}
+//     a:hover {
+//         color: $accentColor;
+//     }
+// }
 
-///////////
+// ///////////
 
-.headerImg {
-    height: 100vh;
-    background-image: url('../assets/BentleyEdited/Dj-Bentley-Taylor-.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-} 
+// .headerImg {
+//     height: 100vh;
+//     background-image: url('../assets/BentleyEdited/Dj-Bentley-Taylor-.jpg');
+//     background-size: 100% 100%;
+//     background-repeat: no-repeat;
+// } 
 
-.aboutModal {
-    z-index: 10;
-}
+// .aboutModal {
+//     z-index: 10;
+// }
 
-.aboutImage {
-    background-image: url('../assets/BentleyEdited/Dj-Bentley-Taylor-2.jpg');
-    background-size: 100%;
-}
+// .aboutImage {
+//     background-image: url('../assets/BentleyEdited/Dj-Bentley-Taylor-2.jpg');
+//     background-size: 100%;
+// }
 
-.bookImage {
-    background-image: url('../assets/BentleyEdited/Dj-Bentley-Taylor-10.jpg');
-    background-size: 100%;
-}
+// .bookImage {
+//     background-image: url('../assets/BentleyEdited/Dj-Bentley-Taylor-10.jpg');
+//     background-size: 100%;
+// }
 
-.aboutContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    // color: $darkColor;
+// .aboutContent {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-evenly;
+//     // color: $darkColor;
     
-    h1 {
-        text-align: center;
-        margin: 25px;
-    }
-}
+//     h1 {
+//         text-align: center;
+//         margin: 25px;
+//     }
+// }
 
-.imageGallery {
-    padding: 50px 20px 160px;
-    display: grid;
-    // grid-template-columns: 1fr 4fr 1fr;
-    background-color: $imageGalBackground;
-}
+// .imageGallery {
+//     padding: 50px 20px 160px;
+//     display: grid;
+//     // grid-template-columns: 1fr 4fr 1fr;
+//     background-color: $imageGalBackground;
+// }
 
-.iGSlider {
-    max-height: 80vh;
-}
+// .iGSlider {
+//     max-height: 80vh;
+// }
 
-.iGImage {
-    // height: 75vh !important;
-    // width: auto !important;
-    margin: 10px auto;
-    box-shadow: $darkColor 0px 10px 30px 5px;
-    padding: 10px;
-    border-radius: 10px;
-}
+// .iGImage {
+//     // height: 75vh !important;
+//     // width: auto !important;
+//     margin: 10px auto;
+//     box-shadow: $darkColor 0px 10px 30px 5px;
+//     padding: 10px;
+//     border-radius: 10px;
+// }
 
-.imgGalBtn {
-    background: none;
-    border: none;
+// .imgGalBtn {
+//     background: none;
+//     border: none;
 
-    svg {
-        height: 50px;
-        width: 50px;
-    }
-}
+//     svg {
+//         height: 50px;
+//         width: 50px;
+//     }
+// }
 
-.musicDjForm, .djForm {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    flex-wrap: wrap;
-}
+// .musicDjForm, .djForm {
+//     display: flex;
+//     justify-content: center;
+//     padding: 20px;
+//     flex-wrap: wrap;
+// }
 
-.editMusicDj {
-    display: flex;
-    flex-direction: column;
-    padding: 60px;
-}
+// .editMusicDj {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 60px;
+// }
 
-.indDj {
-    border: $lightColor solid 1px;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-}
+// .indDj {
+//     border: $lightColor solid 1px;
+//     border-radius: 5px;
+//     padding: 20px;
+//     margin: 10px;
+//     width: 25%;
+//     display: flex;
+//     flex-direction: column;
+// }
 
-.editDjModal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+// .editDjModal {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-around;
 
-    p {
-        color: $lightColor;
-        text-align: center;
-    }
+//     p {
+//         color: $lightColor;
+//         text-align: center;
+//     }
 
-    .btn {
-        font-size: 10px;
-    }
-}
+//     .btn {
+//         font-size: 10px;
+//     }
+// }
