@@ -15,7 +15,9 @@ corsOptions = {
 };
 app.use(cors(corsOptions));
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley',
+let MONGODB_URL = "mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley"
+
+mongoose.connect(MONGODB_URL || 'mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley',
     {
         useNewUrlParser: true,
         useFindAndModify: true,
