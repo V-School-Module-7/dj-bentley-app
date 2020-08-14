@@ -117,6 +117,16 @@ svg:hover {
   cursor: pointer;
 }
 
+.editAbout {
+  text-align: center;
+}
+
+.editAbout > textarea {
+  background-color: #b6b9b92f;
+  color: #060606;
+  resize: none;
+}
+
 .aboutPage, .eventPage {
   display: -ms-grid;
   display: grid;
@@ -168,7 +178,7 @@ svg:hover {
   padding: 20px;
   margin: 10px 0px;
   text-align: center;
-  background-color: #55c5c9;
+  background-color: #0d0516;
 }
 
 .fellowDjsPage svg {
@@ -191,15 +201,15 @@ svg:hover {
 .fDjBannerOne {
   margin: 10px 0px;
   /* border-left: 10px solid transparent; */
-  border-top: 35px solid #55c5c9;
-  border-bottom: 35px solid #55c5c9;
+  border-top: 35px solid #0d0516;
+  border-bottom: 35px solid #0d0516;
 }
 
 .fDjBannerTwo {
   margin: 10px 0px;
   /* border-right: 10px solid transparent; */
-  border-top: 35px solid #55c5c9;
-  border-bottom: 35px solid #55c5c9;
+  border-top: 35px solid #0d0516;
+  border-bottom: 35px solid #0d0516;
 }
 
 .fDjName {
@@ -557,7 +567,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #55c5c9;
+  background-color: #0d0516;
   color: #F001FF;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -577,7 +587,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #F001FF;
+  color: #F58C2B;
 }
 
 .headerImg {

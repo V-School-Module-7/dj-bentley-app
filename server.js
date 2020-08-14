@@ -23,6 +23,7 @@ app.use("/api", expressJwt({ secret: process.env.SECRET }))
 app.use("/info", require("./routes/infoRouter"))
 app.use("/api/editmix", require("./routes/mixRouter"))
 app.use("/api/perform", require("./routes/performRouter"))
+app.use("/api/about", require("./routes/aboutRouter"))
 app.use("/api/text", require("./routes/textRouter"))
 
 

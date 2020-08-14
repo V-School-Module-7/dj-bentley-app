@@ -246,7 +246,7 @@ function App() {
 			style={aboutModalStyles}
 		>
 			<h3 onClick={closeAboutModal} className="svgRight"><FaTimes style={{color: 'black', float:'right', margin: '10px'}} /></h3>
-			<About />
+			<About  />
 		</Modal>
 
 		<Modal

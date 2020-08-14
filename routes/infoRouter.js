@@ -2,13 +2,13 @@ const express = require("express")
 const infoRouter = express.Router()
 const MixList = require("../models/mixListSchema")
 const Perform = require("../models/performSchema")
-const Text = require("../models/textSchema")
+const About = require("../models/aboutSchema")
 
 //unprotected route to get all of the information for those not logged in
 
-//TEXT
-infoRouter.get('/text', (req, res, next) => {
-    Text.find((err, text) => {
+//ABOUT
+infoRouter.get('/about', (req, res, next) => {
+    About.find((err, text) => {
         if (err) {
             res.status(500)
             return next(err)

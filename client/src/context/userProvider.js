@@ -20,18 +20,19 @@ const UserProvider = (props) => {
 
     const [dataState, setDataState] = useState({
         mixData: [],
-        fellowData: []
+        fellowData: [],
+        aboutData: []
     })
 
     const login = credentials => {
         axios.post("/auth/login", credentials)
-        .then(res => {
-            const { user, token } = res.data
-            localStorage.setItem("user", JSON.stringify(user))
-            localStorage.setItem("token", token)
-            setUserState(res.data)
-        })
-        .catch(err => handleAuthErr(err.response.data.errMsg))
+            .then(res => {
+                const { user, token } = res.data
+                localStorage.setItem("user", JSON.stringify(user))
+                localStorage.setItem("token", token)
+                setUserState(res.data)
+            })
+            .catch(err => handleAuthErr(err.response.data.errMsg))
     }
 
     const handleAuthErr = errMsg => {
@@ -73,6 +74,14 @@ const UserProvider = (props) => {
             .catch(err => {
                 console.log(err)
             })
+
+        axios.get('/info/about')
+            .then(res => {
+                setDataState(prevData => ({
+                    ...prevData,
+                    aboutData: res.data
+                }))
+            })
     }
 
     const deleteMix = (id) => {
@@ -97,6 +106,17 @@ const UserProvider = (props) => {
             .catch(err => console.log(err.response.data.errMsg))
     }
 
+    const deleteAbout = (id) => {
+        userAxios.delete(`/api/about/${id}`)
+            .then(res => {
+                setDataState(prevData => ({
+                    ...prevData,
+                    aboutData: dataState.aboutData.filter(ab => ab._id !== id)
+                }))
+            })
+            .catch(err => console.log(err.response.data.errMsg))
+    }
+
     const addMix = (newUrl, newName) => {
         const newMix = {
             url: newUrl,
@@ -106,7 +126,7 @@ const UserProvider = (props) => {
             .then(res => {
                 getData()
             })
-            .catch(err=> console.log(err))
+            .catch(err => console.log(err))
     }
     const addFellow = (newName) => {
         const newFellow = {
@@ -116,7 +136,29 @@ const UserProvider = (props) => {
             .then(res => {
                 getData()
             })
-            .catch(err=> console.log(err))
+            .catch(err => console.log(err))
+    }
+    const addAbout = (newText) => {
+        const newAbout = {
+            aboutText: newText
+        }
+        userAxios.post('/api/about', newAbout)
+            .then(res => {
+                getData()
+            })
+            .catch(err => console.log(err))
+    }
+
+    const editAbout = (update, id) => {
+        const updatedAbout = {
+            aboutText: update
+        }
+        userAxios.put(`/api/about/${id}`, updatedAbout)
+        .then(res => {
+            console.log(res.data, 'edited')
+            getData()
+        })
+        .catch(err => console.log(err))
     }
 
     return (
@@ -132,9 +174,12 @@ const UserProvider = (props) => {
                 deleteMix: deleteMix,
                 addMix: addMix,
                 deleteFellow: deleteFellow,
-                addFellow: addFellow
+                addFellow: addFellow,
+                editAbout: editAbout,
+                deleteAbout: deleteAbout,
+                addAbout: addAbout
             }}>
-            { props.children }
+            {props.children}
         </UserContext.Provider>
     )
 }
