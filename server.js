@@ -15,7 +15,7 @@ corsOptions = {
 };
 app.use(cors(corsOptions));
 
-mongoose.connect('mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley',
+mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley',
     {
         useNewUrlParser: true,
         useFindAndModify: true,
@@ -33,17 +33,6 @@ app.use("/api/about", require("./routes/aboutRouter"))
 app.use("/api/text", require("./routes/textRouter"))
 
 
-// ... other imports 
-const path = require("path")
-
-// ... other app.use middleware 
-app.use(express.static(path.join(__dirname, "client", "build")))
-
-// ...
-// Right before your app.listen(), add this:
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
 
 
 // Err handler
