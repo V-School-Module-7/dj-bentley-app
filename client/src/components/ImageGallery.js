@@ -9,7 +9,7 @@ export default class extends React.Component {
         <CarouselProvider
             naturalSlideWidth={100}
             naturalSlideHeight={125}
-            totalSlides={40} //changes number of slides. 
+            totalSlides={39} //changes number of slides. 
             infinite='true'
             isPlaying='true'
             className="imageGallery"
@@ -50,13 +50,12 @@ export default class extends React.Component {
                 <Slide index={30}><Image className="iGImage" src={require('../assets/IMG_0817.PNG')} /></Slide>
                 <Slide index={31}><Image className="iGImage" src={require('../assets/IMG_0820.PNG')} /></Slide>
                 <Slide index={32}><Image className="iGImage" src={require('../assets/IMG_0822.PNG')} /></Slide>
-                <Slide index={33}><Image className="iGImage" src={require('../assets/IMG_0823.PNG')} /></Slide>
-                <Slide index={34}><Image className="iGImage" src={require('../assets/IMG_4192.JPG')} /></Slide>
-                <Slide index={35}><Image className="iGImage" src={require('../assets/IMG_0832.PNG')} /></Slide>
-                <Slide index={36}><Image className="iGImage" src={require('../assets/IMG_0833.PNG')} /></Slide>
-                <Slide index={37}><Image className="iGImage" src={require('../assets/IMG_0835.PNG')} /></Slide>
-                <Slide index={38}><Image className="iGImage" src={require('../assets/IMG_0839.PNG')} /></Slide>
-                <Slide index={39}><Image className="iGImage" src={require('../assets/tall-backstage.jpeg')} /></Slide>
+                <Slide index={33}><Image className="iGImage" src={require('../assets/IMG_4192.JPG')} /></Slide>
+                <Slide index={34}><Image className="iGImage" src={require('../assets/IMG_0832.PNG')} /></Slide>
+                <Slide index={35}><Image className="iGImage" src={require('../assets/IMG_0833.PNG')} /></Slide>
+                <Slide index={36}><Image className="iGImage" src={require('../assets/IMG_0835.PNG')} /></Slide>
+                <Slide index={37}><Image className="iGImage" src={require('../assets/IMG_0839.PNG')} /></Slide>
+                <Slide index={38}><Image className="iGImage" src={require('../assets/tall-backstage.jpeg')} /></Slide>
             </Slider>
             <ButtonNext className='imgGalBtn'><FaCaretRight /></ButtonNext>
             
