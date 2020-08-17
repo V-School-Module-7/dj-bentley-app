@@ -16,7 +16,7 @@ input[type=text], input[type=password], input[type=date], input[type=time], text
   border: none;
   border-bottom: 1px solid #F2EFE9;
   font-size: 20px;
-  /* background: none; */
+  background: none;
   color: #F2EFE9;
 }
 
