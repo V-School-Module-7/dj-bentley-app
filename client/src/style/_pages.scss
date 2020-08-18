@@ -7,15 +7,15 @@ input[type=text], input[type=password], input[type=date], input[type=time], text
     border-bottom: 1px solid $lightColor;
     font-size: 20px;
     background: none;
-    color: $lightColor;
+    color: #F2EFE9;
 }
 
 input[type=date]:invalid {
-    color: $lightColor;
+    color: #F2EFE9;
 }
 
 ::placeholder {
-    color: $lightColor;
+    color: #F2EFE9;
     opacity: 64%;
 }
 
