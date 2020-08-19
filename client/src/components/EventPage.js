@@ -12,6 +12,7 @@ const EventPage = () => {
             }, (error) => {
                 console.log(error.text);
             });
+        alert(`Your request was sent, and I'll get back to you as soon as possible. Thanks!`)
     }
 
     return (
