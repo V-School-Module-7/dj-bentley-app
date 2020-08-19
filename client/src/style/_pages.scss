@@ -7,16 +7,16 @@ input[type=text], input[type=password], input[type=date], input[type=time], text
     border-bottom: 1px solid $lightColor;
     font-size: 20px;
     background: none;
-    color: #F2EFE9;
+    color: $lightColor;
 }
 
 input[type=date]:invalid {
-    color: #F2EFE9;
+    color: $lightColor;
 }
 
 ::placeholder {
-    color: #F2EFE9;
-    opacity: 64%;
+    color: $lightColor;
+    // opacity: 0.64;
 }
 
 textarea {

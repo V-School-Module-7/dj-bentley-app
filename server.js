@@ -4,6 +4,7 @@ const morgan = require("morgan")
 const mongoose = require("mongoose")
 const expressJwt = require("express-jwt")
 const PORT = process.env.PORT || 7000
+const path = require("path")
 require("dotenv").config()
 
 app.use(express.json())
@@ -31,6 +32,8 @@ app.use("/api/editmix", require("./routes/mixRouter"))
 app.use("/api/perform", require("./routes/performRouter"))
 app.use("/api/about", require("./routes/aboutRouter"))
 app.use("/api/text", require("./routes/textRouter"))
+app.use(express.static(path.join(__dirname, "client", "build")))
+
 
 
 
@@ -44,13 +47,6 @@ app.use((err, req, res, next) => {
     return res.send({ errMsg: err.message })
 })
 
-// ... other imports 
-const path = require("path")
-
-// ... other app.use middleware 
-app.use(express.static(path.join(__dirname, "client", "build")))
-
-// ...
 // Right before your app.listen(), add this:
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
