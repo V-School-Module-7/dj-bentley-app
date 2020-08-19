@@ -42,7 +42,7 @@ const About = () => {
                         <div className="editAbout">
                             <textarea value={aboutText} onChange={handleChange} name="about" id="aboutMe" cols="30" rows="10"></textarea>
                             <br/>
-                            <button onClick={handleUpdate}>Save</button>
+                            <button className="btn2" onClick={handleUpdate}>Save</button>
                         </div>
                         : 
                         <p>{aboutData[0].aboutText}</p> }

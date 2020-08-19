@@ -12,7 +12,7 @@ const IndMusic = (props) => {
         <div className="otherMusic" onClick={() => props.handleSongChange(props.url)}>
             <h3>{props.mixName}</h3>
 
-            {token ? <button onClick={handleDelete}>Delete</button> : null}
+            {token ? <button className="btn" onClick={handleDelete}>Delete</button> : null}
         </div>
     )
 }
