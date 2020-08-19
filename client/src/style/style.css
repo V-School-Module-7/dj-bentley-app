@@ -225,7 +225,7 @@ svg:hover {
   font-size: 30px;
 }
 
-.opacity {
+/* .opacity {
   -webkit-transition: opacity 5s;
   transition: opacity 5s;
   opacity: 40%;
@@ -235,7 +235,7 @@ svg:hover {
   -webkit-transition: opacity 5s;
   transition: opacity 5s;
   opacity: 100%;
-}
+} */
 
 .instaDiv img {
   border-radius: 10px;
