@@ -14,9 +14,9 @@ input[type=date]:invalid {
     color: $lightColor;
 }
 
-form::placeholder {
+input::placeholder {
     color: $lightColor;
-    opacity: 64%;
+    opacity: 0.5;
 }
 
 textarea {
