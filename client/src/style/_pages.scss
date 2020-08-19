@@ -153,15 +153,15 @@ svg {
     font-size: 30px;
 }
 
-// .opacity {
-//     transition: opacity 5s;
-//     opacity: 40%;
-// }
+.opacity {
+    transition: opacity 5s;
+    opacity: 0.5;
+}
 
-// .undoOpacity {
-//     transition: opacity 5s;
-//     opacity: 100%;
-// }
+.undoOpacity {
+    transition: opacity 5s;
+    opacity: 1;
+}
 
 .instaDiv {
     img {
