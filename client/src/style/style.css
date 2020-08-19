@@ -39,7 +39,7 @@ input[type=date]:invalid {
   opacity: 64%;
 }
 
-::placeholder {
+form::placeholder {
   color: #F2EFE9;
   opacity: 64%;
 }
