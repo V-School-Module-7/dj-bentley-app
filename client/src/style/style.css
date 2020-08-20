@@ -344,9 +344,6 @@ svg:hover {
   nav p {
     padding: 0px 7px;
   }
-  .headerImg {
-    height: 200px;
-  }
   .musicPlayer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -414,6 +411,7 @@ svg:hover {
   nav p {
     padding: 0px 15px;
   }
+  
   .musicPlayer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -449,6 +447,7 @@ svg:hover {
   nav p {
     padding: 0px 15px;
   }
+  
   .musicPlayer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -740,6 +739,13 @@ footer a:hover {
 
 .editDjModal .btn {
   font-size: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .headerImg {
+    /* height: 200px; */
+    background-image: url("../assets/mobileHeader.jpg");
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
