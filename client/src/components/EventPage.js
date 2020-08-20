@@ -18,7 +18,7 @@ const EventPage = () => {
     return (
         <div className="eventPage">
             
-            <form className="contact-form aboutContent" onSubmit={sendEmail}>
+            <form className="contact-form aboutContent bookContent" onSubmit={sendEmail}>
                 <h1>BOOKING REQUEST</h1>
                 <input type="hidden" name="contact_number" />
                 

@@ -49,6 +49,11 @@ textarea {
   border-bottom: 1px solid #F2EFE9;
 }
 
+textarea::placeholder {
+  color: #F2EFE9;
+  opacity: 0.5;
+}
+
 .btn {
   background: none;
   color: #F2EFE9;
