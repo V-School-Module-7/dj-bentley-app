@@ -10,12 +10,6 @@ require("dotenv").config()
 app.use(express.json())
 app.use(morgan("dev"))
 
-// corsOptions = {
-//     origin: "https://dj-bentley-taylor.herokuapp.com/",
-//     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-// };
-// app.use(cors(corsOptions));
-
 mongoose.connect('mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley?retryWrites=true&w=majority',
     {
         useNewUrlParser: true,
