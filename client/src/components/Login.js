@@ -29,7 +29,6 @@ const Login = () => {
     return (
         <div className="loginPage">
             <Header />
-            {/* <h2>Admin Login</h2> */}
             <form className="login" onSubmit={handleSubmit}>
                 <input 
                     type="text"
