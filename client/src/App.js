@@ -267,8 +267,6 @@ function App() {
 export default App;
 
 
-//To change the text on the about page, go to the About.js file in the components folder
-
 //To change photos, or add more in the gallery, go to ImageGallery.js in the components folder
 
 //More information about the modals on https://www.npmjs.com/package/react-modal
