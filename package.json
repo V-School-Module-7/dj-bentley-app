@@ -15,15 +15,15 @@
     "mongoose": "^5.9.4",
     "morgan": "^1.9.1",
     "node-sass": "^4.14.1",
-    "nodemon": "^2.0.4",
     "react-modal": "^3.11.2",
     "uuid": "^7.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "start": "node server.js"
   },
   "engines": {
     "node": "10.19.0"
