@@ -1,0 +1,26 @@
+{
+  "name": "dj-bentley-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thereIsNoSpoon8891/dj-bentley-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thereIsNoSpoon8891/dj-bentley-app/issues"
+  },
+  "homepage": "https://github.com/thereIsNoSpoon8891/dj-bentley-app#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.2"
+  }
+}
