@@ -33,7 +33,7 @@ const EventPage = () => {
                 onSubmit={sendEmail}
             >
                 <h1>BOOKING REQUEST</h1>
-                <input type="hidden" name="contact_number" />
+                
 
                 <input type="text" name="user_name" placeholder="Name" />
 
