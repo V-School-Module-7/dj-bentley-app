@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 7000
 const path = require("path")
 require("dotenv").config()
 
+
 app.use(express.json())
 app.use(morgan("dev"))
 
@@ -27,6 +28,8 @@ app.use("/api/perform", require("./routes/performRouter"))
 app.use("/api/about", require("./routes/aboutRouter"))
 app.use("/api/text", require("./routes/textRouter"))
 app.use(express.static(path.join(__dirname, "client", "build")))
+
+
 
 
 
