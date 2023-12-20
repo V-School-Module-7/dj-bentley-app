@@ -1,13 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MixPlayer from './MixPlayer.jsx'
+import About from './About.jsx'
 
 
 function App() {
 
 
   return (
-    <>
-      DJ Bentley V2        
-    </>
+    <div>
+      DJ Bentley V2 
+      <MixPlayer />
+      <About />       
+    </div>
   )
 }
 

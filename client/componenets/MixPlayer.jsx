@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import IndMusic from './IndMusic'
 
-const MusicPlayer = () => {
+const MixPlayer = () => {
     // const { dataState } = useContext(UserContext);
     const [mixes, setMixes] = useState([]);
     const [selectedMix, setSelectedMix] = useState(null);
@@ -73,4 +73,4 @@ const MusicPlayer = () => {
     );
 };
 
-export default MusicPlayer;
+export default MixPlayer;

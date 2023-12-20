@@ -9,7 +9,6 @@ const About = () => {
             .get("https://api.mixcloud.com/djbentleytaylor")
             .then((res) => {
                 const data = res.data.biog;
-                console.log(data);
                 setBio(data);
             })
             .catch((err) => console.log(err));
