@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MixPlayer from './MixPlayer.jsx'
 import About from './About.jsx'
-
+import Reviews from './Reviews.jsx';
 
 function App() {
 
@@ -10,7 +10,8 @@ function App() {
     <div>
       DJ Bentley V2 
       <MixPlayer />
-      <About />       
+      <About /> 
+      <Reviews />      
     </div>
   )
 }
