@@ -15,7 +15,7 @@ const MixPlayer = () => {
                     "https://api.mixcloud.com/djbentleytaylor/cloudcasts"
                 );
                 const data = response.data.data;
-                // console.log(data);
+                console.log(data);
                 const mixTiles = data.map((mix) => ({
                     name: mix.name,
                     url: mix.url,
