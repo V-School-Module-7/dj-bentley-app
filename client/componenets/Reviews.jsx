@@ -1,8 +1,9 @@
 import StarsRow from "./StarsRow"
+import the_knot_logo from '../assets/the_knot_logo.png'
 
 /*  DESIGN NOTES
 all classes in this component start with 'reviews', hopefully this will help mitigate 'class hunting' when Valerie starts styling with CSS
-I added style props to some of the span tags to make sure the containers to make sure the stars and sub-headers will align properly FEEL FREE to REMOVE THEM!
+I added style props to some of the span tags to make sure the containers and sub-headers will align properly FEEL FREE to REMOVE THEM!
 */
 function Reviews() {
 
@@ -20,7 +21,7 @@ return (
     <span className="reviews-header">Awards & reviews</span>
 
     <div className="reviews-awards-container">
-        {/* logo here somewhere */}
+        <img width={100} src={the_knot_logo}/>
         <p>
         DJ Bentley was selected as a 2023 ­­winner of The Knot Best of Weddings! An accolade representing the highest- and most-rated wedding professionals
         as reviewed by real couples. To determine the winners, The Knot analyzed millions of its user reviews across various vendor categories to find the 
