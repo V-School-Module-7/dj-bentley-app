@@ -4,7 +4,7 @@ import About from './About.jsx'
 import Home from './Home.jsx';
 import Reviews from './Reviews.jsx';
 import Gallery from './Gallery.jsx';
-import Booking from './Booking.jsx';
+import BookingForm from './BookingForm.jsx';
 import './navbar.css'
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
    <Route path="/" element={<Home/>}/> 
        <Route path="/about" element={<About />} />
        <Route path="/mixplayer" element={<MixPlayer/>} />
-       <Route path="/booking" element={<Booking/>}/> 
+       <Route path="/booking" element={<BookingForm/>}/> 
        <Route path="/reviews" element={<Reviews/>}/>
        <Route path="/gallery" element={<Gallery/>}/> 
 
