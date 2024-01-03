@@ -5,7 +5,7 @@ import Home from './Home.jsx';
 import Reviews from './Reviews.jsx';
 import Gallery from './Gallery.jsx';
 import Booking from './Booking.jsx';
-// import './navbar.css';
+import GalleryImage from './GalleryImage.jsx';
 import'./style.css'
 
 function App() {
@@ -33,6 +33,7 @@ function App() {
      <Booking/>
      <Reviews/>
      <MixPlayer/>
+     <GalleryImage/>
    <Routes>
    {/* <Route path="/" element={<Home/>}/> 
        <Route path="/about" element={<About />} />

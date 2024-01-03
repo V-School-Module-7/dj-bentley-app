@@ -17,11 +17,12 @@ const About = () => {
 
     return (
         <div className="aboutPage">
-            <div className="aboutImage"></div>
-            <div className="aboutContent">
-                <h1>ABOUT ME</h1>
-                <p>{bio}</p>
+            <div className="aboutImage">
                 <img className = "bioImage" src = "../images/bioPhoto.jpg" ></img>
+            </div>
+            <div className="aboutContent">
+                <h1>Bio</h1>
+                <p>{bio}</p>
             </div>
         </div>
     );
