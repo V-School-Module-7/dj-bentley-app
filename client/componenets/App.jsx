@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import MixPlayer from './MixPlayer.jsx'
 import About from './About.jsx'
-import Home from './Home.jsx';
 import Reviews from './Reviews.jsx';
 import Gallery from './Gallery.jsx';
 import BookingForm from './BookingForm.jsx';
 import './navbar.css'
+
 function App() {
 
 
