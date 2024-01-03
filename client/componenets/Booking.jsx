@@ -5,7 +5,7 @@ import React from "react";
 export default function Booking(){
 
     return(
-        <div className="Booking-Form">
+        <div className="bookingForm">
             Form goes here
         </div>
     )

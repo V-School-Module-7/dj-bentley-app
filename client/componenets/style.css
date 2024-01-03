@@ -1,0 +1,100 @@
+/* Test stuff */
+
+
+
+.aboutPage {
+    border: solid 3px green
+}
+
+.bioImage {
+    width:50vw
+}
+
+.musicPlayer {
+    border: solid 3px violet
+}
+
+.bookingForm {
+    border: solid 3px orange
+}
+
+.reviewsContainer {
+    border: solid 3px teal
+}
+
+/* actual styling */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-size: 14px; /* Set a base font size for the root element */
+}
+
+body {
+    font-size: 1rem; /* 1rem is equal to the root element's font size (16px in this case) */
+}
+
+/* NavBar.css */
+
+.navbar {
+    background-color: #F0EFEE;
+    font-family: "montserrat";
+    width: 100vw;
+    height: 133px;
+    position: sticky;
+    top:0;
+    display:flex;
+    align-items: center;
+}
+
+.navItems {
+    position: absolute;
+    top: 3.62rem;
+    right:5.44rem;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 1;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 25vw;
+    height: auto;
+    margin-left: 5vw;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #56575c;
+    padding-right: 0.5rem;
+    font-size: 1.25rem;
+}
+
+/* Home */
+
+.homeImage {
+    width:100vw;
+}
+
+.homeLogo {
+    width: 50vw;
+    position: absolute;
+    right:8vw
+
+}
+/* Colors */
+
+/* light beige #d7d0cd
+charcoal #56575c
+red #e01c2a
+  light grey f0efee
+  burnt orange #c74a32 */

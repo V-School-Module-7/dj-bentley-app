@@ -1,9 +1,10 @@
 import React from "react"
+import './style.css'
 
 function Reviews() {
  
 return (
-<div className="reviews-container">
+<div className="reviewsContainer">
     reviews go here
 </div>
 )

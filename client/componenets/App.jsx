@@ -5,7 +5,9 @@ import Home from './Home.jsx';
 import Reviews from './Reviews.jsx';
 import Gallery from './Gallery.jsx';
 import Booking from './Booking.jsx';
-import './navbar.css'
+// import './navbar.css';
+import'./style.css'
+
 function App() {
 
 
@@ -15,20 +17,28 @@ function App() {
 
           <nav className='nav-links'>
           <img src ="images/NavBarLogo.png" className='logo'/>
+          <div className = "navItems">
           <Link to="/" className="nav-link">Home</Link>
-          <Link to="/about" className="nav-link">About</Link>
-          <Link to="/mixplayer" className="nav-link">MixPlayer</Link>
-          <Link to="/booking" className="nav-link">Booking</Link>
-          <Link to="/reviews" className="nav-link">Reviews</Link>
+          <Link to="/about" className="nav-link">Bio</Link>
+          <Link to="/mixplayer" className="nav-link">DJ Mixes</Link>
+          <Link to="/booking" className="nav-link">Bookings</Link>
+          <Link to="/reviews" className="nav-link">Awards & Reviews</Link>
+          <Link to="/gallery" className = "nav-link">Gallery</Link>
+          </div>
           </nav>
         </div>
    
+     <Home/>
+     <About/>
+     <Booking/>
+     <Reviews/>
+     <MixPlayer/>
    <Routes>
-   <Route path="/" element={<Home/>}/> 
+   {/* <Route path="/" element={<Home/>}/> 
        <Route path="/about" element={<About />} />
        <Route path="/mixplayer" element={<MixPlayer/>} />
        <Route path="/booking" element={<Booking/>}/> 
-       <Route path="/reviews" element={<Reviews/>}/>
+       <Route path="/reviews" element={<Reviews/>}/> */}
        <Route path="/gallery" element={<Gallery/>}/> 
 
    </Routes>
