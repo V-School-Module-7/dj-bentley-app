@@ -4,6 +4,7 @@ import About from './About.jsx'
 import Reviews from './Reviews.jsx';
 import Gallery from './Gallery.jsx';
 import GalleryImage from './GalleryImage.jsx';
+import Home from './Home.jsx'
 import'./style.css'
 import BookingForm from './BookingForm.jsx';
 
