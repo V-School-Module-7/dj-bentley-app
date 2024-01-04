@@ -1,3 +1,6 @@
+
+import React from "react"
+import './style.css'
 import StarsRow from "./StarsRow"
 import the_knot_logo from '../assets/the_knot_logo.png'
 
@@ -16,6 +19,7 @@ function Reviews() {
  };
 
 return (
+
 <div style={reviewsComponent} className="reviews-container">
 
     <span className="reviews-header">Awards & reviews</span>
@@ -78,7 +82,6 @@ return (
     </div>
 
     <button onClick={navigateToTheKnotReviews}>Additional Reviews</button>
-
 </div>
 )
 }
