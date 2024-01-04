@@ -194,18 +194,19 @@ body {
     justify-content: space-around;
     align-items: center; */
 } 
-/* .chevronIcon {
-    font-size: 3rem;
-    color:#56575C;
-    padding: 1rem
-} */
+.slick-arrow.slick-prev, .slick-arrow.slick-next {
+    color: red;
+    background-color: orange;
+    width: 200px;
+    height:200px
+}
 
 .mix-box > div {
     width:20vw;
     display:flex;
     align-items: center;
     justify-content: center;
-    border: solid 2px red
+    
 
 }
 
