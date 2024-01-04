@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 // import IndMusic from './IndMusic'
 import './style.css'
@@ -9,10 +9,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const MixPlayer = () => {
+    const iframeRef = useRef(null)
     // const { dataState } = useContext(UserContext);
     const [mixes, setMixes] = useState([]);
     const [selectedMix, setSelectedMix] = useState(null);
     const [isClicked, setIsClicked] = useState(false);
+    const [isPlaying, setisPlaying] = useState(false)
+
+
+        const handleFocus = () => {
+            console.log('focused')
+        }
+ 
 
     useEffect(() => {
         const fetchData = async () => {
@@ -39,11 +47,15 @@ const MixPlayer = () => {
     const handleMixClick = (index) => {
         setSelectedMix(index);
         setIsClicked(true);
+        setisPlaying(true)
+        console.log()
     };
 
-    const handleBlur = () => {
+    const handleBlur = (index) => {
         setIsClicked(false);
         setSelectedMix(null);
+        setisPlaying(false)
+        console.log("blurred")
     };
 
 // slider settings
@@ -81,24 +93,29 @@ const settings = {
 
                 {mixes.map((mix, index) => (
                     <div
-                    className="mix-box"
-                    key={index}
-                    onClick={() => handleMixClick(index)}
+                        className="mix-box"
+                        key={index}
+                        onClick={() => handleMixClick(index)}
+                        onBlur={handleBlur}
                     >
                         {selectedMix !== null && isClicked ? (
-                            <iframe
-                            // width="100%"
-                            // height="400"
-                            title={mixes[selectedMix].name}
-                            src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
-                                mix.url
-                                )}`}
-                                frameBorder="0"
-                                onBlur={handleBlur}
+                            <div
+                                onBlur={handleBlur}>
+                                <iframe
+                                    width="30%"
+                                    height="400"
+                                    title={mixes[selectedMix].name}
+                                    src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
+                                        mix.url
+                                    )}`}
+                                    frameBorder="0"
+                                
                                 ></iframe>
-                                ) : (
-                                    <div>
-                                {/* not displaying the names for a cleaner mor minimal look */}
+                            </div>
+                        ) : (
+                            <div
+                                onBlur={handleBlur}>
+ {/* not displaying the names for a cleaner mor minimal look */}
                                 {/* <h3>{mix.name}</h3> */}
                                 <img src={mix.pictures} alt={mix.name} />
                             </div>

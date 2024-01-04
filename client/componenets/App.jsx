@@ -1,15 +1,13 @@
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import MixPlayer from './MixPlayer.jsx'
 import About from './About.jsx'
-import Home from './Home.jsx';
 import Reviews from './Reviews.jsx';
 import Gallery from './Gallery.jsx';
-import Booking from './Booking.jsx';
 import GalleryImage from './GalleryImage.jsx';
 import'./style.css'
+import BookingForm from './BookingForm.jsx';
 
 function App() {
-
 
   return (
     <div>
@@ -30,18 +28,12 @@ function App() {
    
      <Home/>
      <About/>
-     <Booking/>
+     <BookingForm/>
      <Reviews/>
      <MixPlayer/>
      <GalleryImage/>
    <Routes>
-   {/* <Route path="/" element={<Home/>}/> 
-       <Route path="/about" element={<About />} />
-       <Route path="/mixplayer" element={<MixPlayer/>} />
-       <Route path="/booking" element={<Booking/>}/> 
-       <Route path="/reviews" element={<Reviews/>}/> */}
-       <Route path="/gallery" element={<Gallery/>}/> 
-
+       <Route path="/gallery" element={<Gallery/>}/>
    </Routes>
 </div>
   )
