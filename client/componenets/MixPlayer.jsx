@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import ReactPlayer from 'react-player'
 // import IndMusic from './IndMusic'
 import './style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -36,7 +37,8 @@ const MixPlayer = () => {
                     pictures: mix.pictures && mix.pictures["320wx320h"],
                 }));
 
-                setMixes(mixTiles);
+                setMixes(mixTiles)
+                console.log(mixes);
             } catch (error) {
                 console.error("Error fetching Mixcloud data:", error);
             }
@@ -85,6 +87,7 @@ const settings = {
   }
 
     return (
+        
         <div className="musicPlayer">
             <h1>Bentley's Mixes</h1>
             {/* <FontAwesomeIcon icon={faChevronLeft} className = "chevronIcon"/> */}
