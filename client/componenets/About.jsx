@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import './style.css'
 
 const About = () => {
     const [bio, setBio] = useState("");
@@ -10,15 +11,18 @@ const About = () => {
             .then((res) => {
                 const data = res.data.biog;
                 setBio(data);
+                console.log(data)
             })
             .catch((err) => console.log(err));
     }, []);
 
     return (
         <div className="aboutPage">
-            <div className="aboutImage"></div>
+            <div className="aboutImage">
+                <img className = "bioImage" src = "../images/bioPhoto.jpg" ></img>
+            </div>
             <div className="aboutContent">
-                <h1>ABOUT ME</h1>
+                <h1>Bio</h1>
                 <p>{bio}</p>
             </div>
         </div>

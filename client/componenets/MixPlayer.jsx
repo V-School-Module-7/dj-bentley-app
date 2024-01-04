@@ -2,14 +2,26 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import ReactPlayer from 'react-player'
 // import IndMusic from './IndMusic'
+import './style.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const MixPlayer = () => {
+    const iframeRef = useRef(null)
     // const { dataState } = useContext(UserContext);
     const [mixes, setMixes] = useState([]);
     const [selectedMix, setSelectedMix] = useState(null);
     const [isClicked, setIsClicked] = useState(false);
+    const [isPlaying, setisPlaying] = useState(false)
 
-    const iframeRef = useRef(null);
+
+        const handleFocus = () => {
+            console.log('focused')
+        }
+ 
 
     useEffect(() => {
         const fetchData = async () => {
@@ -37,63 +49,85 @@ const MixPlayer = () => {
     const handleMixClick = (index) => {
         setSelectedMix(index);
         setIsClicked(true);
+        setisPlaying(true)
+        console.log()
     };
 
-    const handleBlur = () => {
+    const handleBlur = (index) => {
         setIsClicked(false);
         setSelectedMix(null);
+        setisPlaying(false)
+        console.log("blurred")
     };
 
-    const handleMouseOver = () => {
-        if (iframeRef.current) {
-            console.log('moused over')
-            iframeRef.current.contentWindow.postMessage({ method: 'play' }, '*');
+// slider settings
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
         }
-    };
-
-    const handleMouseOut = () => {
-        if (iframeRef.current) {
-            console.log("moused out")
-            // Pause the Mixcloud player when the iframe is not hovered
-            iframeRef.current.contentWindow.postMessage({ method: 'pause' }, '*');
-        }
-    };
-        
-    
+      ]
+  }
 
     return (
         
         <div className="musicPlayer">
-            <script src="//widget.mixcloud.com/media/js/widgetApi.js" type="text/javascript"></script>
-            <div>
+            <h1>Bentley's Mixes</h1>
+            {/* <FontAwesomeIcon icon={faChevronLeft} className = "chevronIcon"/> */}
+            <div className = "carousel">
+                <Slider {...settings}>
+
                 {mixes.map((mix, index) => (
                     <div
                         className="mix-box"
                         key={index}
                         onClick={() => handleMixClick(index)}
+                        onBlur={handleBlur}
                     >
                         {selectedMix !== null && isClicked ? (
-                            <iframe
-                                width="30%"
-                                height="400"
-                                title={mixes[selectedMix].name}
-                                src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
-                                    mix.url
-                                )}`}
-                                frameBorder="0"
-                                onBlur={handleBlur}
-                                onMouseOver={handleMouseOver}
-                                onMouseOut={handleMouseOut}
-                            ></iframe>
+                            <div
+                                onBlur={handleBlur}>
+                                <iframe
+                                    width="30%"
+                                    height="400"
+                                    title={mixes[selectedMix].name}
+                                    src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
+                                        mix.url
+                                    )}`}
+                                    frameBorder="0"
+                                
+                                ></iframe>
+                            </div>
                         ) : (
-                            <div>
-                                <h3>{mix.name}</h3>
+                            <div
+                                onBlur={handleBlur}>
+ {/* not displaying the names for a cleaner mor minimal look */}
+                                {/* <h3>{mix.name}</h3> */}
                                 <img src={mix.pictures} alt={mix.name} />
                             </div>
                         )}
                     </div>
                 ))}
+                </Slider>
             </div>
+            {/* <FontAwesomeIcon icon={faChevronRight} className = "chevronIcon" /> */}
         </div>
     );
 };
