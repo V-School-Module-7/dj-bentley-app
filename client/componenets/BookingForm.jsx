@@ -32,8 +32,9 @@ const BookingForm = () => {
                 className="contact-form aboutContent bookContent"
                 onSubmit={sendEmail}
             >
-                <h1>BOOKING INQUIRIES</h1>
+               
                 <select
+                className = "input"
                      name="how" 
                      >
                         <option value="">-- How did you hear about DJ Bentley? --</option>
@@ -45,6 +46,7 @@ const BookingForm = () => {
                         <option value="other">Other</option>
                 </select>
                 <select
+                className = "input"
                     name="event_type" 
                     >
                         <option value="">--Event Type--</option>
@@ -56,21 +58,24 @@ const BookingForm = () => {
 
                     </select>
 
-                <input type="text" name="user_name" placeholder="Name" />
+                <input className = "input" type="text" name="user_name" placeholder="Name" />
 
-                <input type="text" name="user_email" placeholder="Email" />
+                <input className = "input" type="text" name="user_email" placeholder="Email" />
 
                 <input
+                className = "input"
                     type="text"
                     name="event_location"
                     placeholder="Event Location"
                 />
                 <input 
+                className = "input"
                     type="text"
                     name="city"
                     placeholder="City"
                 />
                 <select
+                className = "input"
                     name="state"
                 >
                     <option value="">-- State --</option>
@@ -127,9 +132,9 @@ const BookingForm = () => {
 
                 </select>
 
-                <input type="date" placeholder="date" name="requested_date" />
+                <input className = "input" type="date" placeholder="date" name="requested_date" />
 
-                <textarea name="details" placeholder="Additional Details" />
+                <textarea className = "textarea" name="details" placeholder="Additional Details" />
 
                 <input type="submit" value="Submit" className="btn" />
             </form>
