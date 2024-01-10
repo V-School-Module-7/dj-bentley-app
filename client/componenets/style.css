@@ -214,7 +214,36 @@ body {
     border-radius: 10px;
     width: 20vw;
     height:auto
-} 
+}
+.mix-box:not(.hidden-mix-div) > div > img {
+    border-radius: 10px;
+    width: 20vw;
+    height:auto
+}
+
+.mix-box:not(.hidden-mix-div) {
+    border-radius: 10px;
+    width: 20vw;
+    height:auto
+}
+
+.hidden-mix-div {
+    height: 0;
+}
+
+.hidden-image {
+    display: none;
+}
+
+.mix-box:not(.hidden-image) {
+    border-radius: 10px;
+    width: 20vw;
+    height:auto
+}
+
+.unclicked iframe {
+    height: 0;
+}
 
 /* Colors */
 

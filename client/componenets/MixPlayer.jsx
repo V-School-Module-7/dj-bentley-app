@@ -74,25 +74,14 @@ const MixPlayer = () => {
 
     const handleWidgetLoaded = () => {
         setIframeLoaded(true);
+        console.log("loaded!");
     };
 
     //will need to call the widget.events.play function on the widget that's clicked
     //the widget that's clicked will need to be saved as a variable
 
     const handleWidgetPlayEvent = (index) => {
-        // let widget;
-        // for (let id in widgets) {
-        //     widget = widgets[id];
-        //     widget.getIsPaused().then((isPaused) => {
-        //         if (isPaused) {
-        //             console.log(`Pausing widget ${id}`);
-        //             // widget.pause()
-        //         } else {
-        //             console.log(`played widget ${id}`);
-        //         }
-        //     });
-        // }
-        if (iframeLoaded) {
+        if (!iframeLoaded) {
             const iframeId = `my-widget-iframe-${index}`;
             const widget = window.Mixcloud.PlayerWidget(
                 document.getElementById(iframeId)
@@ -101,6 +90,19 @@ const MixPlayer = () => {
             widget.ready.then(() => {
                 widget.events.play.on(() => console.log("It played!"));
             });
+            setWidgets((prevWidgets) => ({ ...prevWidgets, [index]: widget }));
+        }
+    };
+
+    const onImageClick = (index) => {
+        const iframe = document.getElementById(`my-widget-iframe-${index}`);
+        const img = document.getElementById(`my-widget-image-${index}`);
+        if (iframe && iframe.classList.contains("hidden-mix-div")) {
+            iframe.classList.remove("hidden-mix-div");
+        }
+
+        if (img && img.classList.contains("hidden-image")) {
+            img.classList.remove("hidden-image");
         }
     };
 
@@ -142,21 +144,25 @@ const MixPlayer = () => {
                             onClick={() => handleMixClick(index)}
                             // onBlur={handleBlur}
                         >
-                            <div>
-                                
-                                    <iframe
-                                        id={`my-widget-iframe-${index}`}
-                                        onLoad={() => handleWidgetLoaded(index)}
-                                        width="30%"
-                                        height="400"
-                                        title={mix.name}
-                                        src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
-                                            mix.url
-                                        )}`}
-                                        frameBorder="0"
-                                        className="dynamicClass"
-                                    ></iframe>
-                                
+                            <div className={!isClicked ? "hidden-mix-div" : ""}>
+                                <iframe
+                                    id={`my-widget-iframe-${index}`}
+                                    onLoad={() => handleWidgetLoaded(index)}
+                                    width="30%"
+                                    height="400"
+                                    title={mix.name}
+                                    src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
+                                        mix.url
+                                    )}`}
+                                    frameBorder="0"
+                                ></iframe>
+                                <img
+                                    id={`my-widget-image-${index}`}
+                                    className="hidden-image"
+                                    onClick={() => onImageClick(index)}
+                                    src={mix.pictures}
+                                    alt={mix.name}
+                                />
                             </div>
                         </div>
                     ))}
