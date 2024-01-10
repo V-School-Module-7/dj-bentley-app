@@ -52,6 +52,7 @@ const MixPlayer = () => {
     const handleMixClick = (index) => {
         setSelectedMixIndex(index);
         setIsClicked(true);
+        console.log("clicked");
         handleWidgetPlayEvent();
         const iframeId = `my-widget-iframe-${index}`;
         const widget = window.Mixcloud.PlayerWidget(
@@ -144,22 +145,29 @@ const MixPlayer = () => {
                             onClick={() => handleMixClick(index)}
                             // onBlur={handleBlur}
                         >
-                            <div className={!isClicked ? "hidden-mix-div" : ""}>
-                                <iframe
-                                    id={`my-widget-iframe-${index}`}
-                                    onLoad={() => handleWidgetLoaded(index)}
-                                    width="30%"
-                                    height="400"
-                                    title={mix.name}
-                                    src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
-                                        mix.url
-                                    )}`}
-                                    frameBorder="0"
-                                ></iframe>
+                            <div className="container">
+                                <div
+                                    className={`iframe-container ${
+                                        isClicked ? "visible" : "hidden"
+                                    }`}
+                                >
+                                    <iframe
+                                        id={`my-widget-iframe-${index}`}
+                                        onLoad={() => handleWidgetLoaded(index)}
+                                        width="100%"
+                                        height="400"
+                                        title={mix.name}
+                                        src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
+                                            mix.url
+                                        )}`}
+                                        frameBorder="0"
+                                        style={{ opacity: isClicked ? 1 : 0 }}
+                                    ></iframe>
+                                </div>
                                 <img
                                     id={`my-widget-image-${index}`}
                                     className="hidden-image"
-                                    onClick={() => onImageClick(index)}
+                                    onClick={() => handleMixClick(index)}
                                     src={mix.pictures}
                                     alt={mix.name}
                                 />
