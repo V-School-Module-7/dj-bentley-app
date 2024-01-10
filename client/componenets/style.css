@@ -1,16 +1,4 @@
-/* Test stuff */
 
-
-
-.bookingForm {
-    border: solid 3px orange
-}
-
-.reviewsContainer {
-    border: solid 3px teal
-}
-
-/* actual styling */
 
 * {
     box-sizing: border-box;
@@ -23,6 +11,7 @@ html {
 
 body {
     font-size: 1rem; /* 1rem is equal to the root element's font size (16px in this case) */
+background-color: #F0EFEE;
 }
 
 /* NavBar.css */
@@ -95,7 +84,6 @@ body {
 
 .aboutPage {
     font-family: "montserrat";
-    /* border: solid 3px green; */
     display:flex;
     justify-content: center;
     background-color: #F0EFEE;
@@ -123,6 +111,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color:#56575C
 }
 
 .aboutContent >h1 {
@@ -133,7 +122,7 @@ body {
 .aboutContent >p {
     width: 60%;
     max-height: 75%;
-    overflow:scroll
+    overflow:auto
 }
 
 /* GalleryImage */
@@ -170,11 +159,148 @@ body {
     
 }
 
+/* Booking */
+
+.eventPage {
+
+    position: relative;
+    top: 50%;
+    transform : translateY(-50%)
+}
+
+.bookH1 {
+    font-family: "montserrat";
+    text-align: center;
+    padding: 3rem;
+    background-color: #F0EFEE;
+    color:#56575C
+}
+
+.booking {
+    display:flex;
+    flex-direction: row-reverse;
+    font-family: "montserrat";
+    background-color: #F0EFEE;
+    color:#56575C
+}
+
+.input{
+    width: 40vw;
+padding: 5px;
+margin-top: 10px;
+flex-shrink: 0;
+border-radius: 5.625rem;
+background: #D7D0CD;
+color:#56575C;
+font-family: "montserrat";
+box-shadow: 0;
+}
+
+.textarea {
+    width: 40vw;
+    padding:5px;
+    height: 5rem;
+    margin-top: 10px;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    background: #D7D0CD;
+    font-family: "montserrat";
+}
+
+.btn {
+    width: 21.52925rem;
+height: 3.625rem;
+flex-shrink: 0;
+border-radius: 5.625rem;
+background: #C74A32;
+font-family: "montserrat";
+margin-top: 10px;
+}
+
+.details {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 40vw
+}
+
+.details > h2 {
+    margin : 1rem;
+
+}
+
+/* Reviews */
+
+.reviews-container {
+    font-family: "montserrat";
+    color:#56575C;
+    background-color: #D7D0CD;
+    border-radius: 1rem;
+    width:80vw;
+    position:relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews-header {
+    text-align: center;
+    background-color: #D7D0CD;
+}
+.reviews-awards-container {
+    background-color: #D7D0CD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.reviews-awards-container > img{
+    background-color: #D7D0CD;
+}
+.reviews-awards-container > p{
+    background-color: #D7D0CD;
+    text-align: center;
+    margin: 1rem
+}
+.reviews-recent-reviews-header {
+    background-color: #D7D0CD;
+    text-align: center;
+    margin: 1rem;
+}
+.reviews-sub-header-container {
+    background-color: #D7D0CD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.reviews-recent-reviews-sub-header {
+    background-color: #D7D0CD;
+}
+.reviews-recent-reviews > p {
+    background-color: #D7D0CD;
+    margin-bottom: 1rem;
+}
+.row-of-stars-component {
+    background-color: #D7D0CD;
+}
+
 /* MixPlayer */
 
 .musicPlayer {
     background-color: #F0EFEE;
     font-family: 'montserrat';
+    margin-bottom: 3rem;
+    width:90vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     /* display:flex;
     justify-content: space-around;
     align-items: center; */
@@ -182,32 +308,25 @@ body {
 
 .musicPlayer > h1 {
     text-align: center;
-    padding: 3rem
+    padding: 3rem;
+    color:#56575C;
 }
 
 .carousel {
     width: 75vw;
     position: relative;
     left: 50%;
-    transform: translateX(-50%)
-    /* display:flex;
-    justify-content: space-around;
-    align-items: center; */
+    transform: translateX(-50%);
 } 
 .slick-arrow.slick-prev, .slick-arrow.slick-next {
-    color: red;
-    background-color: orange;
-    width: 200px;
-    height:200px
+    
 }
 
 .mix-box > div {
     width:20vw;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    
-
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
 }
 
 .mix-box > div > img {
