@@ -10,9 +10,7 @@ I added style props to some of the span tags to make sure the containers and sub
 */
 function Reviews() {
 
- const reviewsComponent = {// @Valerie, remove this once you start the design process, it's only here to help me see where the component is :-)
-    border: 'solid black 1px'
- };
+
 
  function navigateToTheKnotReviews() {
     window.open('https://www.theknot.com/marketplace/dj-bentley-park-city-ut-2064480');
@@ -20,9 +18,9 @@ function Reviews() {
 
 return (
 
-<div style={reviewsComponent} className="reviews-container">
+<div className="reviews-container"> 
 
-    <span className="reviews-header">Awards & reviews</span>
+    <h1 className="reviews-header">Awards & reviews</h1>
 
     <div className="reviews-awards-container">
         <img width={100} src={the_knot_logo}/>
@@ -34,7 +32,7 @@ return (
         </p>
     </div>
 
-    <span className="reviews-recent-reviews-header">Recent Reviews</span>
+    <h2 className="reviews-recent-reviews-header">Recent Reviews</h2>
 
     <div className="reviews-recent-reviews">
 
@@ -81,7 +79,7 @@ return (
     </p>
     </div>
 
-    <button onClick={navigateToTheKnotReviews}>Additional Reviews</button>
+    <button className = "btn" onClick={navigateToTheKnotReviews}>Additional Reviews</button>
 </div>
 )
 }
