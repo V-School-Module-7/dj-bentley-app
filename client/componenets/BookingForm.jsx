@@ -32,34 +32,52 @@ const BookingForm = () => {
                 className="contact-form aboutContent bookContent"
                 onSubmit={sendEmail}
             >
-                <h1>BOOKING INQUIRIES</h1>
-                <select name="how">
-                    <option value="">
-                        -- How did you hear about DJ Bentley? --
-                    </option>
-                    <option value="google">Google</option>
-                    <option value="social_media">Social media</option>
-                    <option value="friend">
-                        Recommended by friend or colleague
-                    </option>
-                    <option value="attended_prior_event">
-                        Attended prior event
-                    </option>
-                    <option value="blog">Blog or other publication</option>
-                    <option value="other">Other</option>
+               
+                <select
+                className = "input"
+                     name="how" 
+                     >
+                        <option value="">-- How did you hear about DJ Bentley? --</option>
+                        <option value="google">Google</option>
+                        <option value="social_media">Social media</option>
+                        <option value="friend">Recommended by friend or colleague</option>
+                        <option value="attended_prior_event">Attended prior event</option>
+                        <option value="blog">Blog or other publication</option>
+                        <option value="other">Other</option>
                 </select>
+                <select
+                className = "input"
+                    name="event_type" 
+                    >
+                        <option value="">--Event Type--</option>
+                        <option value="corporate">Corporate event</option>
+                        <option value="party">Private party</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="club">Club event</option>
+                        <option value="nonprofit">Non-profit event</option>
 
-                <input type="text" name="user_name" placeholder="Name" />
+                    </select>
 
-                <input type="text" name="user_email" placeholder="Email" />
+                <input className = "input" type="text" name="user_name" placeholder="Name" />
+
+                <input className = "input" type="text" name="user_email" placeholder="Email" />
 
                 <input
+                className = "input"
                     type="text"
                     name="event_location"
                     placeholder="Event Location"
                 />
-                <input type="text" name="city" placeholder="City" />
-                <select name="state">
+                <input 
+                className = "input"
+                    type="text"
+                    name="city"
+                    placeholder="City"
+                />
+                <select
+                className = "input"
+                    name="state"
+                >
                     <option value="">-- State --</option>
                     <option value="AL">AL</option>
                     <option value="AK">AK</option>
@@ -121,9 +139,9 @@ const BookingForm = () => {
                     <option value="nonprofit">Non-profit event</option>
                 </select>
 
-                <input type="date" placeholder="date" name="requested_date" />
+                <input className = "input" type="date" placeholder="date" name="requested_date" />
 
-                <textarea name="details" placeholder="Additional Details" />
+                <textarea className = "textarea" name="details" placeholder="Additional Details" />
 
                 <input type="submit" value="Submit" className="btn" />
             </form>
