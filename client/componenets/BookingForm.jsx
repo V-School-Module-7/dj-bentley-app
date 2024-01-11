@@ -45,18 +45,7 @@ const BookingForm = () => {
                         <option value="blog">Blog or other publication</option>
                         <option value="other">Other</option>
                 </select>
-                <select
-                className = "input"
-                    name="event_type" 
-                    >
-                        <option value="">--Event Type--</option>
-                        <option value="corporate">Corporate event</option>
-                        <option value="party">Private party</option>
-                        <option value="wedding">Wedding</option>
-                        <option value="club">Club event</option>
-                        <option value="nonprofit">Non-profit event</option>
-
-                    </select>
+                
 
                 <input className = "input" type="text" name="user_name" placeholder="Name" />
 
@@ -129,8 +118,19 @@ const BookingForm = () => {
                     <option value="WV">WV</option>
                     <option value="WI">WI</option>
                     <option value="WY">WY</option>
-
                 </select>
+                <select
+                className = "input"
+                    name="event_type" 
+                    >
+                        <option value="">--Event Type--</option>
+                        <option value="corporate">Corporate event</option>
+                        <option value="party">Private party</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="club">Club event</option>
+                        <option value="nonprofit">Non-profit event</option>
+
+                    </select>
 
                 <input className = "input" type="date" placeholder="date" name="requested_date" />
 
