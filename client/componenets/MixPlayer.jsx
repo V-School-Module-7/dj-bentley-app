@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import ReactPlayer from 'react-player'
+// import ReactPlayer from 'react-player'
 // import IndMusic from './IndMusic'
 import './style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

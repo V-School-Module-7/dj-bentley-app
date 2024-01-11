@@ -33,28 +33,21 @@ const BookingForm = () => {
                 onSubmit={sendEmail}
             >
                 <h1>BOOKING INQUIRIES</h1>
-                <select
-                     name="how" 
-                     >
-                        <option value="">-- How did you hear about DJ Bentley? --</option>
-                        <option value="google">Google</option>
-                        <option value="social_media">Social media</option>
-                        <option value="friend">Recommended by friend or colleague</option>
-                        <option value="attended_prior_event">Attended prior event</option>
-                        <option value="blog">Blog or other publication</option>
-                        <option value="other">Other</option>
+                <select name="how">
+                    <option value="">
+                        -- How did you hear about DJ Bentley? --
+                    </option>
+                    <option value="google">Google</option>
+                    <option value="social_media">Social media</option>
+                    <option value="friend">
+                        Recommended by friend or colleague
+                    </option>
+                    <option value="attended_prior_event">
+                        Attended prior event
+                    </option>
+                    <option value="blog">Blog or other publication</option>
+                    <option value="other">Other</option>
                 </select>
-                <select
-                    name="event_type" 
-                    >
-                        <option value="">--Event Type--</option>
-                        <option value="corporate">Corporate event</option>
-                        <option value="party">Private party</option>
-                        <option value="wedding">Wedding</option>
-                        <option value="club">Club event</option>
-                        <option value="nonprofit">Non-profit event</option>
-
-                    </select>
 
                 <input type="text" name="user_name" placeholder="Name" />
 
@@ -65,14 +58,8 @@ const BookingForm = () => {
                     name="event_location"
                     placeholder="Event Location"
                 />
-                <input 
-                    type="text"
-                    name="city"
-                    placeholder="City"
-                />
-                <select
-                    name="state"
-                >
+                <input type="text" name="city" placeholder="City" />
+                <select name="state">
                     <option value="">-- State --</option>
                     <option value="AL">AL</option>
                     <option value="AK">AK</option>
@@ -124,7 +111,14 @@ const BookingForm = () => {
                     <option value="WV">WV</option>
                     <option value="WI">WI</option>
                     <option value="WY">WY</option>
-
+                </select>
+                <select name="event_type">
+                    <option value="">--Event Type--</option>
+                    <option value="corporate">Corporate event</option>
+                    <option value="party">Private party</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="club">Club event</option>
+                    <option value="nonprofit">Non-profit event</option>
                 </select>
 
                 <input type="date" placeholder="date" name="requested_date" />
