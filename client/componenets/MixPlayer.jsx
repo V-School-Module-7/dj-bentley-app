@@ -58,15 +58,10 @@ const MixPlayer = () => {
         const widget = window.Mixcloud.PlayerWidget(
             document.getElementById(iframeId)
         );
-        const pauseListener = () => {
-            console.log("Widget paused!");
+    };
 
-            // setWidgets((prevWidgets) => ({ ...prevWidgets, [index]: widget }));
-
-            // widget.ready.then(() => {
-            //     widget.events.play.on(() => console.log("It played!"));
-            // });
-        };
+    const pauseListener = () => {
+        console.log("Widget paused!");
     };
 
     // const handleBlur = () => {
@@ -150,10 +145,15 @@ const MixPlayer = () => {
                                     className={`iframe-container ${
                                         isClicked ? "visible" : "hidden"
                                     }`}
+                                        title={mix.name}
+                                        onClick={() => handleMixClick(index)}
+                                        
+
                                 >
                                     <iframe
                                         id={`my-widget-iframe-${index}`}
                                         onLoad={() => handleWidgetLoaded(index)}
+                                        onClick={pauseListener}
                                         width="100%"
                                         height="400"
                                         title={mix.name}
