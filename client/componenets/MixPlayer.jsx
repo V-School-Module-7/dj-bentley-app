@@ -46,14 +46,15 @@ const MixPlayer = () => {
 
     useEffect(() => {
         setIframeLoaded(true);
-        console.log('iframe loaded!')
+        console.log("iframe loaded!");
     }, []);
 
     const handleMixClick = (index) => {
         setSelectedMixIndex(index);
         setIsClicked(true);
         console.log("clicked");
-        handleWidgetPlayEvent();
+        console.log(isClicked);
+        // handleWidgetPlayEvent();
         const iframeId = `my-widget-iframe-${index}`;
         const widget = window.Mixcloud.PlayerWidget(
             document.getElementById(iframeId)
@@ -76,31 +77,32 @@ const MixPlayer = () => {
     //will need to call the widget.events.play function on the widget that's clicked
     //the widget that's clicked will need to be saved as a variable
 
-    const handleWidgetPlayEvent = (index) => {
-        if (!iframeLoaded) {
-            const iframeId = `my-widget-iframe-${index}`;
-            const widget = window.Mixcloud.PlayerWidget(
-                document.getElementById(iframeId)
-            );
+    // const handleWidgetPlayEvent = (index) => {
+    //     if (!iframeLoaded) {
+    //         const iframeId = `my-widget-iframe-${index}`;
+    //         const widget = window.Mixcloud.PlayerWidget(
+    //             document.getElementById(iframeId)
+    //         );
 
-            widget.ready.then(() => {
-                widget.events.play.on(() => console.log("It played!"));
-            });
-            setWidgets((prevWidgets) => ({ ...prevWidgets, [index]: widget }));
-        }
-    };
+    //         widget.ready.then(() => {
+    //             widget.events.play.on(() => console.log("It played!"));
+    //         });
+    //         console.log("playing")
+    //         setWidgets((prevWidgets) => ({ ...prevWidgets, [index]: widget }));
+    //     }
+    // };
 
-    const onImageClick = (index) => {
-        const iframe = document.getElementById(`my-widget-iframe-${index}`);
-        const img = document.getElementById(`my-widget-image-${index}`);
-        if (iframe && iframe.classList.contains("hidden-mix-div")) {
-            iframe.classList.remove("hidden-mix-div");
-        }
+    // const onImageClick = (index) => {
+    //     const iframe = document.getElementById(`my-widget-iframe-${index}`);
+    //     const img = document.getElementById(`my-widget-image-${index}`);
+    //     if (iframe && iframe.classList.contains("hidden-mix-div")) {
+    //         iframe.classList.remove("hidden-mix-div");
+    //     }
 
-        if (img && img.classList.contains("hidden-image")) {
-            img.classList.remove("hidden-image");
-        }
-    };
+    //     if (img && img.classList.contains("hidden-image")) {
+    //         img.classList.remove("hidden-image");
+    //     }
+    // };
 
     // slider settings
     const settings = {
@@ -145,15 +147,14 @@ const MixPlayer = () => {
                                     className={`iframe-container ${
                                         isClicked ? "visible" : "hidden"
                                     }`}
-                                        title={mix.name}
-                                        onClick={() => handleMixClick(index)}
-                                        
-
+                                    title={mix.name}
+                                    onClick={() => handleMixClick(index)}
                                 >
                                     <iframe
                                         id={`my-widget-iframe-${index}`}
                                         onLoad={() => handleWidgetLoaded(index)}
                                         onClick={pauseListener}
+                                        sandbox="allow-same-origin allow-scripts allow-top-navigation"
                                         width="100%"
                                         height="400"
                                         title={mix.name}
@@ -167,7 +168,7 @@ const MixPlayer = () => {
                                 <img
                                     id={`my-widget-image-${index}`}
                                     className="hidden-image"
-                                    onClick={() => handleMixClick(index)}
+                                    // onClick={() => handleMixClick(index)}
                                     src={mix.pictures}
                                     alt={mix.name}
                                 />
