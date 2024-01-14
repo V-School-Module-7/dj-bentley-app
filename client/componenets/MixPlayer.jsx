@@ -14,13 +14,7 @@ import "https://widget.mixcloud.com/media/js/widgetApi.js";
 const MixPlayer = () => {
     const [mixes, setMixes] = useState([]);
     const [isClicked, setIsClicked] = useState(false);
-    const [selectedMixIndex, setSelectedMixIndex] = useState(null);
-    const [iframeLoaded, setIframeLoaded] = useState(false);
-    const [widgets, setWidgets] = useState({});
-
-    useEffect(() => {
-        console.log(window.Mixcloud);
-    }, []);
+    const [selectedMixIndex, setSelectedMixIndex] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -44,65 +38,11 @@ const MixPlayer = () => {
         fetchData();
     }, []);
 
-    useEffect(() => {
-        setIframeLoaded(true);
-        console.log("iframe loaded!");
-    }, []);
-
     const handleMixClick = (index) => {
+        window.onbeforeunload = () => undefined;
         setSelectedMixIndex(index);
-        setIsClicked(true);
-        console.log("clicked");
-        console.log(isClicked);
-        // handleWidgetPlayEvent();
-        const iframeId = `my-widget-iframe-${index}`;
-        const widget = window.Mixcloud.PlayerWidget(
-            document.getElementById(iframeId)
-        );
+        console.log(selectedMixIndex);
     };
-
-    const pauseListener = () => {
-        console.log("Widget paused!");
-    };
-
-    // const handleBlur = () => {
-    //     setIsClicked(false);
-    // };
-
-    const handleWidgetLoaded = () => {
-        setIframeLoaded(true);
-        console.log("loaded!");
-    };
-
-    //will need to call the widget.events.play function on the widget that's clicked
-    //the widget that's clicked will need to be saved as a variable
-
-    // const handleWidgetPlayEvent = (index) => {
-    //     if (!iframeLoaded) {
-    //         const iframeId = `my-widget-iframe-${index}`;
-    //         const widget = window.Mixcloud.PlayerWidget(
-    //             document.getElementById(iframeId)
-    //         );
-
-    //         widget.ready.then(() => {
-    //             widget.events.play.on(() => console.log("It played!"));
-    //         });
-    //         console.log("playing")
-    //         setWidgets((prevWidgets) => ({ ...prevWidgets, [index]: widget }));
-    //     }
-    // };
-
-    // const onImageClick = (index) => {
-    //     const iframe = document.getElementById(`my-widget-iframe-${index}`);
-    //     const img = document.getElementById(`my-widget-image-${index}`);
-    //     if (iframe && iframe.classList.contains("hidden-mix-div")) {
-    //         iframe.classList.remove("hidden-mix-div");
-    //     }
-
-    //     if (img && img.classList.contains("hidden-image")) {
-    //         img.classList.remove("hidden-image");
-    //     }
-    // };
 
     // slider settings
     const settings = {
@@ -143,32 +83,9 @@ const MixPlayer = () => {
                             // onBlur={handleBlur}
                         >
                             <div className="container">
-                                <div
-                                    className={`iframe-container ${
-                                        isClicked ? "visible" : "hidden"
-                                    }`}
-                                    title={mix.name}
-                                    onClick={() => handleMixClick(index)}
-                                >
-                                    <iframe
-                                        id={`my-widget-iframe-${index}`}
-                                        onLoad={() => handleWidgetLoaded(index)}
-                                        onClick={pauseListener}
-                                        sandbox="allow-same-origin allow-scripts allow-top-navigation"
-                                        width="100%"
-                                        height="400"
-                                        title={mix.name}
-                                        src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
-                                            mix.url
-                                        )}`}
-                                        frameBorder="0"
-                                        style={{ opacity: isClicked ? 1 : 0 }}
-                                    ></iframe>
-                                </div>
                                 <img
                                     id={`my-widget-image-${index}`}
-                                    className="hidden-image"
-                                    // onClick={() => handleMixClick(index)}
+                                    onClick={() => handleMixClick(index)}
                                     src={mix.pictures}
                                     alt={mix.name}
                                 />
@@ -176,6 +93,18 @@ const MixPlayer = () => {
                         </div>
                     ))}
                 </Slider>
+                <iframe
+                    id={`my-widget-iframe`}
+                    onClick={() => handleMixClick(index)}
+                    sandbox="allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                    width="100%"
+                    height="400"
+                    title={mixes[selectedMixIndex]?.name}
+                    src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
+                        mixes[selectedMixIndex]?.url || ""
+                    )}`}
+                    frameBorder="0"
+                ></iframe>
             </div>
         </div>
     );

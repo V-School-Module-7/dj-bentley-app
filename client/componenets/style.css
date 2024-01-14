@@ -334,17 +334,7 @@ width: 40vw
     width: 20vw;
     height:auto
 }
-.mix-box:not(.hidden-mix-div) > div > img {
-    border-radius: 10px;
-    width: 20vw;
-    height:auto
-}
 
-.mix-box:not(.hidden-mix-div) {
-    border-radius: 10px;
-    width: 20vw;
-    height:auto
-}
 
 .iframe-container {
     position: absolute;
@@ -362,17 +352,7 @@ width: 40vw
     }
   }
 
-.hidden-mix-div {
-    opacity: 0;
-}
 
-
-
-.mix-box:not(.hidden-image) {
-    border-radius: 10px;
-    width: 20vw;
-    height:auto
-}
 
 
 
