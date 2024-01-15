@@ -13,7 +13,6 @@ import "https://widget.mixcloud.com/media/js/widgetApi.js";
 
 const MixPlayer = () => {
     const [mixes, setMixes] = useState([]);
-    const [isClicked, setIsClicked] = useState(false);
     const [selectedMixIndex, setSelectedMixIndex] = useState(0);
 
     useEffect(() => {
@@ -41,7 +40,7 @@ const MixPlayer = () => {
     const handleMixClick = (index) => {
         window.onbeforeunload = () => undefined;
         setSelectedMixIndex(index);
-        console.log(selectedMixIndex);
+        // console.log(selectedMixIndex);
     };
 
     // slider settings
@@ -80,7 +79,6 @@ const MixPlayer = () => {
                             className="mix-box"
                             key={index}
                             onClick={() => handleMixClick(index)}
-                            // onBlur={handleBlur}
                         >
                             <div className="container">
                                 <img
