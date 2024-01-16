@@ -333,7 +333,28 @@ width: 40vw
     border-radius: 10px;
     width: 20vw;
     height:auto
-} 
+}
+
+
+.iframe-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease; /* Optional: Add a smooth transition effect */
+  
+    &.hidden {
+      opacity: 0;
+    }
+  
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+
+
 
 /* Colors */
 
