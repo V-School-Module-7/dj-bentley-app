@@ -9,6 +9,7 @@ import GalleryImage from './GalleryImage.jsx';
 import Home from './Home.jsx'
 import'./style.css'
 import BookingForm from './BookingForm.jsx';
+import Footer from './Footer.jsx';
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
    <Routes>
        <Route path="/gallery" element={<Gallery/>}/>
    </Routes>
+   <Footer />
 </div>
   )
 }
