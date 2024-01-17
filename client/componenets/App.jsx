@@ -14,69 +14,7 @@ function App() {
 
   return (
     <div>
-        {/* <div className='navbar'>
-
-          <nav className='nav-links'>
-          <img src ="images/NavBarLogo.png" className='logo'/>
-          <div className = "navItems">
-          <Link
-    activeClass="active"
-    className = "nav-link"
-    to="home"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={600}
->Home</Link>
-<Link
-    activeClass="active"
-    className = "nav-link"
-    to="about"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={600}
->Bio</Link>
-<Link
-    activeClass="active"
-    className = "nav-link"
-    to="bookingForm"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={600}
->Bookings</Link>
-<Link
-    activeClass="active"
-    className = "nav-link"
-    to="reviews"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={600}
->Awards & Reviews</Link>
-<Link
-    activeClass="active"
-    className = "nav-link"
-    to="mixPlayer"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={600}
->DJ Mixes</Link>
-<Link
-    activeClass="active"
-    className = "nav-link"
-    to="galleryImage"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={600}
->Gallery</Link>
-          </div>
-          </nav>
-        </div> */}
-        <Navbar/>
+    <Navbar/>
    
    <div id = "home">
      <Home/>
