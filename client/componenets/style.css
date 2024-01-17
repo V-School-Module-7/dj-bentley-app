@@ -1,17 +1,17 @@
-
-
 * {
     box-sizing: border-box;
     margin: 0;
 }
 
 html {
-    font-size: 14px; /* Set a base font size for the root element */
+    font-size: 14px;
+    /* Set a base font size for the root element */
 }
 
 body {
-    font-size: 1rem; /* 1rem is equal to the root element's font size (16px in this case) */
-background-color: #F0EFEE;
+    font-size: 1rem;
+    /* 1rem is equal to the root element's font size (16px in this case) */
+    background-color: #F0EFEE;
 }
 
 /* NavBar.css */
@@ -22,8 +22,8 @@ background-color: #F0EFEE;
     width: 100vw;
     height: 133px;
     position: sticky;
-    top:0;
-    display:flex;
+    top: 0;
+    display: flex;
     align-items: center;
     z-index: 100;
 }
@@ -31,7 +31,7 @@ background-color: #F0EFEE;
 .navItems {
     position: absolute;
     top: 3.62rem;
-    right:5.44rem;
+    right: 5.44rem;
     width: 50vw;
     display: flex;
     align-items: center;
@@ -55,32 +55,37 @@ background-color: #F0EFEE;
     color: #56575c;
     padding-right: 0.5rem;
     font-size: 1.25rem;
+    transition: all 0.75s ease-in-out;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    border-bottom: solid 0.5px #56575C;
 }
 
 .dropdown {
-    display:none
+    display: none
 }
 
 /* Home */
 
 .homeContainer {
-    margin:0;
+    margin: 0;
     background-color: #F0EFEE;
-    height:auto;
+    height: auto;
     font-size: 0;
 }
 
 .homeImage {
-    width:100vw;
-    margin:0
-    /* max-height:80vh */
+    width: 100vw;
+    margin: 0
+        /* max-height:80vh */
 }
 
 .homeLogo {
     width: 50vw;
     position: absolute;
-    right:8vw
-    
+    right: 8vw
 }
 
 /* Bio/About */
@@ -88,73 +93,75 @@ background-color: #F0EFEE;
 
 .aboutPage {
     font-family: "montserrat";
-    display:flex;
+    display: flex;
     justify-content: center;
     background-color: #F0EFEE;
-    margin:0;
+    margin: 0;
     /* max-height: 80vh; */
-    width:100vw;
+    width: 100vw;
 }
 
 .aboutImage {
-    max-height:80vh;
-    max-width:50vw;
-    height:auto;
+    max-height: 80vh;
+    max-width: 50vw;
+    height: auto;
     /* overflow:hidden; */
-    display:flex;
+    display: flex;
     justify-content: flex-start;
 }
 
 .bioImage {
-    max-width:50vw;
-    height:auto;
-    max-height:80vh;
+    max-width: 50vw;
+    height: auto;
+    max-height: 80vh;
     object-fit: contain;
 }
 
 .aboutContent {
-    /* min-width:50vw; */
-    height:auto;
-    /* max-height: 80vh; */
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color:#56575C
+    color: #56575C
 }
 
-.aboutContent >h1 {
+.aboutContent>h1 {
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
-.aboutContent >p {
+.aboutContent>p {
     width: 60%;
     max-height: 75%;
-    overflow:auto
+    overflow: auto
 }
 
 /* GalleryImage */
 
 .galleryImage {
-    width : 100vw;
-    height:auto;
-    position:relative;
+    width: 100vw;
+    height: auto;
+    position: relative;
 }
 
-.galleryImage > img {
+.galleryImage>img {
     width: 100%;
     position: relative;
-    top:0px
+    top: 0px
 }
 
-.galleryImage > h1 {
-    
+.galleryImage>Link {
+    text-decoration: none;
+}
+
+.galleryH1 {
+
     border-radius: 10px;
     top: 50%;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
-    position:absolute;
+    position: absolute;
     z-index: 3;
     padding: 4rem;
     font-family: "montserrat";
@@ -165,48 +172,46 @@ background-color: #F0EFEE;
     font-weight: 400;
     line-height: normal;
     background: rgba(240, 239, 238, 0.80);
-    width:45vw;
-    
+    width: 45vw;
+
 }
 
 /* Booking */
-
-
 
 .bookH1 {
     font-family: "montserrat";
     text-align: center;
     padding: 3rem;
     background-color: #F0EFEE;
-    color:#56575C
+    color: #56575C
 }
 
 .booking {
-    display:flex;
+    display: flex;
     flex-direction: row-reverse;
-    align-items:center;
+    align-items: center;
     justify-content: space-around;
     font-family: "montserrat";
     background-color: #F0EFEE;
-    color:#56575C;
-    width:100vw;
+    color: #56575C;
+    width: 100vw;
 }
 
-.input{
+.input {
     width: 40vw;
-padding: 5px;
-margin-top: 10px;
-flex-shrink: 0;
-border-radius: 5.625rem;
-background: #D7D0CD;
-color:#56575C;
-font-family: "montserrat";
-box-shadow: 0;
+    padding: 5px;
+    margin-top: 10px;
+    flex-shrink: 0;
+    border-radius: 5.625rem;
+    background: #D7D0CD;
+    color: #56575C;
+    font-family: "montserrat";
+    border: solid 0.5px #56575C
 }
 
 .textarea {
     width: 40vw;
-    padding:5px;
+    padding: 5px;
     height: 5rem;
     margin-top: 10px;
     flex-shrink: 0;
@@ -217,25 +222,26 @@ box-shadow: 0;
 
 .btn {
     width: 40vw;
-height: 3rem;
-flex-shrink: 0;
-border-radius: 5.625rem;
-background: #C74A32;
-font-family: "montserrat";
-margin-top: 10px;
+    height: 3rem;
+    flex-shrink: 0;
+    border-radius: 5.625rem;
+    background: #C74A32;
+    font-family: "montserrat";
+    margin-top: 10px;
+    border: solid 0.5px #56575C
 }
 
 .details {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 40vw;
-position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    position: relative;
 }
 
-.details > h2 {
-    margin : 1rem;
+.details>h2 {
+    margin: 1rem;
 
 }
 
@@ -243,11 +249,11 @@ position: relative;
 
 .reviews-container {
     font-family: "montserrat";
-    color:#56575C;
+    color: #56575C;
     background-color: #D7D0CD;
     border-radius: 1rem;
-    width:80vw;
-    position:relative;
+    width: 80vw;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     padding: 5rem;
@@ -262,6 +268,7 @@ position: relative;
     text-align: center;
     background-color: #D7D0CD;
 }
+
 .reviews-awards-container {
     background-color: #D7D0CD;
     display: flex;
@@ -269,19 +276,23 @@ position: relative;
     align-items: center;
     justify-content: center;
 }
-.reviews-awards-container > img{
+
+.reviews-awards-container>img {
     background-color: #D7D0CD;
 }
-.reviews-awards-container > p{
+
+.reviews-awards-container>p {
     background-color: #D7D0CD;
     text-align: center;
     margin: 1rem
 }
+
 .reviews-recent-reviews-header {
     background-color: #D7D0CD;
     text-align: center;
     margin: 1rem;
 }
+
 .reviews-sub-header-container {
     background-color: #D7D0CD;
     display: flex;
@@ -289,13 +300,16 @@ position: relative;
     align-items: center;
     justify-content: center;
 }
+
 .reviews-recent-reviews-sub-header {
     background-color: #D7D0CD;
 }
-.reviews-recent-reviews > p {
+
+.reviews-recent-reviews>p {
     background-color: #D7D0CD;
     margin-bottom: 1rem;
 }
+
 .row-of-stars-component {
     background-color: #D7D0CD;
 }
@@ -306,19 +320,19 @@ position: relative;
     background-color: #F0EFEE;
     font-family: 'montserrat';
     margin-bottom: 3rem;
-    width:90vw;
+    width: 90vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    /* display:flex;
+    /* display: flex;
     justify-content: space-around;
     align-items: center; */
 }
 
-.musicPlayer > h1 {
+.musicPlayer>h1 {
     text-align: center;
     padding: 3rem;
-    color:#56575C;
+    color: #56575C;
 }
 
 .carousel {
@@ -326,62 +340,91 @@ position: relative;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-} 
+}
+
 .custom-prev {
-    color:#56575C;
+    color: #56575C;
     font-size: 3rem;
-    width:min-content
+    width: min-content
 }
 
 .custom-next {
-    color:#56575C;
+    color: #56575C;
     font-size: 3rem;
-    width:min-content
+    width: min-content
 }
 
-.slick-slider {
-    display:flex;
-    align-items: center;
-}
 
-.mix-box > div {
-    width:20vw;
+.mix-box>div {
+    width: 20vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%)
 }
 
-.mix-box > div > img {
+.mix-box>div>img {
     border-radius: 10px;
     width: 20vw;
-    height:auto
+    height: auto
 }
 
+.mix-box>div>img:hover {
+    cursor: pointer
+}
 
 .iframe-container {
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: opacity 0.5s ease; /* Optional: Add a smooth transition effect */
-  
+    transition: opacity 0.5s ease;
+    /* Optional: Add a smooth transition effect */
+
     &.hidden {
-      opacity: 0;
+        opacity: 0;
     }
-  
+
     iframe {
-      width: 100%;
-      height: 100%;
+        width: 100%;
+        height: 100%;
     }
-  }
+}
+
+/* footer */
+
+.footer-container {
+    background-color: #F0EFEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.footerItems {
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerItems>a {
+    max-height: 5vw;
+    font-size: 5vw;
+    color: #56575C;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 
-
-
+.footerItems>a>img {
+    height: 5vh;
+    color: #56575C
+}
 
 /* navbar font size */
 
 @media only screen and (max-width: 1000px) {
-    
+
     .nav-link {
         text-decoration: none;
         color: #56575c;
@@ -391,12 +434,20 @@ position: relative;
 }
 
 @media only screen and (max-width: 800px) {
-    
+
     .nav-link {
         text-decoration: none;
         color: #56575c;
         padding-right: 0.5rem;
         font-size: 0.80rem;
+    }
+
+    .aboutContent>p {
+        width: 80%;
+        max-height: none;
+        overflow: auto;
+        margin-bottom: 3rem;
+        text-align: center;
     }
 }
 
@@ -406,8 +457,9 @@ position: relative;
 @media only screen and (max-width: 600px) {
 
     body {
-        font-size: 1rem; /* 1rem is equal to the root element's font size (16px in this case) */
-    /* background-color: red; */
+        font-size: 1rem;
+        /* 1rem is equal to the root element's font size (16px in this case) */
+        /* background-color: red; */
     }
 
     /* navbar */
@@ -418,14 +470,14 @@ position: relative;
         width: 100vw;
         height: 10vh;
         position: sticky;
-        top:0;
-        display:flex;
+        top: 0;
+        display: flex;
         align-items: center;
         z-index: 100;
     }
-    
+
     .menuToggle {
-        color:#56575C;
+        color: #56575C;
         font-size: 1.25rem;
     }
 
@@ -434,7 +486,7 @@ position: relative;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width:100vw;
+        width: 100vw;
     }
 
     .dropItems {
@@ -448,16 +500,16 @@ position: relative;
         flex-shrink: 1;
         background-color: #F0EFEE;
     }
-    
-    
+
+
     .logo {
         width: 40vw;
         height: auto;
     }
-    
+
     .drop-link {
         text-decoration: none;
-        width:100vw;
+        width: 100vw;
         text-align: end;
         color: #56575c;
         background-color: #F0EFEE;
@@ -469,7 +521,160 @@ position: relative;
 
 
     .navbar {
-        display:none
+        display: none
+    }
+
+    /* bio */
+
+    .aboutPage {
+        font-family: "montserrat";
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        background-color: #F0EFEE;
+        margin: 0;
+        /* max-height: 80vh; */
+        width: 100vw;
+    }
+
+    .aboutImage {
+        max-width: none;
+        width: 100vw;
+        height: auto;
+        /* overflow:hidden; */
+        /* display: flex;
+        justify-content: flex-start; */
+    }
+
+    .bioImage {
+        max-width: none;
+        width: 100vw;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .aboutContent {
+        /* min-width:50vw; */
+        height: auto;
+        /* max-height: 80vh; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #56575C
+    }
+
+    .aboutContent>h1 {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .aboutContent>p {
+        width: 80%;
+        max-height: none;
+        overflow: auto;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    /* form */
+
+    .booking {
+        flex-direction: column;
+    }
+
+    .input,
+    .textarea,
+    .btn {
+        width: 85vw;
+    }
+
+    .details {
+        width: 85vw;
+        text-align: center;
+    }
+
+    .details>h2 {
+        margin: 2rem;
+    }
+
+    /* reviews */
+
+    .reviews-container {
+        width: 95vw;
+        padding: 0rem 0.5rem 2rem 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .reviews-header {
+        margin: 2rem
+    }
+
+    .reviews-awards-container {
+        flex-direction: column-reverse;
+        margin: none
+    }
+
+    .reviews-awards-container>p {
+        font-size: 0.85rem;
+        margin: 0.25rem;
+    }
+
+    .reviews-recent-reviews>p {
+        background-color: #D7D0CD;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .row-of-stars-component {
+        margin-top: 0.5rem
+    }
+
+    /* carousel */
+
+    .mix-box>div {
+        width: 50vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    .mix-box>div>img {
+        border-radius: 10px;
+        width: 50vw;
+        height: auto
+    }
+
+    /* gallery image */
+
+    .galleryH1 {
+
+        padding: 1rem;
+        font-size: 2rem;
+        width: 75vw;
+
+    }
+
+    /* footer */
+
+    .footer-container {
+
+        height: 10vh;
+    }
+
+    .footerItems {
+        width: 60vw;
+    }
+
+    .footerItems>a {
+        width: 10vw;
+        font-size: 10vw;
+    }
+
+    .footerItems>a>img {
+        width: 10vw;
     }
 
 }

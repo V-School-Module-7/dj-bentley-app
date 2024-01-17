@@ -67,7 +67,7 @@ const MixPlayer = () => {
         nextArrow: <CustomNextArrow />,
         responsive: [
             {
-                breakpoint: 600,
+                breakpoint: 800,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -75,7 +75,7 @@ const MixPlayer = () => {
                 },
             },
             {
-                breakpoint: 480,
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -88,7 +88,7 @@ const MixPlayer = () => {
         <div className="musicPlayer">
             <h1>Bentley's Mixes</h1>
             <div className="carousel">
-                <Slider {...settings}>
+                <Slider style={{ display: 'flex', alignItems: 'center' }} {...settings}>
                     {mixes.map((mix, index) => (
                         <div
                             className="mix-box"
