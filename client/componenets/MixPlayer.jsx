@@ -61,12 +61,27 @@ const MixPlayer = () => {
     };
 
 // slider settings
+
+const CustomPrevArrow = ({ onClick }) => (
+    <div className="custom-prev" onClick={onClick}>
+      <FontAwesomeIcon icon={faChevronLeft} />
+    </div>
+  );
+  
+  const CustomNextArrow = ({ onClick }) => (
+    <div className="custom-next" onClick={onClick}>
+      <FontAwesomeIcon icon={faChevronRight} />
+    </div>
+  );
+
 const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    prevArrow : <CustomPrevArrow />,
+    nextArrow : <CustomNextArrow />,
     responsive: [
         {
           breakpoint: 600,

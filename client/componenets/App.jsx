@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Link, animateScroll as scroll } from "react-scroll";
+import Navbar from './Navbar.jsx';
 import MixPlayer from './MixPlayer.jsx'
 import About from './About.jsx'
 import Reviews from './Reviews.jsx';
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <div>
-        <div className='navbar'>
+        {/* <div className='navbar'>
 
           <nav className='nav-links'>
           <img src ="images/NavBarLogo.png" className='logo'/>
@@ -74,12 +75,13 @@ function App() {
 >Gallery</Link>
           </div>
           </nav>
-        </div>
+        </div> */}
+        <Navbar/>
    
    <div id = "home">
      <Home/>
    </div>
-   <div id = "about">
+   <div id = "about" className = "aboutContainer">
      <About/>
    </div>
    <h1 className = "bookH1">Book DJ Bentley</h1>
