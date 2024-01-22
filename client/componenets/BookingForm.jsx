@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import ReactModal from "react-modal";
+import FormModal from "./FormModal";
 // import Calendar from 'react-calendar'
 
-const BookingForm = () => {
+const BookingForm = (props) => {
     const initInputs = {
         how: "",
         user_name: "",
@@ -20,6 +22,11 @@ const BookingForm = () => {
     const [requiredFieldError, setRequiredFieldError] = useState("");
     const isDisabled = !(inputs.user_name && inputs.user_email);
     const hasError = !(inputs.user_name && inputs.user_email);
+    const [showModal, setShowModal] = useState(false);
+
+    useEffect(() => {
+        console.log("showModal updated:", showModal);
+    }, [showModal]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -39,6 +46,14 @@ const BookingForm = () => {
         }
     };
 
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
     function sendEmail(e) {
         e.preventDefault();
 
@@ -52,15 +67,16 @@ const BookingForm = () => {
             .then(
                 (result) => {
                     console.log(result.text);
+                    handleOpenModal();
                 },
                 (error) => {
                     console.log(error.text);
                 }
             );
-        alert(
-            `Your request was sent, and I'll get back to you as soon as possible. Thanks!`
-        );
-        setIsSubmitted(true);
+     
+        handleOpenModal();
+        console.log(showModal);
+
         console.log("submitted form!");
         setInputs({
             how: "",
@@ -233,6 +249,11 @@ const BookingForm = () => {
                     Submit
                 </button>
             </form>
+            <FormModal
+                show={showModal}
+                handleClose={handleCloseModal}
+                setShowModal={setShowModal}
+            ></FormModal>
 
             {/* <div className="bookImage"></div> */}
         </div>
