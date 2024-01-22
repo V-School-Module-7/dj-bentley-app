@@ -5,8 +5,9 @@ export default function GalleryImage() {
 
     return (
         <div className="galleryImage">
-
-            <h1 className="galleryH1">View Gallery</h1>
+            <Link to="/gallery" >
+                <h1 className="galleryH1">View Gallery</h1>
+            </Link>
 
             <img className="backgroundImage" src="../images/galleryImage.jpeg"></img>
         </div>

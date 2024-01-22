@@ -37,6 +37,7 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-shrink: 1;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -94,6 +95,7 @@ body {
 .aboutPage {
     font-family: "montserrat";
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     background-color: #F0EFEE;
     margin: 0;
@@ -123,7 +125,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #56575C
+    color: #56575C;
 }
 
 .aboutContent>h1 {
@@ -151,8 +153,9 @@ body {
     top: 0px
 }
 
-.galleryImage>Link {
+.galleryLink {
     text-decoration: none;
+    color: #56575C
 }
 
 .galleryH1 {
@@ -474,6 +477,46 @@ body {
     height: 5vh;
     color: #56575C
 }
+
+
+/* Gallery */
+
+.galleryNavbar {
+    background-color: #F0EFEE;
+    font-family: "montserrat";
+    width: 100vw;
+    height: 133px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.galleryNav {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.galleryNavItems>link {
+    text-decoration: none;
+    /* display: flex; */
+}
+
+.Gallery-Images {
+    text-align: center;
+}
+
+.photo {
+    display: inline-block;
+    height: 24vw;
+    width: 24vw;
+    border: solid 1px black;
+    margin: 5px;
+}
+
 
 /* navbar font size */
 
