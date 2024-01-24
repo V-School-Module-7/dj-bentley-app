@@ -16,17 +16,18 @@ export default function Main() {
             <div id="about" className="aboutContainer">
                 <About />
             </div>
-            <h1 className="bookH1">Book DJ Bentley</h1>
             <div className="booking">
                 <div id="bookingForm">
+                    <h1 className="bookH1">Book DJ Bentley</h1>
                     <BookingForm />
+                    <div className="details">
+                        <h2>Booking Details</h2>
+                        <p>DJ Bentley is dedicated to transforming your events into lasting impressions for you and your guests! He will work closely with you to understand your vision, preferences, and any specific requests to create a personalized experience that exceeds expectations.</p>
+                    </div>
                 </div>
-                <div className="details">
-                    <h2>Booking Details</h2>
-                    <p>DJ Bentley is dedicated to transforming your events into lasting impressions for you and your guests! He will work closely with you to understand your vision, preferences, and any specific requests to create a personalized experience that exceeds expectations.</p>
-                </div>
+                <img src="../images/bookingPhoto.png" className="bookingImage"></img>
             </div>
-            <div id="reviews">
+            <div id="reviews" className="reviewsComponent">
                 <Reviews />
             </div>
             <div id="mixPlayer">

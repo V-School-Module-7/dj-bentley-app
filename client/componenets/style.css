@@ -186,7 +186,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    background: rgba(240, 239, 238, 0.80);
+    background: rgba(240, 239, 238, 0.50);
     width: 30vw;
 
 }
@@ -203,7 +203,7 @@ body {
 
 .booking {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-around;
     font-family: "montserrat";
@@ -211,6 +211,8 @@ body {
     color: #56575C;
     width: 100vw;
 }
+
+
 
 .input {
     width: 40vw;
@@ -221,7 +223,10 @@ body {
     background: #D7D0CD;
     color: #56575C;
     font-family: "montserrat";
-    border: solid 0.5px #56575C
+    border: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
 }
 
 .textarea {
@@ -233,17 +238,25 @@ body {
     border-radius: 1.25rem;
     background: #D7D0CD;
     font-family: "montserrat";
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
 }
 
 .btn {
-    width: 40vw;
+    padding: 0 2rem 0 2rem;
     height: 3rem;
     flex-shrink: 0;
     border-radius: 5.625rem;
     background: #C74A32;
+    color: #F0EFEE;
     font-family: "montserrat";
     margin-top: 10px;
-    border: solid 0.5px #56575C
+    border: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
 }
 
 
@@ -255,6 +268,8 @@ body {
     justify-content: center;
     width: 40vw;
     position: relative;
+    left: 50%;
+    transform: translateX(-50%)
 }
 
 .details>h2 {
@@ -262,14 +277,25 @@ body {
 
 }
 
+.bookingImage {
+    width: 40vw
+}
+
+
 /* Reviews */
+
+/* .reviewsComponent {
+    background-image: url("../images/galleryImage.jpeg");
+    background-repeat: no-repeat;
+
+} */
 
 .reviews-container {
     font-family: "montserrat";
     color: #56575C;
     background-color: #D7D0CD;
     border-radius: 1rem;
-    width: 80vw;
+    width: 90vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -279,6 +305,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.badgeContainer {
+    display: flex
 }
 
 .reviews-header {
@@ -329,6 +359,18 @@ body {
 
 .row-of-stars-component {
     background-color: #D7D0CD;
+}
+
+.reviewsBtn {
+    padding: 0 2rem 0 2rem;
+    height: 3rem;
+    flex-shrink: 0;
+    border-radius: 5.625rem;
+    background: #C74A32;
+    color: #F0EFEE;
+    font-family: "montserrat";
+    margin-top: 10px;
+    border: none;
 }
 
 /* MixPlayer */
@@ -470,19 +512,20 @@ body {
 }
 
 .footerLogo {
-    width: 20vw;
+    width: 30vw;
+    margin: 8vh 0 0 0;
 }
 
 .footerItems {
-    width: 40vw;
+    width: 20vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 .footerItems>a {
-    max-height: 5vw;
-    font-size: 5%;
+    max-height: 3vw;
+    font-size: 3vw;
     color: #56575C;
     display: flex;
     justify-content: space-around;
@@ -712,6 +755,10 @@ body {
         margin: 2rem;
     }
 
+    .bookingImage {
+        width: 100vw
+    }
+
     /* reviews */
 
     .reviews-container {
@@ -766,44 +813,51 @@ body {
 
 
 
-}
 
-/* gallery image */
+    /* gallery image */
 
-.galleryH1 {
+    .galleryH1 {
 
-    padding: 1rem;
-    font-size: 2rem;
-    width: 75vw;
+        padding: 1rem;
+        font-size: 2rem;
+        width: 75vw;
 
-}
+    }
 
-/* footer */
+    /* footer */
 
-.footer-container {
 
-    height: 10vh;
-}
+    .footerLogo {
+        width: 60vw;
+        margin: 5vh 0 0 0;
+    }
 
-.footerItems {
-    width: 60vw;
-}
+    .footer-container {
+        height: 10vh;
+    }
 
-.footerItems>a {
-    width: 10vw;
-    font-size: 10vw;
-}
+    .footerItems {
+        width: 50vw;
+        justify-content: center;
+    }
 
-.footerItems>a>img {
-    width: 10vw;
-}
+    .footerItems>a {
+        width: 8vw;
+        font-size: 8vw;
+        margin: 0vw 3vw 0vw 3vw
+    }
+
+    .footerItems>a>img {
+        width: 8vw;
+    }
+
 
 }
 
 /* Colors */
 
 /* light beige #d7d0cd
-charcoal #56575c
-red #e01c2a
+    charcoal #56575c
+    red #e01c2a
 light grey f0efee
 burnt orange #c74a32 */
