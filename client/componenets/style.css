@@ -569,14 +569,37 @@ body {
     text-align: center;
 }
 
-.photo {
+.squarePhoto {
     display: inline-block;
     height: 24vw;
     width: 24vw;
     border: solid 1px black;
     margin: 5px;
+
 }
 
+.carouselPhoto {
+    max-width: 75vw;
+    max-height: 75vh;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-slide.slick-active.slick-current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 75vw
+}
+
+.slick-slide.slick-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 75vws
+}
 
 /* navbar font size */
 
