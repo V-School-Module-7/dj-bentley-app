@@ -73,7 +73,7 @@ const BookingForm = (props) => {
                     console.log(error.text);
                 }
             );
-     
+
         handleOpenModal();
         console.log(showModal);
 
@@ -94,7 +94,7 @@ const BookingForm = (props) => {
     return (
         <div className="eventPage">
             <form
-                className="contact-form aboutContent bookContent"
+                className="bookContent"
                 onSubmit={sendEmail}
             >
                 <select

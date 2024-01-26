@@ -17,6 +17,7 @@ const Footer = () => {
                     <FaMixcloud />
                 </a>
             </div>
+            <img className="footerLogo" src="../images/DJBENTLEY.png" ></img>
         </div>
     )
 }
