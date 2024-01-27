@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from 'react-router-dom';
 import Photo from "./Photo";
 import Slider from "react-slick";
@@ -9,6 +9,7 @@ import {
     faChevronLeft,
     faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import ClickOutside from "./ClickOutside";
 
 export default function Gallery() {
 
@@ -19,6 +20,8 @@ export default function Gallery() {
     const [showCarousel, setShowCarousel] = useState(false)
     const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(null)
 
+
+
     const handlePhotoClick = async (index) => {
         await setSelectedPhotoIndex(index)
         setShowCarousel(true)
@@ -27,6 +30,7 @@ export default function Gallery() {
     const closeCarousel = () => {
         setShowCarousel(false)
         setSelectedPhotoIndex(null)
+        console.log("carousel closed")
     }
 
 
@@ -43,7 +47,7 @@ export default function Gallery() {
     );
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 700,
         slidesToShow: 1,
@@ -73,12 +77,16 @@ export default function Gallery() {
 
             </div>
             {showCarousel &&
-                <Slider style={{ display: 'flex', alignItems: 'center', justifyContent: "center", maxWidth: "80vw", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", backgroundColor: "rgba(240, 239, 238, 0.90)", padding: "8vh 0 8vh 0" }} {...settings}>
-                    {photosArr.map((str, index) => (
-                        <Photo className="carouselPhoto" key={str} url={str} handleClick={() => handlePhotoClick(index)} />
-                    ))}
-                </Slider>}
-        </>
+                <ClickOutside onClick={closeCarousel} className="carouselContainer">
 
+                    <Slider style={{ display: 'flex', alignItems: 'center', justifyContent: "center", maxWidth: '80vw', backgroundColor: "rgba(240, 239, 238, 0.90)", padding: "5vh 0 5vh 0" }} {...settings}>
+                        {photosArr.map((str, index) => (
+                            <Photo className="carouselPhoto" key={index} url={str} />
+                        ))}
+                    </Slider>
+                </ClickOutside>
+
+            }
+        </>
     )
 }

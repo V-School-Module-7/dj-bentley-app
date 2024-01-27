@@ -545,7 +545,7 @@ body {
     background-color: #F0EFEE;
     font-family: "montserrat";
     width: 100vw;
-    height: 133px;
+    height: 10vh;
     position: sticky;
     top: 0;
     display: flex;
@@ -578,10 +578,18 @@ body {
 
 }
 
+.carouselContainer {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    max-width: 80vw;
+}
+
 .carouselPhoto {
     max-width: 75vw;
     max-height: 75vh;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -591,14 +599,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 75vw
+    width: max-content
 }
 
 .slick-slide.slick-active {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 75vws
+    width: max-content
 }
 
 /* navbar font size */
