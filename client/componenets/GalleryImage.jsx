@@ -1,10 +1,15 @@
 import React from "react"
+import { Link } from 'react-router-dom';
 
-export default function GalleryImage(){
+export default function GalleryImage() {
 
-    return(
-        <div className = "galleryImage">
-        <h1>View Gallery</h1>
+    return (
+        <div className="galleryImage">
+            <Link to="/gallery" >
+                <h1 className="galleryH1">View Gallery</h1>
+            </Link>
+
+            <img className="backgroundImage" src="../images/galleryPhoto.jpg"></img>
         </div>
     )
 }

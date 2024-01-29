@@ -1,8 +1,59 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import ReactModal from "react-modal";
+import FormModal from "./FormModal";
 // import Calendar from 'react-calendar'
 
-const BookingForm = () => {
+const BookingForm = (props) => {
+    const initInputs = {
+        how: "",
+        user_name: "",
+        user_email: "",
+        event_location: "",
+        city: "",
+        state: "",
+        event_type: "",
+        requested_date: "",
+        details: "",
+    };
+
+    const [inputs, setInputs] = useState(initInputs);
+
+    const [requiredFieldError, setRequiredFieldError] = useState("");
+    const isDisabled = !(inputs.user_name && inputs.user_email);
+    const hasError = !(inputs.user_name && inputs.user_email);
+    const [showModal, setShowModal] = useState(false);
+
+    useEffect(() => {
+        console.log("showModal updated:", showModal);
+    }, [showModal]);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setInputs((prevInputs) => ({ ...prevInputs, [name]: value }));
+    };
+
+    const handleBlur = (e) => {
+        const { name, value } = e.target;
+
+        if (name === "user_name" && value === "") {
+            setRequiredFieldError("Name is a required field.");
+        } else if (name === "user_email" && value === "") {
+            setRequiredFieldError("Email address is a required field.");
+        } else {
+            setRequiredFieldError("");
+        }
+    };
+
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
     function sendEmail(e) {
         e.preventDefault();
 
@@ -16,56 +67,96 @@ const BookingForm = () => {
             .then(
                 (result) => {
                     console.log(result.text);
+                    handleOpenModal();
                 },
                 (error) => {
                     console.log(error.text);
                 }
             );
-        alert(
-            `Your request was sent, and I'll get back to you as soon as possible. Thanks!`
-        );
+
+        handleOpenModal();
+        console.log(showModal);
+
+        console.log("submitted form!");
+        setInputs({
+            how: "",
+            user_name: "",
+            user_email: "",
+            event_location: "",
+            city: "",
+            state: "",
+            event_type: "",
+            requested_date: "",
+            details: "",
+        });
     }
 
     return (
         <div className="eventPage">
             <form
-                className="contact-form aboutContent bookContent"
+                className="bookContent"
                 onSubmit={sendEmail}
             >
-               
                 <select
-                className = "input"
-                     name="how" 
-                     >
-                        <option value="">-- How did you hear about DJ Bentley? --</option>
-                        <option value="google">Google</option>
-                        <option value="social_media">Social media</option>
-                        <option value="friend">Recommended by friend or colleague</option>
-                        <option value="attended_prior_event">Attended prior event</option>
-                        <option value="blog">Blog or other publication</option>
-                        <option value="other">Other</option>
+                    className="input"
+                    name="how"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                >
+                    <option value="">
+                        -- How did you hear about DJ Bentley? --
+                    </option>
+                    <option value="google">Google</option>
+                    <option value="social_media">Social media</option>
+                    <option value="friend">
+                        Recommended by friend or colleague
+                    </option>
+                    <option value="attended_prior_event">
+                        Attended prior event
+                    </option>
+                    <option value="blog">Blog or other publication</option>
+                    <option value="other">Other</option>
                 </select>
-                
-
-                <input className = "input" type="text" name="user_name" placeholder="Name" />
-
-                <input className = "input" type="text" name="user_email" placeholder="Email" />
 
                 <input
-                className = "input"
+                    className="input"
+                    type="text"
+                    name="user_name"
+                    placeholder="Name"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                />
+
+                <input
+                    className="input"
+                    type="text"
+                    name="user_email"
+                    placeholder="Email"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                />
+
+                <input
+                    className="input"
                     type="text"
                     name="event_location"
                     placeholder="Event Location"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                 />
-                <input 
-                className = "input"
+                <input
+                    className="input"
                     type="text"
                     name="city"
                     placeholder="City"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                 />
                 <select
-                className = "input"
+                    className="input"
                     name="state"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                 >
                     <option value="">-- State --</option>
                     <option value="AL">AL</option>
@@ -120,26 +211,51 @@ const BookingForm = () => {
                     <option value="WY">WY</option>
                 </select>
                 <select
-                className = "input"
-                    name="event_type" 
-                    >
-                        <option value="">--Event Type--</option>
-                        <option value="corporate">Corporate event</option>
-                        <option value="party">Private party</option>
-                        <option value="wedding">Wedding</option>
-                        <option value="club">Club event</option>
-                        <option value="nonprofit">Non-profit event</option>
+                    className="input"
+                    name="event_type"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                >
+                    <option value="">--Event Type--</option>
+                    <option value="corporate">Corporate event</option>
+                    <option value="party">Private party</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="club">Club event</option>
+                    <option value="nonprofit">Non-profit event</option>
+                </select>
 
-                    </select>
+                <input
+                    className="input"
+                    type="date"
+                    placeholder="date"
+                    name="requested_date"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                />
 
-                <input className = "input" type="date" placeholder="date" name="requested_date" />
-
-                <textarea className = "textarea" name="details" placeholder="Additional Details" />
-
-                <input type="submit" value="Submit" className="btn" />
+                <textarea
+                    className="textarea"
+                    name="details"
+                    placeholder="Additional Details"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                />
+                {hasError && (
+                    <p style={{ color: "red", textAlign: "center" }}>
+                        {requiredFieldError}
+                    </p>
+                )}
+                <button type="submit" className="btn" disabled={isDisabled}>
+                    Submit
+                </button>
             </form>
+            <FormModal
+                show={showModal}
+                handleClose={handleCloseModal}
+                setShowModal={setShowModal}
+            ></FormModal>
 
-            <div className="bookImage"></div>
+            {/* <div className="bookImage"></div> */}
         </div>
     );
 };
