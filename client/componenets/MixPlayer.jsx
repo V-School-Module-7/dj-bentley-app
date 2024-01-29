@@ -109,14 +109,21 @@ const MixPlayer = () => {
                 <iframe
                     id={`my-widget-iframe`}
                     onClick={() => handleMixClick(index)}
-                    sandbox="allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                    sandbox="allow-same-origin allow-scripts "
                     width="100%"
-                    height="400"
+                    height="30"
                     title={mixes[selectedMixIndex]?.name}
-                    src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
+                    src={`https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=${encodeURIComponent(
                         mixes[selectedMixIndex]?.url || ""
                     )}`}
                     frameBorder="0"
+                    style={{
+                        display: "block", // Override any display property
+                        width: "96%", // Override width property
+                        height: "100%", // Override height property
+                        margin: "auto", // Center horizontally
+                        padding: "40px",
+                    }}
                 ></iframe>
             </div>
         </div>
