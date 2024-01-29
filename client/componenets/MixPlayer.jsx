@@ -98,7 +98,7 @@ const MixPlayer = () => {
                     width="100%"
                     height="400"
                     title={mixes[selectedMixIndex]?.name}
-                    src={`https://player-widget.mixcloud.com/widget/iframe/?light=1&feed=${encodeURIComponent(
+                    src={`https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=${encodeURIComponent(
                         mixes[selectedMixIndex]?.url || ""
                     )}`}
                     frameBorder="0"
