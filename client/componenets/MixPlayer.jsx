@@ -119,7 +119,7 @@ const MixPlayer = () => {
                     frameBorder="0"
                     style={{
                         display: "block", // Override any display property
-                        width: "100%", // Override width property
+                        width: "96%", // Override width property
                         height: "100%", // Override height property
                         margin: "auto", // Center horizontally
                         padding: "40px",
