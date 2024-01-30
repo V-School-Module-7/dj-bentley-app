@@ -236,9 +236,9 @@ const BookingForm = (props) => {
                     onBlur={handleBlur}
                 />
                 {hasError && (
-                    <p style={{ color: "red", textAlign: "center" }}>
+                    <h3 style={{ color: "red", textAlign: "center" }}>
                         {requiredFieldError}
-                    </p>
+                    </h3>
                 )}
                 <button type="submit" className="btn" disabled={isDisabled}>
                     Submit
