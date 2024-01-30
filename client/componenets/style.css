@@ -545,7 +545,7 @@ body {
     background-color: #F0EFEE;
     font-family: "montserrat";
     width: 100vw;
-    height: 133px;
+    height: 10vh;
     position: sticky;
     top: 0;
     display: flex;
@@ -557,7 +557,8 @@ body {
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-right: 5vw;
 }
 
 .galleryNavItems>link {
@@ -573,15 +574,23 @@ body {
     display: inline-block;
     height: 24vw;
     width: 24vw;
-    border: solid 1px black;
+    border: solid 1px #56575C;
     margin: 5px;
+    object-fit: cover;
+}
 
+.carouselContainer {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    max-width: 80vw;
 }
 
 .carouselPhoto {
     max-width: 75vw;
     max-height: 75vh;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -591,14 +600,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 75vw
+    width: max-content
 }
 
 .slick-slide.slick-active {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 75vws
+    width: max-content
 }
 
 /* navbar font size */
