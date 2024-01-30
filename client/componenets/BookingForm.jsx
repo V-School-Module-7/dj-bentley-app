@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import ReactModal from "react-modal";
 import FormModal from "./FormModal";
-// import Calendar from 'react-calendar'
 
 const BookingForm = (props) => {
     const initInputs = {
@@ -93,10 +91,7 @@ const BookingForm = (props) => {
 
     return (
         <div className="eventPage">
-            <form
-                className="bookContent"
-                onSubmit={sendEmail}
-            >
+            <form className="bookContent" onSubmit={sendEmail}>
                 <select
                     className="input"
                     name="how"
@@ -254,8 +249,6 @@ const BookingForm = (props) => {
                 handleClose={handleCloseModal}
                 setShowModal={setShowModal}
             ></FormModal>
-
-            {/* <div className="bookImage"></div> */}
         </div>
     );
 };
