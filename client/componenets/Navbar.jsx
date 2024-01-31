@@ -10,7 +10,7 @@ export default function Navbar() {
             <div className='navbar'>
 
                 <nav className='nav-links'>
-                    <img src="/assets/NavBarLogo.png" className='logo' />
+                    <img src="../assets/NavBarLogo.png" className='logo' />
                     <div className="navItems">
                         <Link
                             activeClass="active"
