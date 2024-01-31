@@ -513,7 +513,7 @@ body {
 
 .footerLogo {
     width: 30vw;
-    margin: 8vh 0 0 0;
+    margin: 8vh 0 -5vh 0;
 }
 
 .footerItems {
@@ -521,6 +521,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 5vh;
 }
 
 .footerItems>a {
