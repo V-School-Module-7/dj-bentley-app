@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,7 +40,7 @@ const MixPlayer = () => {
     const handleMixClick = (index) => {
         window.onbeforeunload = () => undefined;
         setSelectedMixIndex(index);
-        // console.log(selectedMixIndex);
+    
     };
 
     // slider settings
@@ -118,10 +118,10 @@ const MixPlayer = () => {
                     )}`}
                     frameBorder="0"
                     style={{
-                        display: "block", // Override any display property
-                        width: "96%", // Override width property
-                        height: "100%", // Override height property
-                        margin: "auto", // Center horizontally
+                        display: "block", 
+                        width: "96%", 
+                        height: "100%", 
+                        margin: "auto", 
                         padding: "40px",
                     }}
                 ></iframe>

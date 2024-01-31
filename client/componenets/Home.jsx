@@ -7,5 +7,5 @@ export default function Home() {
         <div className="homeContainer">
             <img className="homeImage" src="/images/homeImage.jpg" ></img>
         </div>
-    )
+    );
 }
