@@ -9,7 +9,7 @@ export default function GalleryImage() {
                 <h1 className="galleryH1">View Gallery</h1>
             </Link>
 
-            <img className="backgroundImage" src="../images/galleryPhoto.jpeg"></img>
+            <img className="backgroundImage" src="/assets/images/galleryPhoto.jpeg"></img>
         </div>
     )
 }
