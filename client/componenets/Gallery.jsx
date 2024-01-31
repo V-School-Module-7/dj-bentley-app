@@ -14,7 +14,7 @@ import ClickOutside from "./ClickOutside";
 export default function Gallery() {
 
     const photosArr = [
-        "/assets/images/gallery/Copy of Moet-Hennessy-3-11-9143.jpg", "/assets/images/gallery/DBBA205D-BC33-4022-AC5D-45AE80FC6BC6.JPG", "/assets/images/gallery/Dj-Bentley-Taylor-8.jpg", "/assets/images/gallery/DSC03286.jpg", "/assets/images/gallery/F7B2E57D-BE4F-45B2-9DD0-EF98A062A8A8.JPG", "/assets/images/gallery/Header_Bio Photo.JPG", "/assets/images/gallery/IMG_2786.jpg", "/assets/images/gallery/IMG_5909.JPG", "/assets/images/gallery/IMG_6271 2.JPG", "/assets/images/gallery/Moet-Hennessy-3-11-9145.jpg", "/assets/images/gallery/Moet-Hennessy-3-18-9135.jpg", "/assets/images/gallery/Photo Feb 01, 2 51 14 AM.jpg", "/assets/images/gallery/Photo Feb 01, 2 51 21 AM.jpg", "/assets/images/gallery/Screenshot 2023-12-19 at 8.17.44 PM.png", "/assets/images/gallery/unnamed (1).jpg", "/assets/images/gallery/unnamed.jpg"
+        "/assets/Copy of Moet-Hennessy-3-11-9143.jpg", "/assets/DBBA205D-BC33-4022-AC5D-45AE80FC6BC6.JPG", "/assets/Dj-Bentley-Taylor-8.jpg", "/assets/DSC03286.jpg", "/assets/F7B2E57D-BE4F-45B2-9DD0-EF98A062A8A8.JPG", "/assets/Header_Bio Photo.JPG", "/assets/IMG_2786.jpg", "/assets/IMG_5909.JPG", "/assets/IMG_6271 2.JPG", "/assets/Moet-Hennessy-3-11-9145.jpg", "/assets/Moet-Hennessy-3-18-9135.jpg", "/assets/Photo Feb 01, 2 51 14 AM.jpg", "/assets/Photo Feb 01, 2 51 21 AM.jpg", "/assets/Screenshot 2023-12-19 at 8.17.44 PM.png", "/assets/unnamed (1).jpg", "/assets/unnamed.jpg"
     ]
 
     const [showCarousel, setShowCarousel] = useState(false)
