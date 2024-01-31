@@ -1,5 +1,4 @@
 import { FaInstagram, FaMixcloud } from "react-icons/fa";
-import mixCloudIcon from '../assets/mixcloud.svg';
 import theKnotLogo from '../assets/the-knot-logo-vector.svg'
 import DJBENTLEY from "../assets/DJBENTLEY.png"
 
