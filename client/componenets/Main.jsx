@@ -5,6 +5,7 @@ import Reviews from './Reviews.jsx';
 import GalleryImage from './GalleryImage.jsx';
 import Home from './Home.jsx'
 import BookingForm from './BookingForm.jsx';
+import bookingPhoto from "../assets/bookingPhoto.png"
 
 export default function Main() {
     return (
@@ -25,7 +26,7 @@ export default function Main() {
                         <p>DJ Bentley is dedicated to transforming your events into lasting impressions for you and your guests! He will work closely with you to understand your vision, preferences, and any specific requests to create a personalized experience that exceeds expectations.</p>
                     </div>
                 </div>
-                <img src="../assets/bookingPhoto.png" className="bookingImage"></img>
+                <img src={bookingPhoto} className="bookingImage"></img>
             </div>
             <div id="reviews" className="reviewsComponent">
                 <Reviews />

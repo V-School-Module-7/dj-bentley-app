@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
-
+import NavBarLogo from "../assets/NavBarLogo.png"
 
 export default function Navbar() {
 
@@ -11,7 +11,7 @@ export default function Navbar() {
             <div className='navbar'>
 
                 <nav className='nav-links'>
-                    <img src="../assets/NavBarLogo.png" className='logo' />
+                    <img src={NavBarLogo} className='logo' />
                     <div className="navItems">
                         <Link
                             activeClass="active"
