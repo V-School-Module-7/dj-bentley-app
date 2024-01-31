@@ -1,6 +1,7 @@
 import { FaInstagram, FaMixcloud } from "react-icons/fa";
 import mixCloudIcon from '../assets/mixcloud.svg';
 import theKnotLogo from '../assets/the-knot-logo-vector.svg'
+import DJBENTLEY.png from "../assets/DJBENTLEY.png"
 
 const Footer = () => {
 
@@ -17,7 +18,7 @@ const Footer = () => {
                     <FaMixcloud />
                 </a>
             </div>
-            <img className="footerLogo" src="../assets/DJBENTLEY.png" ></img>
+            <img className="footerLogo" src={DJBENTLEY.png} ></img>
         </div>
     )
 }
