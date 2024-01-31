@@ -5,10 +5,7 @@ import StarsRow from "./StarsRow"
 import the_knot_logo from '../assets/the_knot_logo.png'
 import TK_BOW_2024_Badge from '../assets/TK_BOW_2024_Badge.png'
 
-/*  DESIGN NOTES
-all classes in this component start with 'reviews', hopefully this will help mitigate 'class hunting' when Valerie starts styling with CSS
-I added style props to some of the span tags to make sure the containers and sub-headers will align properly FEEL FREE to REMOVE THEM!
-*/
+
 function Reviews() {
 
 
@@ -87,11 +84,5 @@ function Reviews() {
         </div>
     )
 }
-// meeting notes:
-/*
 
-research google reviews API?
-hard coded for now.....
-
-*/
 export default Reviews

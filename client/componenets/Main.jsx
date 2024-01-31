@@ -25,7 +25,7 @@ export default function Main() {
                         <p>DJ Bentley is dedicated to transforming your events into lasting impressions for you and your guests! He will work closely with you to understand your vision, preferences, and any specific requests to create a personalized experience that exceeds expectations.</p>
                     </div>
                 </div>
-                <img src="../images/bookingPhoto.png" className="bookingImage"></img>
+                <img src="/images/bookingPhoto.png" className="bookingImage"></img>
             </div>
             <div id="reviews" className="reviewsComponent">
                 <Reviews />
