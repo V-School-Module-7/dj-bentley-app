@@ -20,11 +20,17 @@ import photo7 from "../assets/IMG_2786.jpg"
 import photo8 from "../assets/IMG_5909.JPG"
 import photo9 from "../assets/IMG_6271 2.JPG"
 import photo10 from "../assets/Moet-Hennessy-3-11-9145.jpg"
+import photo11 from "../assets/Moet-Hennessy-3-18-9135.jpg"
+import photo12 from "../assets/Photo Feb 01, 2 51 14 AM.jpg"
+import photo13 from "../assets/Photo Feb 01, 2 51 21 AM.jpg"
+import photo14 from "../assets/Screenshot 2023-12-19 at 8.17.44 PM.png"
+import photo15 from "../assets/unnamed (1).jpg"
+import photo16 from "../assets/unnamed.jpg"
 
 export default function Gallery() {
 
     const photosArr = [
-        { photo1 }, { photo2 }, { photo3 }, { photo4 }, { photo5 }, { photo6 }, { photo7 }, { photo8 }, { photo9 }, { photo10 }, "../assets/Moet-Hennessy-3-18-9135.jpg", "../assets/Photo Feb 01, 2 51 14 AM.jpg", "../assets/Photo Feb 01, 2 51 21 AM.jpg", "../assets/Screenshot 2023-12-19 at 8.17.44 PM.png", "../assets/unnamed (1).jpg", "../assets/unnamed.jpg"
+        { photo1 }, { photo2 }, { photo3 }, { photo4 }, { photo5 }, { photo6 }, { photo7 }, { photo8 }, { photo9 }, { photo10 }, { photo11 }, { photo12 }, { photo13 }, { photo14 }, { photo15 }, { photo16 }
     ]
 
     const [showCarousel, setShowCarousel] = useState(false)
