@@ -505,12 +505,13 @@ body {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+   
+    padding-bottom: 3vh;
 }
 
 .footerLogo {
     width: 30vw;
-    margin: 8vh 0 -5vh 0;
+    margin: -5vh 0 -5vh 0;
 }
 
 .footerItems {
@@ -519,6 +520,7 @@ body {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 5vh;
+    
 }
 
 .footerItems>a {
@@ -561,7 +563,7 @@ body {
 
 .galleryNavItems>link {
     text-decoration: none;
-    /* display: flex; */
+   
 }
 
 .Gallery-Images {
