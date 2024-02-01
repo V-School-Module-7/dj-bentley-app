@@ -10,21 +10,21 @@ import {
     faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import ClickOutside from "./ClickOutside";
-import photo1 from "../assets/Copy of Moet-Hennessy-3-11-9143.jpg"
+import photo1 from "../assets/CopyofMoet-Hennessy-3-11-9143.jpg"
 import photo2 from "../assets/DBBA205D-BC33-4022-AC5D-45AE80FC6BC6.jpg"
 import photo3 from "../assets/Dj-Bentley-Taylor-8.jpg"
 import photo4 from "../assets/DSC03286.jpg"
 import photo5 from "../assets/F7B2E57D-BE4F-45B2-9DD0-EF98A062A8A8.jpg"
-import photo6 from "../assets/Header_Bio Photo.jpg"
+import photo6 from "../assets/Header_Bio_Photo.jpg"
 import photo7 from "../assets/IMG_2786.jpg"
 import photo8 from "../assets/IMG_5909.jpg"
-import photo9 from "../assets/IMG_6271 2.jpg"
+import photo9 from "../assets/IMG_62712.jpg"
 import photo10 from "../assets/Moet-Hennessy-3-11-9145.jpg"
 import photo11 from "../assets/Moet-Hennessy-3-18-9135.jpg"
-import photo12 from "../assets/Photo Feb 01, 2 51 14 AM.jpg"
-import photo13 from "../assets/Photo Feb 01, 2 51 21 AM.jpg"
-import photo14 from "../assets/Screenshot 2023-12-19 at 8.17.44 PM.png"
-import photo15 from "../assets/unnamed (1).jpg"
+import photo12 from "../assets/PhotoFeb01.jpg"
+import photo13 from "../assets/PhotoFeb01_2.jpg"
+import photo14 from "../assets/Screenshot2023.png"
+import photo15 from "../assets/unnamed1.jpg"
 import photo16 from "../assets/unnamed.jpg"
 
 export default function Gallery() {
