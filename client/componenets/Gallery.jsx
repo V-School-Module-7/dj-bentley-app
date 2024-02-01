@@ -26,6 +26,7 @@ import photo13 from "../assets/PhotoFeb01_2.jpg"
 import photo14 from "../assets/Screenshot2023.png"
 import photo15 from "../assets/unnamed1.jpg"
 import photo16 from "../assets/unnamed.jpg"
+import Navbarlogo from "../assets/NavBarLogo.png"
 
 export default function Gallery() {
 
@@ -82,7 +83,7 @@ export default function Gallery() {
         <>
             <div className='galleryNavbar'>
                 <nav className='galleryNav'>
-                    <img src="images/NavBarLogo.png" className='logo' />
+                    <img src={Navbarlogo} className='logo' />
                     <div className="galleryNavItems">
                         <Link className="galleryLink" to="/">Back To Main Page</Link>
                     </div>
