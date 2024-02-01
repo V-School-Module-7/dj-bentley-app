@@ -10,11 +10,19 @@ import {
     faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import ClickOutside from "./ClickOutside";
+import photo1 from "../assets/Copy of Moet-Hennessy-3-11-9143.jpg"
+import photo2 from "../assets/DBBA205D-BC33-4022-AC5D-45AE80FC6BC6.JPG"
+import photo3 from "../assets/Dj-Bentley-Taylor-8.jpg"
+import photo4 from "../assets/DSC03286.jpg"
+import photo5 from "../assets/F7B2E57D-BE4F-45B2-9DD0-EF98A062A8A8.JPG"
+import photo6 from "../assets/Header_Bio Photo.JPG"
+import photo7 from "../assets/IMG_2786.jpg"
+import photo8 from "../assets/IMG_5909.JPG"
 
 export default function Gallery() {
 
     const photosArr = [
-        "../assets/Copy of Moet-Hennessy-3-11-9143.jpg", "../assets/DBBA205D-BC33-4022-AC5D-45AE80FC6BC6.JPG", "../assets/Dj-Bentley-Taylor-8.jpg", "../assets/DSC03286.jpg", "../assets/F7B2E57D-BE4F-45B2-9DD0-EF98A062A8A8.JPG", "../assets/Header_Bio Photo.JPG", "../assets/IMG_2786.jpg", "../assets/IMG_5909.JPG", "../assets/IMG_6271 2.JPG", "../assets/Moet-Hennessy-3-11-9145.jpg", "../assets/Moet-Hennessy-3-18-9135.jpg", "../assets/Photo Feb 01, 2 51 14 AM.jpg", "../assets/Photo Feb 01, 2 51 21 AM.jpg", "../assets/Screenshot 2023-12-19 at 8.17.44 PM.png", "../assets/unnamed (1).jpg", "../assets/unnamed.jpg"
+        { photo1 }, { photo2 }, { photo3 }, { photo4 }, { photo5 }, { photo6 }, { photo7 }, { photo8 }, "../assets/IMG_6271 2.JPG", "../assets/Moet-Hennessy-3-11-9145.jpg", "../assets/Moet-Hennessy-3-18-9135.jpg", "../assets/Photo Feb 01, 2 51 14 AM.jpg", "../assets/Photo Feb 01, 2 51 21 AM.jpg", "../assets/Screenshot 2023-12-19 at 8.17.44 PM.png", "../assets/unnamed (1).jpg", "../assets/unnamed.jpg"
     ]
 
     const [showCarousel, setShowCarousel] = useState(false)
