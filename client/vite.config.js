@@ -16,6 +16,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'static',
+    assetsInclude: ["**/*.JPG"],
     sourcemap: false,
   },
   base: '/'
