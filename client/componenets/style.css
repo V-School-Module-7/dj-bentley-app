@@ -256,7 +256,8 @@ body {
     border: none;
     position: relative;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    display: block;
 }
 
 
@@ -470,7 +471,7 @@ body {
     margin: 10px;
     border: solid 0.5px #56575C;
     margin: 0 auto;
-    color: #cccccc;
+    color: #f0efee
 
 
 }

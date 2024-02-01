@@ -89,6 +89,8 @@ const BookingForm = (props) => {
         });
     }
 
+    console.log(hasError);
+
     return (
         <div className="eventPage">
             <form className="bookContent" onSubmit={sendEmail}>
@@ -235,10 +237,13 @@ const BookingForm = (props) => {
                     onChange={handleChange}
                     onBlur={handleBlur}
                 />
+
                 {hasError && (
-                    <h3 style={{ color: "red", textAlign: "center" }}>
-                        {requiredFieldError}
-                    </h3>
+                    <div>
+                        <h3 style={{ color: "red", textAlign: "center" }}>
+                            {requiredFieldError}
+                        </h3>
+                    </div>
                 )}
                 <button type="submit" className="btn" disabled={isDisabled}>
                     Submit

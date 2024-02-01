@@ -76,7 +76,7 @@ export default function Navbar() {
             <div className='dropdown'>
 
                 <nav className='drop-links'>
-                    <img src="images/NavBarLogo.png" className='logo' />
+                    <img src={NavBarLogo} className='logo' />
 
                     <div className="menuToggle" onClick={() => setToggle(prevToggle => !prevToggle)}>Menu</div>
 
