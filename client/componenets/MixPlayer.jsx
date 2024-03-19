@@ -86,7 +86,7 @@ const MixPlayer = () => {
 
     return (
         <div className="musicPlayer">
-            <h1>Bentley's Mixes</h1>
+            <h1>DJ Mixes</h1>
             <div className="carousel">
                 <Slider style={{ display: 'flex', alignItems: 'center' }} {...settings}>
                     {mixes.map((mix, index) => (

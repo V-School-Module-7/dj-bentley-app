@@ -4,7 +4,7 @@
 }
 
 html {
-    font-size: 14px;
+    font-size: 20px;
     /* Set a base font size for the root element */
 }
 
@@ -221,7 +221,7 @@ body {
     flex-shrink: 0;
     border-radius: 5.625rem;
     background: #D7D0CD;
-    color: #56575C;
+    color: #56575C; 
     font-family: "montserrat";
     border: none;
     position: relative;
@@ -475,6 +475,14 @@ body {
 
 
 }
+
+@media (max-width: 600px) {
+    .modal-btn{
+      width: 80px; /* Adjust this value as needed */
+      height: 40px; /* Adjust this value as needed */
+      font-size: 14px; /* Adjust this value as needed */
+    }
+  }
 
 .modal-h2 {
     text-align: center;

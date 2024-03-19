@@ -55,7 +55,7 @@ function Reviews() {
 
                 <span style={{ display: 'flex', alignItems: 'center' }} className="reviews-sub-header-container">
 
-                    <h3 className="reviews-recent-reviews-sub-header">Reviewed On 11/07/2023 by Achley W.</h3>
+                    <h3 className="reviews-recent-reviews-sub-header">Reviewed On 11/07/2023 by Ashley W.</h3>
                     <StarsRow />
 
                 </span>
