@@ -22,7 +22,7 @@ const About = () => {
                 <img className="bioImage" src={bioPhoto} ></img>
             </div>
             <div className="aboutContent">
-                <h1>About Bentley</h1>
+                <h1>Bio</h1>
                 <p>{bio}</p>
             </div>
         </div>

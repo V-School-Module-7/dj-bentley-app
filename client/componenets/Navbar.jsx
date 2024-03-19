@@ -39,7 +39,7 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >Bookings</Link>
+                        >Contact</Link>
                         <Link
                             activeClass="active"
                             className="nav-link"
