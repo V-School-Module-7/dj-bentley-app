@@ -205,14 +205,20 @@ body {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     font-family: "montserrat";
     background-color: #F0EFEE;
     color: #56575C;
     width: 100vw;
 }
 
-
+.name-input {
+    display: flex;
+    flex-wrap: wrap; 
+   
+    width: 40vw;
+    
+}
 
 .input {
     width: 40vw;
@@ -226,22 +232,44 @@ body {
     border: none;
     position: relative;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    
 }
 
-.textarea {
+.first-name-input,
+.last-name-input {
+    flex: 1;
+   
+    margin-top: 10px;
+   
+    margin-left: 10px;
+    border-radius: 5.625rem;
+    background: #D7D0CD;
+    color: #56575C;
+    font-family: "montserrat";
+    border: none;
+    transform: translateX(+50%);
+    height: 28px;
+}
+
+/* .first-name-input {
+    margin-right: 5px; /* Add some spacing between the inputs */
+} */
+
+.input {
     width: 40vw;
     padding: 5px;
-    height: 5rem;
     margin-top: 10px;
     flex-shrink: 0;
-    border-radius: 1.25rem;
+    border-radius: 5.625rem;
     background: #D7D0CD;
+    color: #56575C; 
     font-family: "montserrat";
+    border: none;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    border: none;
+    
 }
 
 .btn {
@@ -282,7 +310,97 @@ body {
     width: 40vw
 }
 
+.validation-error {
+    text-align: center;
+    color: red;
+    font-size: 2vh;
+}
 
+.required-field {
+    color: red;
+    margin-left: 160px;
+    text-align: left;
+    font-size: 2vh;
+}
+
+.input::placeholder {
+    color: #000000; /
+}
+
+.first-name-input::placeholder {
+    color: #000000; /
+}
+
+.last-name-input::placeholder {
+    color: #000000; /
+}
+
+/* Target the day grid in the datepicker */
+.react-datepicker__day {
+    /* Add styles to make each day block */
+    display: inline-block;
+    width: 2.5rem; /* Adjust width as needed */
+    height: 2.5rem; /* Adjust height as needed */
+    line-height: 2.5rem; /* Adjust line height to center text vertically */
+    text-align: center;
+    margin: 0.2rem; /* Adjust margin as needed */
+    border-radius: 0.3rem; /* Add border radius for rounded corners */
+  }
+  
+  /* Style for selected date */
+  .react-datepicker__day--selected {
+    background-color: #007bff;
+    color: #fff; 
+  }
+  
+  /* Style for today's date */
+  .react-datepicker__day--today {
+    border: 2px solid #007bff;
+    color: #007bff;
+  }
+  
+  /* Style for disabled dates */
+  .react-datepicker__day--disabled {
+    opacity: 0.5; /* Example opacity for disabled dates */
+  }
+  
+  /* Style for day names (e.g., Mon, Tue, Wed) */
+  .react-datepicker__day-name {
+    display: inline-block;
+    width: 2.5rem; /* Adjust width as needed */
+    height: 2.5rem; /* Adjust height as needed */
+    line-height: 2.5rem; /* Adjust line height to center text vertically */
+    text-align: center;
+    margin: 0.2rem; /* Adjust margin as needed */
+    border-radius: 0.3rem; 
+    /* Add styles for day names if needed */
+  }
+  
+
+  
+  /* Style for the calendar container */
+  .react-datepicker__month-container {
+    z-index: 1000;
+    width: 450px;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+    /* Add styles for the entire calendar container if needed */
+  }
+  
+  /* Style for the entire datepicker */
+  .react-datepicker {
+   
+    /* Add styles for the entire datepicker component if needed */
+  }
+
+
+  
 /* Reviews */
 
 
@@ -781,9 +899,16 @@ body {
     }
 
     .input,
+    .first-name-input,
+    .last-name-input,
     .textarea,
+    .name-input
     .btn {
         width: 85vw;
+    }
+
+    .first-name-input {
+        width: auto;
     }
 
     .details {
@@ -798,6 +923,15 @@ body {
     .bookingImage {
         width: 100vw
     }
+
+    .validation-error {
+        text-align: center;
+        color: red;
+        font-size: 1.8vh;
+    }
+
+   
+    
 
     /* reviews */
 
