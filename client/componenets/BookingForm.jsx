@@ -23,12 +23,18 @@ const BookingForm = () => {
     const isDisabled = !(
         inputs.first_name &&
         inputs.last_name &&
-        inputs.user_email
+        inputs.user_email &&
+        inputs.event_type &&
+        inputs.requested_date &&
+        inputs.how
     );
     const hasError = !(
         inputs.first_name &&
         inputs.last_name &&
-        inputs.user_email
+        inputs.user_email &&
+        inputs.event_type &&
+        inputs.requested_date &&
+        inputs.how
     );
     const [showModal, setShowModal] = useState(false);
 

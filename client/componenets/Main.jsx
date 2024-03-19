@@ -1,4 +1,4 @@
-import React from 'react';
+
 import MixPlayer from './MixPlayer.jsx'
 import About from './About.jsx'
 import Reviews from './Reviews.jsx';

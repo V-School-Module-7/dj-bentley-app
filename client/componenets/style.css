@@ -318,7 +318,7 @@ body {
 
 .required-field {
     color: red;
-    margin-left: 160px;
+    margin-left: 220px;
     text-align: left;
     font-size: 2vh;
 }
@@ -337,14 +337,14 @@ body {
 
 /* Target the day grid in the datepicker */
 .react-datepicker__day {
-    /* Add styles to make each day block */
+    
     display: inline-block;
-    width: 2.5rem; /* Adjust width as needed */
-    height: 2.5rem; /* Adjust height as needed */
-    line-height: 2.5rem; /* Adjust line height to center text vertically */
+    width: 2.5rem; /
+    height: 2.5rem; 
+    line-height: 2.5rem; 
     text-align: center;
-    margin: 0.2rem; /* Adjust margin as needed */
-    border-radius: 0.3rem; /* Add border radius for rounded corners */
+    margin: 0.2rem; 
+    border-radius: 0.3rem; 
   }
   
   /* Style for selected date */
@@ -361,19 +361,19 @@ body {
   
   /* Style for disabled dates */
   .react-datepicker__day--disabled {
-    opacity: 0.5; /* Example opacity for disabled dates */
+    opacity: 0.5; 
   }
   
   /* Style for day names (e.g., Mon, Tue, Wed) */
   .react-datepicker__day-name {
     display: inline-block;
-    width: 2.5rem; /* Adjust width as needed */
-    height: 2.5rem; /* Adjust height as needed */
-    line-height: 2.5rem; /* Adjust line height to center text vertically */
+    width: 2.5rem; 
+    height: 2.5rem; 
+    line-height: 2.5rem; 
     text-align: center;
-    margin: 0.2rem; /* Adjust margin as needed */
+    margin: 0.2rem; 
     border-radius: 0.3rem; 
-    /* Add styles for day names if needed */
+
   }
   
 
@@ -390,14 +390,9 @@ body {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-    /* Add styles for the entire calendar container if needed */
-  }
   
-  /* Style for the entire datepicker */
-  .react-datepicker {
-   
-    /* Add styles for the entire datepicker component if needed */
-  }
+  
+  
 
 
   
