@@ -129,6 +129,7 @@ const MixPlayer = () => {
                         margin: "auto",
                         padding: "40px",
                     }}
+                    
                 ></iframe>
             </div>
         </div>
