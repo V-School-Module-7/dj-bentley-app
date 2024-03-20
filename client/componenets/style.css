@@ -11,27 +11,22 @@ html {
 body {
     font-size: 1rem;
     /* 1rem is equal to the root element's font size (16px in this case) */
-    background-color: #F0EFEE;
+    background-color: #d3d3d3;
 }
 
 /* NavBar.css */
 
 .navbar {
-    background-color: #F0EFEE;
+    background-color: #d3d3d3;
     font-family: "montserrat";
     width: 100vw;
     height: 133px;
     position: sticky;
     top: 0;
-    display: flex;
-    align-items: center;
     z-index: 100;
 }
 
 .navItems {
-    position: absolute;
-    top: 3.62rem;
-    right: 5.44rem;
     width: 50vw;
     display: flex;
     align-items: center;
@@ -43,6 +38,11 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    font-size: 0.5rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .logo {
@@ -72,7 +72,7 @@ body {
 
 .homeContainer {
     margin: 0;
-    background-color: #F0EFEE;
+    background-color: #d3d3d3;
     height: auto;
     font-size: 0;
 }
@@ -97,7 +97,7 @@ body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    background-color: #F0EFEE;
+    background-color: #d3d3d3;
     margin: 0;
     /* max-height: 80vh; */
     width: 100vw;
@@ -132,7 +132,7 @@ body {
 .aboutContent>h1 {
     margin-top: 3rem;
     margin-bottom: 3rem;
-    color: #F0EFEE;
+    color: #d3d3d3;
     font-size: 5rem;
     font-weight: 400;
     font-family: 'Roboto Condensed', sans-serif;
@@ -145,7 +145,7 @@ body {
     overflow: auto;
     font-weight: 500;
     font-size: 1.5rem;
-    color: #F0EFEE;
+    color: #d3d3d3;
     text-align: center;
     line-height: 1.75;
 
@@ -197,7 +197,7 @@ body {
     font-family: "montserrat";
     text-align: center;
     padding: 3rem;
-    background-color: #F0EFEE;
+    background-color: #d3d3d3;
     color: #56575C
 }
 
@@ -207,7 +207,7 @@ body {
     align-items: center;
     justify-content: space-between;
     font-family: "montserrat";
-    background-color: #F0EFEE;
+    background-color: #d3d3d3;
     color: #56575C;
     width: 100vw;
 }
@@ -226,7 +226,7 @@ body {
     margin-top: 10px;
     flex-shrink: 0;
     border-radius: 5.625rem;
-    background: #D7D0CD;
+    background: #e8e8e8;
     color: #56575C; 
     font-family: "montserrat";
     border: none;
@@ -261,9 +261,8 @@ body {
     padding: 5px;
     margin-top: 10px;
     flex-shrink: 0;
-    border-radius: 5.625rem;
-    background: #D7D0CD;
-    color: #56575C; 
+    border-radius: 1.25rem;
+    background: #e8e8e8;
     font-family: "montserrat";
     border: none;
     position: relative;
@@ -278,7 +277,7 @@ body {
     flex-shrink: 0;
     border-radius: 5.625rem;
     background: #C74A32;
-    color: #F0EFEE;
+    color: #d3d3d3;
     font-family: "montserrat";
     margin-top: 10px;
     border: none;
@@ -403,7 +402,7 @@ body {
 .reviews-container {
     font-family: "montserrat";
     color: #56575C;
-    background-color: #D7D0CD;
+    background-color: #e8e8e8;
     border-radius: 1rem;
     width: 90vw;
     position: relative;
@@ -423,11 +422,11 @@ body {
 
 .reviews-header {
     text-align: center;
-    background-color: #D7D0CD;
+    background-color: #e8e8e8;
 }
 
 .reviews-awards-container {
-    background-color: #D7D0CD;
+    background-color: #e8e8e8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -435,23 +434,23 @@ body {
 }
 
 .reviews-awards-container>img {
-    background-color: #D7D0CD;
+    background-color: #e8e8e8;
 }
 
 .reviews-awards-container>p {
-    background-color: #D7D0CD;
+    background-color: #e8e8e8;
     text-align: center;
     margin: 1rem
 }
 
 .reviews-recent-reviews-header {
-    background-color: #D7D0CD;
+    background-color: #e8e8e8;
     text-align: center;
     margin: 1rem;
 }
 
 .reviews-sub-header-container {
-    background-color: #D7D0CD;
+    background-color: #e8e8e8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -459,16 +458,17 @@ body {
 }
 
 .reviews-recent-reviews-sub-header {
-    background-color: #D7D0CD;
+    background-color: #e8e8e8;
+    margin: 0.5rem
 }
 
 .reviews-recent-reviews>p {
-    background-color: #D7D0CD;
+    background-color: #e8e8e8;
     margin-bottom: 1rem;
 }
 
 .row-of-stars-component {
-    background-color: #D7D0CD;
+    background-color: #e8e8e8;
 }
 
 .reviewsBtn {
@@ -477,7 +477,7 @@ body {
     flex-shrink: 0;
     border-radius: 5.625rem;
     background: #C74A32;
-    color: #F0EFEE;
+    color: #d3d3d3;
     font-family: "montserrat";
     margin-top: 10px;
     border: none;
@@ -486,7 +486,7 @@ body {
 /* MixPlayer */
 
 .musicPlayer {
-    background-color: #F0EFEE;
+    background-color: #d3d3d3;
     font-family: 'montserrat';
     margin-bottom: 3rem;
     width: 90vw;
@@ -584,7 +584,7 @@ body {
     margin: 10px;
     border: solid 0.5px #56575C;
     margin: 0 auto;
-    color: #f0efee
+    color: #d3d3d3
 
 
 }
@@ -621,18 +621,17 @@ body {
 /* footer */
 
 .footer-container {
-    background-color: #F0EFEE;
+    background-color: #d3d3d3;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-   
     padding-bottom: 3vh;
 }
 
 .footerLogo {
     width: 30vw;
-    margin: -5vh 0 -5vh 0;
+    margin: -2rem 0 -2rem 0;
 }
 
 .footerItems {
@@ -663,7 +662,7 @@ body {
 /* Gallery */
 
 .galleryNavbar {
-    background-color: #F0EFEE;
+    background-color: #d3d3d3;
     font-family: "montserrat";
     width: 100vw;
     height: 10vh;
@@ -775,7 +774,7 @@ body {
     /* navbar */
 
     .dropdown {
-        background-color: #F0EFEE;
+        background-color: #d3d3d3;
         font-family: "montserrat";
         width: 100vw;
         height: 10vh;
@@ -795,8 +794,8 @@ body {
     .drop-links {
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        width: 100vw;
+        justify-content: space-between;
+        width: 90vw;
     }
 
     .dropItems {
@@ -808,7 +807,7 @@ body {
         align-items: flex-end;
         justify-content: flex-end;
         flex-shrink: 1;
-        background-color: #F0EFEE;
+        background-color: #d3d3d3;
     }
 
 
@@ -822,7 +821,7 @@ body {
         width: 100vw;
         text-align: end;
         color: #56575c;
-        background-color: #F0EFEE;
+        background-color: #d3d3d3;
         padding-right: 0.5rem;
         font-size: 1.25rem;
         padding: 2vh 6vh 2vh 6vh;
@@ -841,7 +840,7 @@ body {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
-        background-color: #F0EFEE;
+        background-color: #d3d3d3;
         margin: 0;
         /* max-height: 80vh; */
         width: 100vw;
@@ -951,7 +950,7 @@ body {
     }
 
     .reviews-recent-reviews>p {
-        background-color: #D7D0CD;
+        background-color: #e8e8e8;
         margin-top: 0.5rem;
         margin-bottom: 1rem;
         font-size: 0.85rem;
@@ -998,7 +997,7 @@ body {
 
     .footerLogo {
         width: 60vw;
-        margin: 5vh 0 0 0;
+        margin: 10rem 0 0 0;
     }
 
     .footer-container {
@@ -1029,4 +1028,4 @@ body {
     charcoal #56575c
     red #e01c2a
 light grey f0efee
-burnt orange #c74a32 */
+burnt orange, #c74a32 */
