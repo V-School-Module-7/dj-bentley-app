@@ -239,12 +239,10 @@ body {
 .first-name-input,
 .last-name-input {
     flex: 1;
-   
     margin-top: 10px;
-   
     margin-left: 10px;
     border-radius: 5.625rem;
-    background: #D7D0CD;
+    background: #e8e8e8;
     color: #56575C;
     font-family: "montserrat";
     border: none;
@@ -252,9 +250,7 @@ body {
     height: 28px;
 }
 
-/* .first-name-input {
-    margin-right: 5px; /* Add some spacing between the inputs */
-} */
+
 
 .input {
     width: 40vw;
@@ -268,6 +264,7 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    background: #e8e8e8;
     
 }
 
@@ -317,10 +314,11 @@ body {
 
 .required-field {
     color: red;
-    margin-left: 220px;
+    margin-left: 160px;
     text-align: left;
     font-size: 2vh;
 }
+
 
 .input::placeholder {
     color: #000000; /
@@ -338,12 +336,13 @@ body {
 .react-datepicker__day {
     
     display: inline-block;
-    width: 2.5rem; /
-    height: 2.5rem; 
-    line-height: 2.5rem; 
+    width: 2rem; /
+    height: 2rem; 
+    line-height: 2rem; 
     text-align: center;
     margin: 0.2rem; 
     border-radius: 0.3rem; 
+    font-size: 0.8rem; 
   }
   
   /* Style for selected date */
@@ -366,9 +365,9 @@ body {
   /* Style for day names (e.g., Mon, Tue, Wed) */
   .react-datepicker__day-name {
     display: inline-block;
-    width: 2.5rem; 
-    height: 2.5rem; 
-    line-height: 2.5rem; 
+    width: 2rem; 
+    height: 2rem; 
+    line-height: 2rem; 
     text-align: center;
     margin: 0.2rem; 
     border-radius: 0.3rem; 
@@ -380,7 +379,7 @@ body {
   /* Style for the calendar container */
   .react-datepicker__month-container {
     z-index: 1000;
-    width: 450px;
+    width: 300px;
     text-align: center;
     margin-top: 5px;
     padding-top: 5px;
@@ -591,9 +590,9 @@ body {
 
 @media (max-width: 600px) {
     .modal-btn{
-      width: 80px; /* Adjust this value as needed */
-      height: 40px; /* Adjust this value as needed */
-      font-size: 14px; /* Adjust this value as needed */
+      width: 80px; 
+      height: 40px; 
+      font-size: 14px; 
     }
   }
 
@@ -617,6 +616,7 @@ body {
     padding: 20px;
     font-size: 16px;
 }
+
 
 /* footer */
 
@@ -896,14 +896,24 @@ body {
     .first-name-input,
     .last-name-input,
     .textarea,
-    .name-input
+    
     .btn {
         width: 85vw;
+        
     }
 
-    .first-name-input {
+    /* .first-name-input {
         width: auto;
-    }
+        background: #e8e8e8;
+    } */
+
+    
+        .input,
+        .first-name-input,
+        .last-name-input {
+            width: 85vw; /* Adjust width for smaller screens */
+            transform: translateX(0%); /* Reset transformation */
+        }
 
     .details {
         width: 85vw;

@@ -111,7 +111,7 @@ export default function Navbar() {
                                 offset={-70}
                                 duration={600}
                                 onClick={() => setToggle(prevToggle => !prevToggle)}
-                            >Bookings</Link>
+                            >Contact</Link>
                             <Link
                                 activeClass="active"
                                 className="drop-link"

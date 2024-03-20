@@ -4,7 +4,18 @@ import FormModal from "./FormModal";
 import DatePicker from "react-datepicker";
 
 const BookingForm = () => {
-    const initInputs = {
+    //on my local version, the bio pic doesn't fill entire vertical space
+    //first name and last name fields not as wide as the rest of the inputs
+
+  
+    //
+    //submit button too large on mobile
+    //no padding between submit button and image on mobile
+    //view gallery cut off at the bottom
+    //maybe we can make bio text smaller on mobile or a scroll box?
+    //first name and last name too narrow on mobile
+
+    const [inputs, setInputs] = useState({
         first_name: "",
         last_name: "",
         user_email: "",
@@ -15,9 +26,7 @@ const BookingForm = () => {
         estimated_budget: "",
         how: "",
         details: "",
-    };
-
-    const [inputs, setInputs] = useState(initInputs);
+    });
 
     const [requiredFieldError, setRequiredFieldError] = useState("");
     const isDisabled = !(
@@ -53,12 +62,13 @@ const BookingForm = () => {
     };
 
     const handleBlur = (e) => {
+        
         const { name, value } = e.target;
 
         if (name === "first_name" && value === "") {
-            setRequiredFieldError("First Name is a required field.");
+            setRequiredFieldError("First name is a required field.");
         } else if (name === "last_name" && value === "") {
-            setRequiredFieldError("Last Name is a required field.");
+            setRequiredFieldError("Last name is a required field.");
         } else if (name === "user_email" && value === "") {
             setRequiredFieldError("Email address is a required field.");
         } else if (name === "event_type" && value === "") {
@@ -66,9 +76,9 @@ const BookingForm = () => {
         } else if (name === "event_date" && value === "") {
             setRequiredFieldError("Event date is a required field.");
         } else if (name === "how" && value === "") {
-            setRequiredFieldError("How did you hear about DJ Bentley is a required field.");
-        
-        
+            setRequiredFieldError(
+                "How did you hear about DJ Bentley is a required field."
+            );
         } else {
             setRequiredFieldError("");
         }
@@ -126,9 +136,7 @@ const BookingForm = () => {
     return (
         <div className="eventPage">
             <form className="bookContent" onSubmit={sendEmail}>
-                
-               
-               <p className="required-field">* Required field</p>
+                <p className="required-field">* Required field</p>
                 <div className="name-input">
                     <input
                         className="first-name-input"
@@ -160,7 +168,7 @@ const BookingForm = () => {
                     className="input"
                     name="event_type"
                     onChange={handleChange}
-                   
+                    onBlur={handleBlur}
                 >
                     <option value="">--Event Type *--</option>
 
@@ -174,6 +182,7 @@ const BookingForm = () => {
                     name="requested_date"
                     selected={inputs.requested_date}
                     onChange={handleDateChange}
+                    onBlur={handleBlur}
                     placeholderText="Event Date *"
                 />
 
@@ -231,9 +240,7 @@ const BookingForm = () => {
 
                 {hasError && (
                     <div className="validation-error">
-                        <h3>
-                            {requiredFieldError}
-                        </h3>
+                        <h3>{requiredFieldError}</h3>
                     </div>
                 )}
                 <button type="submit" className="btn" disabled={isDisabled}>
