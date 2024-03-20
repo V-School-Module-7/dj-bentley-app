@@ -23,12 +23,18 @@ const BookingForm = () => {
     const isDisabled = !(
         inputs.first_name &&
         inputs.last_name &&
-        inputs.user_email
+        inputs.user_email &&
+        inputs.event_type &&
+        inputs.requested_date &&
+        inputs.how
     );
     const hasError = !(
         inputs.first_name &&
         inputs.last_name &&
-        inputs.user_email
+        inputs.user_email &&
+        inputs.event_type &&
+        inputs.requested_date &&
+        inputs.how
     );
     const [showModal, setShowModal] = useState(false);
 
@@ -55,6 +61,14 @@ const BookingForm = () => {
             setRequiredFieldError("Last Name is a required field.");
         } else if (name === "user_email" && value === "") {
             setRequiredFieldError("Email address is a required field.");
+        } else if (name === "event_type" && value === "") {
+            setRequiredFieldError("Event type is a required field.");
+        } else if (name === "event_date" && value === "") {
+            setRequiredFieldError("Event date is a required field.");
+        } else if (name === "how" && value === "") {
+            setRequiredFieldError("How did you hear about DJ Bentley is a required field.");
+        
+        
         } else {
             setRequiredFieldError("");
         }
@@ -112,28 +126,33 @@ const BookingForm = () => {
     return (
         <div className="eventPage">
             <form className="bookContent" onSubmit={sendEmail}>
-                <input
-                    className="input"
-                    type="text"
-                    name="first_name"
-                    placeholder="First Name"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                />
-                <input
-                    className="input"
-                    type="text"
-                    name="last_name"
-                    placeholder="Last Name"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                />
+                
+               
+               <p className="required-field">* Required field</p>
+                <div className="name-input">
+                    <input
+                        className="first-name-input"
+                        type="text"
+                        name="first_name"
+                        placeholder="First Name *"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                    />
+                    <input
+                        className="last-name-input"
+                        type="text"
+                        name="last_name"
+                        placeholder="Last Name *"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                    />
+                </div>
 
                 <input
                     className="input"
                     type="text"
                     name="user_email"
-                    placeholder="Email"
+                    placeholder="Email *"
                     onChange={handleChange}
                     onBlur={handleBlur}
                 />
@@ -141,9 +160,9 @@ const BookingForm = () => {
                     className="input"
                     name="event_type"
                     onChange={handleChange}
-                    onBlur={handleBlur}
+                   
                 >
-                    <option value="">--Event Type--</option>
+                    <option value="">--Event Type *--</option>
 
                     <option value="wedding">Wedding</option>
                     <option value="corporate event">Corporate event</option>
@@ -155,7 +174,7 @@ const BookingForm = () => {
                     name="requested_date"
                     selected={inputs.requested_date}
                     onChange={handleDateChange}
-                    placeholderText="Event Date"
+                    placeholderText="Event Date *"
                 />
 
                 <input
@@ -190,7 +209,7 @@ const BookingForm = () => {
                     onBlur={handleBlur}
                 >
                     <option value="">
-                        -- How did you hear about DJ Bentley? --
+                        -- How did you hear about DJ Bentley? * --
                     </option>
                     <option value="The Knot/Wedding Wire">
                         The Knot/Wedding Wire
@@ -203,7 +222,7 @@ const BookingForm = () => {
                     <option value="other">Other</option>
                 </select>
                 <textarea
-                    className="textarea"
+                    className="input"
                     name="details"
                     placeholder="Additional Event Details"
                     onChange={handleChange}
@@ -211,8 +230,8 @@ const BookingForm = () => {
                 />
 
                 {hasError && (
-                    <div>
-                        <h3 style={{ color: "red", textAlign: "center" }}>
+                    <div className="validation-error">
+                        <h3>
                             {requiredFieldError}
                         </h3>
                     </div>
