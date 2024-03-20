@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css'
-import homeImage from "../assets/homeImage.jpg"
+import homeImage from "../assets/BWHeadshot.jpg"
 
 export default function Home() {
 

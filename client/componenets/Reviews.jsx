@@ -39,8 +39,8 @@ function Reviews() {
 
                 <span style={{ display: 'flex', alignItems: 'center' }} className="reviews-sub-header-container">
 
-                    <h3 className="reviews-recent-reviews-sub-header">Reviewed On 11/13/2023 by Jen F.</h3>
-                    <StarsRow />
+                    <h3 className="reviews-recent-reviews-sub-header">Jen F. - 5/5 Review</h3>
+                    {/* <StarsRow /> */}
 
                 </span>
 
@@ -55,8 +55,8 @@ function Reviews() {
 
                 <span style={{ display: 'flex', alignItems: 'center' }} className="reviews-sub-header-container">
 
-                    <h3 className="reviews-recent-reviews-sub-header">Reviewed On 11/07/2023 by Ashley W.</h3>
-                    <StarsRow />
+                    <h3 className="reviews-recent-reviews-sub-header">Ashley W. - 5/5 Review</h3>
+                    {/* <StarsRow /> */}
 
                 </span>
                 <p>
@@ -69,8 +69,8 @@ function Reviews() {
 
                 <span style={{ display: 'flex', alignItems: 'center' }} className="reviews-sub-header-container">
 
-                    <h3 className="reviews-recent-reviews-sub-header">Reviewed On 11/07/2023 by Joel J.</h3>
-                    <StarsRow />
+                    <h3 className="reviews-recent-reviews-sub-header">Joel J. - 5/5 Review</h3>
+                    {/* <StarsRow /> */}
 
                 </span>
                 <p>
