@@ -104,8 +104,8 @@ body {
 }
 
 .aboutImage {
-    max-height: 80vh;
-    max-width: 50vw;
+    /* max-height: 80vh; */
+    max-width: 40vw;
     height: auto;
     /* overflow:hidden; */
     display: flex;
@@ -113,15 +113,17 @@ body {
 }
 
 .bioImage {
-    max-width: 50vw;
+    width: 40vw;
     height: auto;
     max-height: 80vh;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .aboutContent {
     height: auto;
     display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -130,8 +132,8 @@ body {
 }
 
 .aboutContent>h1 {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     color: #d3d3d3;
     font-size: 5rem;
     font-weight: 400;
@@ -140,11 +142,11 @@ body {
 }
 
 .aboutContent>p {
-    width: 60%;
+    width: 80%;
     max-height: 75%;
     overflow: auto;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #d3d3d3;
     text-align: center;
     line-height: 1.75;
@@ -182,7 +184,7 @@ body {
     font-family: "montserrat";
     color: #56575C;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -214,10 +216,10 @@ body {
 
 .name-input {
     display: flex;
-    flex-wrap: wrap; 
-   
+    flex-wrap: wrap;
+
     width: 40vw;
-    
+
 }
 
 .input {
@@ -227,13 +229,13 @@ body {
     flex-shrink: 0;
     border-radius: 5.625rem;
     background: #e8e8e8;
-    color: #56575C; 
+    color: #56575C;
     font-family: "montserrat";
     border: none;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    
+
 }
 
 .first-name-input,
@@ -265,7 +267,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     background: #e8e8e8;
-    
+
 }
 
 .btn {
@@ -277,6 +279,7 @@ body {
     color: #d3d3d3;
     font-family: "montserrat";
     margin-top: 10px;
+    margin-bottom: 10px;
     border: none;
     position: relative;
     left: 50%;
@@ -321,63 +324,62 @@ body {
 
 
 .input::placeholder {
-    color: #000000; /
+    color: #000000;/
 }
 
 .first-name-input::placeholder {
-    color: #000000; /
+    color: #000000;/
 }
 
 .last-name-input::placeholder {
-    color: #000000; /
+    color: #000000;/
 }
 
 /* Target the day grid in the datepicker */
 .react-datepicker__day {
-    
+
     display: inline-block;
-    width: 2rem; /
-    height: 2rem; 
-    line-height: 2rem; 
+    width: 2rem;/ height: 2rem;
+    line-height: 2rem;
     text-align: center;
-    margin: 0.2rem; 
-    border-radius: 0.3rem; 
-    font-size: 0.8rem; 
-  }
-  
-  /* Style for selected date */
-  .react-datepicker__day--selected {
+    margin: 0.2rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+}
+
+/* Style for selected date */
+.react-datepicker__day--selected {
     background-color: #007bff;
-    color: #fff; 
-  }
-  
-  /* Style for today's date */
-  .react-datepicker__day--today {
+    color: #fff;
+}
+
+/* Style for today's date */
+.react-datepicker__day--today {
     border: 2px solid #007bff;
     color: #007bff;
-  }
-  
-  /* Style for disabled dates */
-  .react-datepicker__day--disabled {
-    opacity: 0.5; 
-  }
-  
-  /* Style for day names (e.g., Mon, Tue, Wed) */
-  .react-datepicker__day-name {
+}
+
+/* Style for disabled dates */
+.react-datepicker__day--disabled {
+    opacity: 0.5;
+}
+
+/* Style for day names (e.g., Mon, Tue, Wed) */
+.react-datepicker__day-name {
     display: inline-block;
-    width: 2rem; 
-    height: 2rem; 
-    line-height: 2rem; 
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
     text-align: center;
-    margin: 0.2rem; 
-    border-radius: 0.3rem; 
+    margin: 0.2rem;
+    border-radius: 0.3rem;
 
-  }
-  
+}
 
-  
-  /* Style for the calendar container */
-  .react-datepicker__month-container {
+
+
+/* Style for the calendar container */
+.react-datepicker__month-container {
     z-index: 1000;
     width: 400px;
     text-align: center;
@@ -387,13 +389,13 @@ body {
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  
+}
 
 
-  
+
+
+
+
 /* Reviews */
 
 
@@ -584,17 +586,15 @@ body {
     border: solid 0.5px #56575C;
     margin: 0 auto;
     color: #d3d3d3
-
-
 }
 
 @media (max-width: 600px) {
-    .modal-btn{
-      width: 80px; 
-      height: 40px; 
-      font-size: 14px; 
+    .modal-btn {
+        width: 80px;
+        height: 40px;
+        font-size: 14px;
     }
-  }
+}
 
 .modal-h2 {
     text-align: center;
@@ -627,11 +627,14 @@ body {
     justify-content: center;
     align-items: center;
     padding-bottom: 3vh;
+    height: auto;
 }
 
 .footerLogo {
     width: 30vw;
-    margin: -2rem 0 -2rem 0;
+    /* margin: -2rem 0 -2rem 0; */
+    position: relative;
+    /* transform: translateY(-2rem) */
 }
 
 .footerItems {
@@ -639,8 +642,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 5vh;
-    
+    /* margin-bottom: 5vh; */
 }
 
 .footerItems>a {
@@ -650,7 +652,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-   
+
     z-index: 3;
 }
 
@@ -685,7 +687,7 @@ body {
 
 .galleryNavItems>link {
     text-decoration: none;
-   
+
 }
 
 .Gallery-Images {
@@ -734,6 +736,54 @@ body {
 
 /* navbar font size */
 
+@media only screen and (max-width: 1250px) {
+
+    .aboutContent>h1 {
+        font-size: 3.5rem;
+    }
+
+    .aboutContent>p {
+        width: 80%;
+        max-height: none;
+        overflow: auto;
+        margin-bottom: 3rem;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .galleryH1 {
+        font-size: 1.5rem;
+    }
+
+    .footerLogo {
+        width: 50vw;
+        /* margin: -2rem 0 -2rem 0; */
+        position: relative;
+        /* background-color: red; */
+        /* transform: translateY(-2rem) */
+    }
+
+    .footerItems {
+        width: 40vw
+    }
+
+    .footerItems>a {
+        max-height: 6vw;
+        font-size: 5vw;
+        color: #56575C;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 3;
+    }
+
+    .footerItems>a>img {
+        height: 6vh;
+        color: #56575C
+    }
+
+}
+
 @media only screen and (max-width: 1000px) {
 
     .nav-link {
@@ -741,6 +791,26 @@ body {
         color: #56575c;
         padding-right: 0.5rem;
         font-size: 1rem;
+    }
+
+    .aboutImage {
+        display: none
+    }
+
+    .footerItems>a {
+        max-height: 6vw;
+        font-size: 6vw;
+        color: #56575C;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        z-index: 3;
+    }
+
+    .footerItems>a>img {
+        height: 6vh;
+        color: #56575C
     }
 }
 
@@ -886,6 +956,7 @@ body {
         overflow: auto;
         margin-bottom: 3rem;
         text-align: center;
+
     }
 
     /* form */
@@ -898,10 +969,10 @@ body {
     .first-name-input,
     .last-name-input,
     .textarea,
-    
+
     .btn {
         width: 85vw;
-        
+
     }
 
     /* .first-name-input {
@@ -909,13 +980,15 @@ body {
         background: #e8e8e8;
     } */
 
-    
-        .input,
-        .first-name-input,
-        .last-name-input {
-            width: 85vw; /* Adjust width for smaller screens */
-            transform: translateX(0%); /* Reset transformation */
-        }
+
+    .input,
+    .first-name-input,
+    .last-name-input {
+        width: 85vw;
+        /* Adjust width for smaller screens */
+        transform: translateX(0%);
+        /* Reset transformation */
+    }
 
     .details {
         width: 85vw;
@@ -936,8 +1009,8 @@ body {
         font-size: 1.8vh;
     }
 
-   
-    
+
+
 
     /* reviews */
 
@@ -998,9 +1071,9 @@ body {
 
     .galleryH1 {
 
-        padding: 1rem;
-        font-size: 2rem;
-        width: 75vw;
+        padding: 0.5rem;
+        font-size: 1rem;
+        width: 60vw;
 
     }
 
@@ -1009,12 +1082,9 @@ body {
 
     .footerLogo {
         width: 60vw;
-        margin: 10rem 0 0 0;
+        margin: 0 0 0 0;
     }
 
-    .footer-container {
-        height: 10vh;
-    }
 
     .footerItems {
         width: 50vw;
@@ -1024,11 +1094,12 @@ body {
     .footerItems>a {
         width: 8vw;
         font-size: 8vw;
-        margin: 0vw 3vw 0vw 3vw
+        margin: 0vw 3vw 0vw 3vw;
+
     }
 
     .footerItems>a>img {
-        width: 8vw;
+        height: 10vw;
     }
 
 
