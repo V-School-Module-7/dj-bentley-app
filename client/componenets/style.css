@@ -644,12 +644,14 @@ body {
 }
 
 .footerItems>a {
-    max-height: 3vw;
+    max-height: 6vw;
     font-size: 3vw;
     color: #56575C;
     display: flex;
     justify-content: space-around;
     align-items: center;
+   
+    z-index: 3;
 }
 
 
