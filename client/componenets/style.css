@@ -204,7 +204,9 @@ body {
     color: #56575C
 }
 
-
+.requiredParent {
+    width: 100%;
+}
 
 .bookContent {
     display: flex;
@@ -334,14 +336,16 @@ body {
 .validation-error {
     text-align: center;
     color: red;
-    font-size: 2vh;
+    font-size: 1.75rem;
+    margin: 1rem
 }
 
 .required-field {
-    color: red;
+    /* color: red; */
     /* margin-left: 160px; */
     text-align: left;
-    font-size: 2vh;
+    font-size: 0.75rem;
+
 }
 
 
@@ -361,24 +365,33 @@ body {
 .react-datepicker__day {
 
     display: inline-block;
-    width: 2rem;/ height: 2rem;
-    line-height: 2rem;
-    text-align: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.25rem;
+    /* text-align: center; */
     margin: 0.2rem;
     border-radius: 0.3rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    padding: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+    /* padding-bottom: 1rem;
+    padding-top: 1rem; */
+    /* padding-left: 1rem; */
+    /* box-sizing: border-box; */
 }
 
 /* Style for selected date */
 .react-datepicker__day--selected {
-    background-color: #007bff;
+    background-color: #d98373;
     color: #fff;
+    /* text-align: center; */
 }
 
 /* Style for today's date */
 .react-datepicker__day--today {
-    border: 2px solid #007bff;
-    color: #007bff;
+    border: 2px solid #C74A32;
+    color: #C74A32;
 }
 
 /* Style for disabled dates */
@@ -389,33 +402,52 @@ body {
 /* Style for day names (e.g., Mon, Tue, Wed) */
 .react-datepicker__day-name {
     display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    line-height: 2rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    line-height: 1rem;
     text-align: center;
-    margin: 0.2rem;
+    margin: 0.3rem;
     border-radius: 0.3rem;
-
+    font-size: 0.8rem;
 }
 
-
-
-/* Style for the calendar container */
-.react-datepicker__month-container {
+.react-datepicker {
     z-index: 1000;
-    width: 400px;
-    text-align: center;
-    margin-top: 5px;
-    padding-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Style for the calendar container */
+.react-datepicker__month-container {
+    width: 15rem;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.react-datepicker__navigation {
+    border: 1px solid #ccc;
+    font-family: "montserrat";
+    margin: 1rem 1rem 0.5rem 1rem
+}
 
 
+.react-datepicker__navigation--next {
+    position: relative;
+    right: 0px;
+}
 
+.react-datepicker-popper {
+    z-index: 10
+}
+
+.react-datepicker__aria-live {
+    display: none
+}
 
 
 /* Reviews */
@@ -598,14 +630,15 @@ body {
 }
 
 .modal-btn {
-    width: 5vw;
+    width: 50%;
     height: 3rem;
     flex-shrink: 0;
     border-radius: 5.625rem;
     background: #C74A32;
+
     font-family: "montserrat";
     margin: 10px;
-    border: solid 0.5px #56575C;
+    border: none;
     margin: 0 auto;
     color: #d3d3d3
 }
@@ -760,6 +793,10 @@ body {
 
 @media only screen and (max-width: 1250px) {
 
+    .nav-link {
+        font-size: 1rem;
+    }
+
     .aboutContent>h1 {
         font-size: 3.5rem;
     }
@@ -817,7 +854,6 @@ body {
 
     .btn {
         width: 45vw;
-
     }
 
     .first-name-input {
@@ -825,6 +861,10 @@ body {
         background: #e8e8e8;
     }
 
+    .btn {
+        margin-top: 0.1rem;
+        margin-bottom: 2rem;
+    }
 
     .input,
     .first-name-input,
@@ -864,11 +904,12 @@ body {
 
 @media only screen and (max-width: 1000px) {
 
+
     .nav-link {
         text-decoration: none;
         color: #56575c;
         padding-right: 0.5rem;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .aboutImage {
@@ -890,6 +931,65 @@ body {
         height: 6vh;
         color: #56575C
     }
+
+    /* Target the day grid in the datepicker */
+    .react-datepicker__day {
+        display: inline-block;
+        width: 1.1rem;
+        height: 1.1rem;
+        line-height: 1rem;
+        /* text-align: center; */
+        margin: 0.1rem;
+        border-radius: 0.3rem;
+        font-size: 0.6rem;
+        padding: 0rem;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    /* Style for day names (e.g., Mon, Tue, Wed) */
+    .react-datepicker__day-name {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        line-height: 1rem;
+        text-align: center;
+        margin: 0.3rem 0.2rem 0.3rem 0.2rem;
+        border-radius: 0.3rem;
+        font-size: 0.7rem;
+
+    }
+
+    .react-datepicker {
+        z-index: 1000;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for the calendar container */
+    .react-datepicker__month-container {
+        width: 10rem;
+        text-align: center;
+        margin-top: 5px;
+        padding-top: 5px;
+        border-radius: 5px;
+        background-color: #fff;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    .react-datepicker__navigation {
+        border: 1px solid #ccc;
+        font-family: "montserrat";
+        margin: 1rem 0.1rem 0.5rem 0.1rem
+    }
+
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -908,6 +1008,11 @@ body {
         margin-bottom: 3rem;
         text-align: center;
     }
+
+    .requiredParent {
+        width: 85vw
+    }
+
 }
 
 

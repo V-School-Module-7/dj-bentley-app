@@ -7,7 +7,7 @@ const BookingForm = () => {
     //on my local version, the bio pic doesn't fill entire vertical space
     //first name and last name fields not as wide as the rest of the inputs
 
-  
+
     //
     //submit button too large on mobile
     //no padding between submit button and image on mobile
@@ -62,7 +62,7 @@ const BookingForm = () => {
     };
 
     const handleBlur = (e) => {
-        
+
         const { name, value } = e.target;
 
         if (name === "first_name" && value === "") {
@@ -136,7 +136,9 @@ const BookingForm = () => {
     return (
         <div className="eventPage">
             <form className="bookContent" onSubmit={sendEmail}>
-                <p className="required-field">* Required field</p>
+                <div className="requiredParent">
+                    <p className="required-field">* Required field</p>
+                </div>
                 <div className="name-input">
                     <input
                         className="first-name-input"
