@@ -20,7 +20,7 @@ function Reviews() {
 
         <div className="reviews-container">
 
-            <h1 className="reviews-header">Awards & reviews</h1>
+            <h1 className="reviews-header">Awards & Reviews</h1>
 
             <div className="reviews-awards-container">
                 <div className="badgeContainer">

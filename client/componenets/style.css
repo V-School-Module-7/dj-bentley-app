@@ -48,7 +48,7 @@ body {
 .logo {
     width: 25vw;
     height: auto;
-    margin-left: 5vw;
+    margin-left: 0vw;
 }
 
 .nav-link {
@@ -463,7 +463,7 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    padding: 5rem;
+    padding: 3rem 5rem 3rem 5rem;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -472,7 +472,8 @@ body {
 }
 
 .badgeContainer {
-    display: flex
+    display: flex;
+    margin-top: 1rem;
 }
 
 .reviews-header {
@@ -1204,7 +1205,7 @@ body {
     }
 
     .reviews-header {
-        margin: 2rem
+        margin: 2rem;
     }
 
     .reviews-awards-container {
