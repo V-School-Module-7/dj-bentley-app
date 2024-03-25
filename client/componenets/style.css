@@ -1070,6 +1070,7 @@ body {
     .logo {
         width: 40vw;
         height: auto;
+        margin-left: 1rem;
     }
 
     .drop-link {
