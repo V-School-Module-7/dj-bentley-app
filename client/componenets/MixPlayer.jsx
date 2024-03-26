@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 import axios from "axios";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,16 +41,17 @@ const MixPlayer = () => {
     const handleMixClick = (index) => {
         window.onbeforeunload = () => undefined;
         setSelectedMixIndex(index);
-    
     };
 
     // slider settings
 
-    const CustomPrevArrow = ({ onClick }) => (
-        <div className="custom-prev" onClick={onClick}>
-            <FontAwesomeIcon icon={faChevronLeft} />
-        </div>
-    );
+    function CustomPrevArrow({ onClick }) {
+        return (
+            <div className="custom-prev" onClick={onClick}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+            </div>
+        );
+    }
 
     const CustomNextArrow = ({ onClick }) => (
         <div className="custom-next" onClick={onClick}>
@@ -86,9 +88,12 @@ const MixPlayer = () => {
 
     return (
         <div className="musicPlayer">
-            <h1>Bentley's Mixes</h1>
+            <h1>DJ Mixes</h1>
             <div className="carousel">
-                <Slider style={{ display: 'flex', alignItems: 'center' }} {...settings}>
+                <Slider
+                    style={{ display: "flex", alignItems: "center" }}
+                    {...settings}
+                >
                     {mixes.map((mix, index) => (
                         <div
                             className="mix-box"
@@ -118,12 +123,13 @@ const MixPlayer = () => {
                     )}`}
                     frameBorder="0"
                     style={{
-                        display: "block", 
-                        width: "96%", 
-                        height: "100%", 
-                        margin: "auto", 
+                        display: "block",
+                        width: "96%",
+                        height: "100%",
+                        margin: "auto",
                         padding: "40px",
                     }}
+                    
                 ></iframe>
             </div>
         </div>
