@@ -1,5 +1,5 @@
 
-import React from "react"
+
 import './style.css'
 import StarsRow from "./StarsRow"
 import the_knot_logo from '../assets/the_knot_logo.png'
@@ -11,14 +11,16 @@ function Reviews() {
 
 
     function navigateToTheKnotReviews() {
-        window.open('https://www.theknot.com/marketplace/dj-bentley-park-city-ut-2064480');
-    };
+        window.open(
+            "https://www.theknot.com/marketplace/dj-bentley-park-city-ut-2064480"
+        );
+    }
 
     return (
 
         <div className="reviews-container">
 
-            <h1 className="reviews-header">Awards & reviews</h1>
+            <h1 className="reviews-header">Awards & Reviews</h1>
 
             <div className="reviews-awards-container">
                 <div className="badgeContainer">
@@ -39,13 +41,13 @@ function Reviews() {
 
                 <span style={{ display: 'flex', alignItems: 'center' }} className="reviews-sub-header-container">
 
-                    <h3 className="reviews-recent-reviews-sub-header">Reviewed On 11/13/2023 by Jen F.</h3>
-                    <StarsRow />
+                    <h3 className="reviews-recent-reviews-sub-header">Jen F. - 5/5 Review</h3>
+                    {/* <StarsRow /> */}
 
                 </span>
 
                 <p>
-                    Bentley is one of my favorite DJs I've used for my events. His professionalism, good energy, and manners are just the cherry on top of the
+                    Bentley is one of my favorite DJs I&apos;ve used for my events. His professionalism, good energy, and manners are just the cherry on top of the
                     good music and vibe he sets. I throw upscale apr&eacute;s ski parties at a variety of venues in Park City such as Pendry hotel, a team USA
                     Olympic party, house parties and more with DJ Bentley. All venues have since requested his contact to do future business with.
                 </p>
@@ -55,8 +57,8 @@ function Reviews() {
 
                 <span style={{ display: 'flex', alignItems: 'center' }} className="reviews-sub-header-container">
 
-                    <h3 className="reviews-recent-reviews-sub-header">Reviewed On 11/07/2023 by Achley W.</h3>
-                    <StarsRow />
+                    <h3 className="reviews-recent-reviews-sub-header">Ashley W. - 5/5 Review</h3>
+                    {/* <StarsRow /> */}
 
                 </span>
                 <p>
@@ -69,8 +71,8 @@ function Reviews() {
 
                 <span style={{ display: 'flex', alignItems: 'center' }} className="reviews-sub-header-container">
 
-                    <h3 className="reviews-recent-reviews-sub-header">Reviewed On 11/07/2023 by Joel J.</h3>
-                    <StarsRow />
+                    <h3 className="reviews-recent-reviews-sub-header">Joel J. - 5/5 Review</h3>
+                    {/* <StarsRow /> */}
 
                 </span>
                 <p>

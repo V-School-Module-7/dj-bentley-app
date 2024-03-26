@@ -1,4 +1,4 @@
-import React from 'react';
+
 import MixPlayer from './MixPlayer.jsx'
 import About from './About.jsx'
 import Reviews from './Reviews.jsx';
@@ -19,12 +19,14 @@ export default function Main() {
             </div>
             <div className="booking">
                 <div id="bookingForm">
-                    <h1 className="bookH1">Book DJ Bentley</h1>
-                    <BookingForm />
+                    <h1 className="bookH1">Submit Booking Request</h1>
+                   
                     <div className="details">
-                        <h2>Booking Details</h2>
+                        
                         <p>DJ Bentley is dedicated to transforming your events into lasting impressions for you and your guests! He will work closely with you to understand your vision, preferences, and any specific requests to create a personalized experience that exceeds expectations.</p>
                     </div>
+                    <br></br>
+                     <BookingForm />
                 </div>
                 <img src={bookingPhoto} className="bookingImage"></img>
             </div>

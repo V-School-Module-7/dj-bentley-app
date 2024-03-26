@@ -1,7 +1,9 @@
-import React from "react";
+
 import ReactModal from "react-modal";
 
+
 const FormModal = (props) => {
+    // eslint-disable-next-line react/prop-types
     const { show, handleClose } = props;
 
     return (
@@ -16,7 +18,7 @@ const FormModal = (props) => {
                 <h2 className="modal-h2">Request Sent</h2>
                 <br></br>
                 <p className="modal-p">
-                    Your request was sent, and I'll get back to you as soon as
+                    Your request was sent, and I&apos;ll get back to you as soon as
                     possible. Thanks!
                 </p>
                 <div className="modal-div">

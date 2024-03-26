@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import NavBarLogo from "../assets/NavBarLogo.png"
 
 export default function Navbar() {
 
     const [toggle, setToggle] = useState(false)
-
+ 
     return (
         <>
             <div className='navbar'>
@@ -39,7 +39,7 @@ export default function Navbar() {
                             smooth={true}
                             offset={-70}
                             duration={600}
-                        >Bookings</Link>
+                        >Contact</Link>
                         <Link
                             activeClass="active"
                             className="nav-link"
@@ -111,7 +111,7 @@ export default function Navbar() {
                                 offset={-70}
                                 duration={600}
                                 onClick={() => setToggle(prevToggle => !prevToggle)}
-                            >Bookings</Link>
+                            >Contact</Link>
                             <Link
                                 activeClass="active"
                                 className="drop-link"

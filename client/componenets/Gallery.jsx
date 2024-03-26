@@ -26,12 +26,26 @@ import photo13 from "../assets/PhotoFeb01_2.jpg"
 import photo14 from "../assets/Screenshot2023.png"
 import photo15 from "../assets/unnamed1.jpg"
 import photo16 from "../assets/unnamed.jpg"
+import photo17 from "../assets/cheers.jpg"
+import photo18 from "../assets/indoorWedding.jpg"
+import photo19 from "../assets/landscapeHeadshot.jpg"
+import photo20 from "../assets/lights1.jpg"
+import photo21 from "../assets/lights2.jpg"
+import photo22 from "../assets/moet.jpg"
+import photo23 from "../assets/parkCityStage.jpg"
+import photo24 from "../assets/portraitHeadshot.jpg"
+import photo25 from "../assets/snow.jpg"
+import photo26 from "../assets/stage.jpg"
+import photo27 from "../assets/sundance2024.jpg"
+import photo28 from '../assets/terrasse.jpg'
+import photo29 from "../assets/vintageRoom.jpg"
+import photo30 from "../assets/sittingHeadshot.jpg"
 import Navbarlogo from "../assets/NavBarLogo.png"
 
 export default function Gallery() {
 
     const photosArr = [
-        photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14, photo15, photo16
+        photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20, photo21, photo22, photo23, photo24, photo25, photo26, photo27, photo28, photo29, photo30
     ]
     //
     const [showCarousel, setShowCarousel] = useState(false)
